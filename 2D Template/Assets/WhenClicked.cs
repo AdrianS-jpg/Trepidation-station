@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WhenClicked : MonoBehaviour
 {
-    private float beforeX = 0, beforeY = 0;
     public Transform transform;
     bool ifClickedOn = false, follow = false, click = false;
     private float clickTime = 0f;
