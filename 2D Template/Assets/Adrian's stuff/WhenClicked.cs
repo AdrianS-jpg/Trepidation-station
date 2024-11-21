@@ -6,7 +6,7 @@ using UnityEngine;
 public class WhenClicked : MonoBehaviour
 {
     public Transform transform;
-    bool ifClickedOn = false, follow = false, click = false;
+    bool ifClickedOn = false, follow = false, click = false, clickCheck = false;
     private float clickTime = 0f;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite, sprite2;
@@ -21,20 +21,42 @@ public class WhenClicked : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (click == true)
         {
             clickTime += Time.deltaTime;
+            clickCheck = false;
+            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
+            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
             changeSprite(sprite);
         }
         if (click == false)
         {
-            if (clickTime <= 0.1f)
+            if (clickCheck == false)
             {
-                follow = false;
-                transform.position = new Vector3(0, 0, 1);
-                ifClickedOn = true;
-                changeSprite(sprite2);
+                if (clickTime <= 0.15f && clickTime >= 0.000000001f)
+                {
+                    follow = false;
+                    if (ifClickedOn == false)
+                    {
+                        ifClickedOn = true;
+                        changeSprite(sprite2);
+                        GetComponent<BoxCollider2D>().offset = new Vector2(-0.05305538f, 0.0884265f);
+                        GetComponent<BoxCollider2D>().size = new Vector2(1.106111f, 0.8938886f);
+                    }
+                    else
+                    {
+                        ifClickedOn = false;
+                        changeSprite(sprite);
+                        GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
+                        GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                    }
+
+
+                }
             }
+            clickCheck = true;
+
 
         }
         if (follow == true)
@@ -42,7 +64,6 @@ public class WhenClicked : MonoBehaviour
             if (transform.position.x <= 5 && transform.position.x >= -5)
             {
                 transform.position = new Vector3((Input.mousePosition.x - 480) / 50, (Input.mousePosition.y - 250) / 50, -1);
-                Debug.Log(transform.position.x);
             } else
             {
                 if (transform.position.x <= -5) 
@@ -53,7 +74,6 @@ public class WhenClicked : MonoBehaviour
                     transform.position = new Vector3(5, transform.position.y, transform.position.z);
                 }
                 follow = false;
-                Debug.Log(follow);
             }
             
 
@@ -69,7 +89,7 @@ public class WhenClicked : MonoBehaviour
     {
         click = false;
         follow = false;
-
+        
     }
 
     void changeSprite(Sprite s)
