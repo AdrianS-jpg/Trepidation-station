@@ -6,7 +6,7 @@ using UnityEngine;
 public class WhenClicked : MonoBehaviour
 {
     public Transform transform;
-    bool ifClickedOn = false, follow = false, click = false, clickCheck = false;
+    bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false;
     private float clickTime = 0f;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite, sprite2;
@@ -16,12 +16,14 @@ public class WhenClicked : MonoBehaviour
     {
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        Debug.Log(Camera.main.pixelWidth);
+        Debug.Log(Camera.main.pixelHeight);  
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(Input.mousePosition.x);
         if (click == true)
         {
             clickTime += Time.deltaTime;
@@ -63,7 +65,7 @@ public class WhenClicked : MonoBehaviour
         {
             if (transform.position.x <= 5 && transform.position.x >= -5)
             {
-                transform.position = new Vector3((Input.mousePosition.x - 480) / 50, (Input.mousePosition.y - 250) / 50, -1);
+                transform.position = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / 50, (Input.mousePosition.y - (Screen.height / 2)) / 50, -1);
             } else
             {
                 if (transform.position.x <= -5) 
@@ -95,5 +97,17 @@ public class WhenClicked : MonoBehaviour
     void changeSprite(Sprite s)
     {
             spriteRenderer.sprite = s;
+    }
+
+    public void whenPressed()
+    {
+        if (redMode == false)
+        {
+            redMode = true;
+        }
+        else
+        {
+            redMode = false;
+        }
     }
 }
