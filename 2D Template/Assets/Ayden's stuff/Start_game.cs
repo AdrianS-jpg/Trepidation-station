@@ -9,6 +9,11 @@ public class Start_game : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(LevelName); 
+        StartCoroutine(MyCoroutine());
+    }
+    IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene(LevelName);
     }
 }
