@@ -573,7 +573,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1309238777}
   sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   sprite2: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  sprite3: {fileID: 0}
 --- !u!61 &1309238779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,7 +920,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1920444315}
   sprite: {fileID: 21300000, guid: 7165d18b925accb49a91e9d8e731406a, type: 3}
   sprite2: {fileID: 21300000, guid: 0185d080bc58c6642a76b9c1c62c9b6e, type: 3}
-  sprite3: {fileID: 21300000, guid: 0185d080bc58c6642a76b9c1c62c9b6e, type: 3}
 --- !u!212 &1920444315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1079,5 +1077,5 @@ MonoBehaviour:
   active: 0
   transform: {fileID: 2099097787}
   spriteRenderer: {fileID: 2099097788}
-  sprite: {fileID: 21300000, guid: eace9fce2e9978a4092b14b4a31952d2, type: 3}
+  sprite: {fileID: 21300000, guid: 7165d18b925accb49a91e9d8e731406a, type: 3}
   passport: {fileID: 1920444311}
