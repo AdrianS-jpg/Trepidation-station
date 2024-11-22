@@ -15,7 +15,5 @@ public class Start_game : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene(LevelName);
-
-        Debug.Log("Did it work?");
     }
 }
