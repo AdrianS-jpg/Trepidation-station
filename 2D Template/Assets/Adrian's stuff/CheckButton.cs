@@ -8,7 +8,7 @@ public class CheckButton : MonoBehaviour
     public bool active = false;
     public Transform transform;
     public SpriteRenderer spriteRenderer;
-    public Sprite sprite;
+    public Sprite sprit;
     public GameObject passport;
     // Start is called before the first frame update
     void Start()
@@ -23,13 +23,15 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true) 
         {
-            if (passport.GetComponent<SpriteRenderer>().sprite = sprite) {
-                transform.position = new Vector3(passport.GetComponent<Transform>().transform.position.x, passport.GetComponent<Transform>().transform.position.y, 0);
+            if (passport.GetComponent<SpriteRenderer>().sprite == sprit) {
+                GetComponent<Renderer>().enabled = true;
+                transform.position = new Vector3(passport.GetComponent<Transform>().transform.position.x, passport.GetComponent<Transform>().transform.position.y, passport.GetComponent<Transform>().transform.position.z);
             }
+            
         }
         else
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -300);
+            GetComponent<Renderer>().enabled = false;
         }
 
     }

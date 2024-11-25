@@ -6,10 +6,10 @@ using UnityEngine;
 public class WhenClicked : MonoBehaviour
 {
     public Transform transform;
-    public bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false;
+    public bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false, clicked = false;
     private float clickTime = 0f;
     public SpriteRenderer spriteRenderer;
-    public Sprite sprite, sprite2;
+    public Sprite sprite, sprite2, sprite3;
     
     // Start is called before the first frame update
     void Start()
@@ -27,10 +27,8 @@ public class WhenClicked : MonoBehaviour
         {
             clickTime += Time.deltaTime;
             clickCheck = false;
-            ifClickedOn = false;
             GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
             GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
-            changeSprite(sprite);
         }
         if (click == false)
         {
@@ -42,6 +40,7 @@ public class WhenClicked : MonoBehaviour
                     if (ifClickedOn == false)
                     {
                         ifClickedOn = true;
+                        clicked = true;
                         changeSprite(sprite2);
                         GetComponent<BoxCollider2D>().offset = new Vector2(-0.05305538f, 0.0884265f);
                         GetComponent<BoxCollider2D>().size = new Vector2(1.106111f, 0.8938886f);
@@ -49,6 +48,7 @@ public class WhenClicked : MonoBehaviour
                     else
                     {
                         ifClickedOn = false;
+                        clicked = false;
                         changeSprite(sprite);
                         GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
                         GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
@@ -64,7 +64,7 @@ public class WhenClicked : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+                mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane + 1;
                 transform.position = mousePosition;
                 //} else                                               
                 //{
@@ -113,9 +113,9 @@ public class WhenClicked : MonoBehaviour
     {
         if (redMode == false)
         {
-            if (ifClickedOn == true)
+            if (clicked == true)
             {
-                changeSprite(sprite);
+                changeSprite(sprite3);
             } 
             else
             {
@@ -126,10 +126,10 @@ public class WhenClicked : MonoBehaviour
         else
         {
             redMode = false;
-            //if (spriteRenderer.sprite == sprite3)
-            //{
-            //    changeSprite(sprite2);
-            //}
+            if (spriteRenderer.sprite == sprite3)
+            {
+                changeSprite(sprite2);
+            }
         }
     }
 }
