@@ -9,13 +9,14 @@ public class CheckButton : MonoBehaviour
     public Transform transform;
     public SpriteRenderer spriteRenderer;
     public Sprite sprit;
-    public GameObject passport;
+    public GameObject obj;
+    public string sprite = "sprite";
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        passport = GameObject.Find("Passport");
+        //obj = GameObject.Find("Passport");
     }
 
     // Update is called once per frame
@@ -23,9 +24,12 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true) 
         {
-            if (passport.GetComponent<SpriteRenderer>().sprite == sprit) {
+            if (GameObject.Find("SpriteHolder").GetComponent<settingFunction>().pattern[0] = false) { 
+
+            }
+            if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
                 GetComponent<Renderer>().enabled = true;
-                transform.position = new Vector3(passport.GetComponent<Transform>().transform.position.x, passport.GetComponent<Transform>().transform.position.y, passport.GetComponent<Transform>().transform.position.z);
+                transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x, obj.GetComponent<Transform>().transform.position.y, obj.GetComponent<Transform>().transform.position.z);
             }
             
         }
@@ -34,6 +38,14 @@ public class CheckButton : MonoBehaviour
             GetComponent<Renderer>().enabled = false;
         }
 
+    }
+
+    private void OnMouseDown()
+    {
+        if (active == true)
+        {
+            GameObject.Find("SpriteHolder").GetComponent<settingFunction>().sprites.Add(sprit);
+        }
     }
     public void whenPressed()
     {

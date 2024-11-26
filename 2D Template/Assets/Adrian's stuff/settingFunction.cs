@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class settingFunction : MonoBehaviour
 {
+    public List<Sprite> sprites = new List<Sprite>(); 
+    public List<string> pattern = new List<string>();
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,11 @@ public class settingFunction : MonoBehaviour
         int nc = Random.Range(1, 6);
         if (nc < 6)
         {
-
+            pattern.Add("correct");
+        }
+        else
+        {
+            pattern.Add("incorrect");
         }
     }
 }
