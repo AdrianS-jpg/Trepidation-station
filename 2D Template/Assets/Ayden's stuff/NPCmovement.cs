@@ -13,8 +13,6 @@ public class NPCmovement : MonoBehaviour
     public float amplitude;
     float xPos;
     float yPos;
-    public KeyCode accepted = KeyCode.A;
-    public KeyCode denied = KeyCode.D;
     public bool inMiddle;
     public bool accept;
     public bool deny;
@@ -38,14 +36,7 @@ public class NPCmovement : MonoBehaviour
         }
         else if (inMiddle == true)
         {
-            if (Input.GetKey(accepted))
-            {
-                accept = true;
-            }
-            else if (Input.GetKey(denied))
-            {
-                deny = true;
-            }
+
         }
         if (accept == true)
         {
@@ -65,5 +56,25 @@ public class NPCmovement : MonoBehaviour
         pos.y = sin;
 
         transform.position = pos;
+    }
+    public void acceptedd()
+    {
+        accept = true;
+    }
+    public void denyer()
+    {
+        deny = true;
+    }
+
+    public GameObject monster;
+    public List<Sprite> allMonsters;
+
+    public void Call()
+    {
+        //monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+        transform.position = new Vector2(-11.2f, 0);
+        inMiddle = false;
+        accept = false;
+        deny = false;
     }
 }
