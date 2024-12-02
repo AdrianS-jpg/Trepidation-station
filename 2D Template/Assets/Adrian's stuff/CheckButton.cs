@@ -24,7 +24,7 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true) 
         {
-            if (GameObject.Find("SpriteHolder").GetComponent<settingFunction>().pattern[0] = false) { 
+            if (GameObject.Find("SpriteHolder").GetComponent<settingFunction>().pattern[0] == "f") { 
 
             }
             if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
