@@ -10,7 +10,6 @@ public class CheckButton : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite sprit;
     public GameObject obj;
-    public string sprite = "sprite";
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +23,12 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true) 
         {
-            if (GameObject.Find("SpriteHolder").GetComponent<settingFunction>().pattern[0] == "f") { 
+            if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[0] == "correct") { 
 
             }
             if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
                 GetComponent<Renderer>().enabled = true;
+                GetComponent<BoxCollider2D>().enabled = true;
                 transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x, obj.GetComponent<Transform>().transform.position.y, obj.GetComponent<Transform>().transform.position.z);
             }
             
@@ -36,6 +36,7 @@ public class CheckButton : MonoBehaviour
         else
         {
             GetComponent<Renderer>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
 
     }
@@ -44,7 +45,8 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true)
         {
-            GameObject.Find("SpriteHolder").GetComponent<settingFunction>().sprites.Add(sprit);
+            GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add(GetComponent<SpriteRenderer>().sprite);
+            //Debug.Log(GameObject.Find("SpriteHolder").GetComponent<settingFunction>().sprites.Capacity);
         }
     }
     public void whenPressed()

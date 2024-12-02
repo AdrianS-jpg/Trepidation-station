@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class WhenClicked : MonoBehaviour
@@ -14,6 +15,8 @@ public class WhenClicked : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookDefault;
+        sprite3 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookBlank;
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
@@ -42,8 +45,8 @@ public class WhenClicked : MonoBehaviour
                         ifClickedOn = true;
                         clicked = true;
                         changeSprite(sprite2);
-                        GetComponent<BoxCollider2D>().offset = new Vector2(-0.05305538f, 0.0884265f);
-                        GetComponent<BoxCollider2D>().size = new Vector2(1.106111f, 0.8938886f);
+                        GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+                        GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
                     }
                     else
                     {
@@ -78,7 +81,6 @@ public class WhenClicked : MonoBehaviour
                 //    follow = false;
                 //}
             }
-            Debug.Log(ifClickedOn);
         } else
         {
 
@@ -100,8 +102,6 @@ public class WhenClicked : MonoBehaviour
         click = false;
         follow = false;
         }
-        
-        
     }
 
     void changeSprite(Sprite s)

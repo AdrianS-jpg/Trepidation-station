@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 1032954556}
   - component: {fileID: 1032954558}
   - component: {fileID: 1032954557}
+  - component: {fileID: 1032954559}
   m_Layer: 5
   m_Name: Text2
   m_TagString: Untagged
@@ -356,7 +357,7 @@ MonoBehaviour:
   active: 0
   transform: {fileID: 1032954556}
   spriteRenderer: {fileID: 1032954558}
-  sprit: {fileID: 21300000, guid: 6be5941ad521324478f94212a0f96089, type: 3}
+  sprit: {fileID: 21300000, guid: 7c9556e1b6c26744589442191693a547, type: 3}
   obj: {fileID: 1309238775}
 --- !u!212 &1032954558
 SpriteRenderer:
@@ -399,7 +400,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 007913f18d9ff2a43a507f5c4a384dec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -410,6 +411,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1032954559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032954555}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1245591384
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +569,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1579959693}
+        m_TargetAssemblyTypeName: settingFunction, Assembly-CSharp
+        m_MethodName: whenPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245591387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +633,7 @@ GameObject:
   - component: {fileID: 1309238779}
   - component: {fileID: 1309238780}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Passport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,6 +767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d003889e348fed148854ebafb9857e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites: []
+  pattern: []
+  active: 0
 --- !u!1 &1579959690
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579959691}
   - component: {fileID: 1579959692}
+  - component: {fileID: 1579959693}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -812,6 +855,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1579959693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579959690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d003889e348fed148854ebafb9857e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  pattern: []
+  active: 0
 --- !u!1 &1683480992
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,8 +1022,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1fec3cccd1236438d33ce1b24055f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  rulebookSprites: []
+  rulebookDefault: {fileID: 21300000, guid: f7c3a5f696061794f9a7653b978d2a6c, type: 3}
+  rulebookMap: {fileID: 21300000, guid: 4bf0454f74efb1549be0ec4882345f06, type: 3}
+  rulebook1: {fileID: 21300000, guid: 4f14b65c73d61784db463303e6e75ce7, type: 3}
+  rulebook2: {fileID: 21300000, guid: 37edb060e72e5b14d9f52c71ee80eac0, type: 3}
+  rulebook3: {fileID: 21300000, guid: 85a2449996d5bba46a81ec7193ea5fb8, type: 3}
+  rulebook4: {fileID: 21300000, guid: 91023b44bc34845429658853091e4afc, type: 3}
+  rulebook5: {fileID: 21300000, guid: 9306dbfe6f7e0f44cb2320e1c71b39aa, type: 3}
+  rulebook6: {fileID: 21300000, guid: fc95cfa48a3218d45bd68136d94ce576, type: 3}
+  rulebook7: {fileID: 21300000, guid: b7a660f1ce8013848bb381a477102d41, type: 3}
+  rulebook8: {fileID: 21300000, guid: 70b1e69f8eb6904468fc7d27a830fe0e, type: 3}
+  rulebook9: {fileID: 21300000, guid: a11d445f52325ab4c8373a3cbb05a9f2, type: 3}
+  rulebookBlank: {fileID: 21300000, guid: 7c9556e1b6c26744589442191693a547, type: 3}
+  rulebookSpriteList: []
   sprites2: []
   sprites3: []
 --- !u!1 &1906817085
@@ -1116,7 +1185,7 @@ GameObject:
   - component: {fileID: 1920444314}
   - component: {fileID: 1920444313}
   m_Layer: 0
-  m_Name: Passport
+  m_Name: Rulebook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920444311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -217.2, y: -72.2, z: 0}
+  m_LocalPosition: {x: -199, y: -73, z: 0}
   m_LocalScale: {x: 40, y: 40, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1150,7 +1219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1414819, y: 0.1061118}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1161,7 +1230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.202598, y: 2.627044}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &1920444314
 MonoBehaviour:
@@ -1249,6 +1318,7 @@ GameObject:
   - component: {fileID: 2099097787}
   - component: {fileID: 2099097788}
   - component: {fileID: 2099097789}
+  - component: {fileID: 2099097790}
   m_Layer: 5
   m_Name: Text1
   m_TagString: Untagged
@@ -1312,7 +1382,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8870976b00ffb64b9cb51ec4e056ac6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1338,5 +1408,31 @@ MonoBehaviour:
   active: 0
   transform: {fileID: 2099097787}
   spriteRenderer: {fileID: 2099097788}
-  sprit: {fileID: 21300000, guid: 6be5941ad521324478f94212a0f96089, type: 3}
+  sprit: {fileID: 21300000, guid: 7c9556e1b6c26744589442191693a547, type: 3}
   obj: {fileID: 1920444311}
+--- !u!61 &2099097790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099097786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
