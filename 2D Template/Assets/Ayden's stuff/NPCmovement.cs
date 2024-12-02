@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class NPCmovement : MonoBehaviour
 {
+    public enum Location { Traveling, Accepted, Denied, Middle}
     public Transform centerscreen;
     public Transform Denied;
     public Transform Accepted;
+    public Location location = Location.Traveling;
     public float speed = 3f;
     public float wspeed;
     public float frequency;
     public float amplitude;
     float xPos;
     float yPos;
-    public bool inMiddle;
-    public bool accept;
-    public bool deny;
+    //public bool inMiddle;
+    //public bool accept;
+    //public bool deny;
 
     void Start()
     {
@@ -26,23 +28,20 @@ public class NPCmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == centerscreen.position)
-        {
-            inMiddle = true;
-        }
-        if (inMiddle == false)
+        Debug.Log(location);
+        if (location == Location.Traveling)
         {
            transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed);
+            if (transform.position == centerscreen.position)
+            {
+                location = Location.Middle;
+            }
         }
-        else if (inMiddle == true)
-        {
-
-        }
-        if (accept == true)
+        if (location == Location.Accepted)
         {
             transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed);
         }
-        if (deny == true)
+        if (location == Location.Denied)
         {
             transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed);
         }
@@ -59,11 +58,17 @@ public class NPCmovement : MonoBehaviour
     }
     public void acceptedd()
     {
-        accept = true;
+        if (location == Location.Middle)
+        {
+            location = Location.Accepted;
+        } 
     }
     public void denyer()
     {
-        deny = true;
+        if (location == Location.Middle)
+        {
+            location = Location.Denied;
+        }
     }
 
     public GameObject monster;
@@ -71,10 +76,18 @@ public class NPCmovement : MonoBehaviour
 
     public void Call()
     {
-        //monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
-        transform.position = new Vector2(-11.2f, 0);
-        inMiddle = false;
-        accept = false;
-        deny = false;
+        if (location == Location.Accepted)
+        {
+            //monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            transform.position = new Vector2(-11.2f, 0);
+            location = Location.Traveling;
+        }
+        else if (location == Location.Denied)
+        {
+            //monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            transform.position = new Vector2(-11.2f, 0);
+            location = Location.Traveling;
+        }
+
     }
 }
