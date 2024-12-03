@@ -15,8 +15,8 @@ public class WhenClicked : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookDefault;
-        sprite3 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookBlank;
+        //sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookDefault;
+        //sprite3 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookBlank;
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
