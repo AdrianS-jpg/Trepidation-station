@@ -31,19 +31,20 @@ public class NPCmovement : MonoBehaviour
         Debug.Log(location);
         if (location == Location.Traveling)
         {
-           transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed);
+           transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed * Time.timeScale);
             if (transform.position == centerscreen.position)
             {
                 location = Location.Middle;
+
             }
         }
         if (location == Location.Accepted)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed);
+            transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.timeScale);
         }
         if (location == Location.Denied)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed);
+            transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.timeScale);
         }
         //transform.position = new Vector2(transform.position.x, Mathf.Sin(Time.time * frequency)* wspeed  + yPos);
     }
