@@ -29,7 +29,7 @@ public class CheckButton : MonoBehaviour
             if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
                 GetComponent<Renderer>().enabled = true;
                 GetComponent<BoxCollider2D>().enabled = true;
-                transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x, obj.GetComponent<Transform>().transform.position.y, obj.GetComponent<Transform>().transform.position.z);
+                transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x, obj.GetComponent<Transform>().transform.position.y, obj.GetComponent<Transform>().transform.position.z - 1);
             }
             
         }
