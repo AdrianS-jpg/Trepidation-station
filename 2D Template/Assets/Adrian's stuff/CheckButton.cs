@@ -10,12 +10,17 @@ public class CheckButton : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite sprit;
     public GameObject obj;
+    public Camera camera;
+    public bool runsTimes = false;
+    public static List<float> placements = new List<float>() {0.7f,-0.7f,-1f,-2f};
+    public static int placementnumberInList = 0;
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        //obj = GameObject.Find("Passport");
+        camera = Camera.main;
+        //obj = GameObject.Find("Rulebook");
     }
 
     // Update is called once per frame
@@ -27,9 +32,7 @@ public class CheckButton : MonoBehaviour
 
             }
             if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
-                GetComponent<Renderer>().enabled = true;
-                GetComponent<BoxCollider2D>().enabled = true;
-                transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x, obj.GetComponent<Transform>().transform.position.y, obj.GetComponent<Transform>().transform.position.z - 1);
+                placeEverything();   
             }
             
         }
@@ -37,16 +40,18 @@ public class CheckButton : MonoBehaviour
         {
             GetComponent<Renderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
+            runsTimes = false;
+            placementnumberInList = 0;
         }
+        Debug.Log(camera.WorldToScreenPoint(transform.position));
 
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (active == true)
         {
             GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add(GetComponent<SpriteRenderer>().sprite);
-            //Debug.Log(GameObject.Find("SpriteHolder").GetComponent<settingFunction>().sprites.Capacity);
         }
     }
     public void whenPressed()
@@ -56,6 +61,17 @@ public class CheckButton : MonoBehaviour
         } else
         {
             active = true;
+        }
+    }
+    public void placeEverything()
+    {
+        if (runsTimes == false)
+        {
+            GetComponent<Renderer>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
+            transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x + placements[placementnumberInList], obj.GetComponent<Transform>().transform.position.y + placements[placementnumberInList + 1], obj.GetComponent<Transform>().transform.position.z);
+            runsTimes = true;
+            placementnumberInList += 2;
         }
     }
 }

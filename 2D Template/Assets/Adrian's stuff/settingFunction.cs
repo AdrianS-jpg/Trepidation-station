@@ -11,6 +11,8 @@ public class settingFunction : MonoBehaviour
     void Start()
     {
         drop();
+        GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     // Update is called once per frame

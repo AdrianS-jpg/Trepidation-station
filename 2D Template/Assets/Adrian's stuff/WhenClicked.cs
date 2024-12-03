@@ -26,44 +26,43 @@ public class WhenClicked : MonoBehaviour
     void Update()
     {
         if (redMode == false) {
+            GetComponent<BoxCollider2D>().enabled = true;
             if (click == true)
-        {
-            clickTime += Time.deltaTime;
-            clickCheck = false;
-            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
-        }
-        if (click == false)
-        {
-            if (clickCheck == false)
             {
-                if (clickTime <= 0.15f && clickTime >= 0.000000001f)
-                {
-                    follow = false;
-                    if (ifClickedOn == false)
-                    {
-                        ifClickedOn = true;
-                        clicked = true;
-                        changeSprite(sprite2);
-                        GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-                        GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
-                    }
-                    else
-                    {
-                        ifClickedOn = false;
-                        clicked = false;
-                        changeSprite(sprite);
-                        GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                        GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
-                    }
-
-
-                }
+                clickTime += Time.deltaTime;
+                clickCheck = false;
+                GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
+                GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
             }
-            clickCheck = true;
-        }
-        if (follow == true)
-        {
+            if (click == false)
+            {
+                if (clickCheck == false)
+                {
+                    if (clickTime <= 0.15f && clickTime >= 0.000000001f)
+                    {
+                        follow = false;
+                        if (ifClickedOn == false)
+                        {
+                            ifClickedOn = true;
+                            clicked = true;
+                            changeSprite(sprite2);
+                            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+                            GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
+                        }
+                        else
+                        {
+                            ifClickedOn = false;
+                            clicked = false;
+                            changeSprite(sprite);
+                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
+                            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                        }
+                    }
+                }
+                clickCheck = true;
+            }
+            if (follow == true)
+            {
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -83,7 +82,7 @@ public class WhenClicked : MonoBehaviour
             }
         } else
         {
-
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
     void OnMouseDown()
