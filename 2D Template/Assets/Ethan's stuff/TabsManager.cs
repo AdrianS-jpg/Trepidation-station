@@ -11,6 +11,11 @@ public class TabsManager : MonoBehaviour
     public Vector2 InactiveTabButtonSize, ActiveTabButtonSize;
     public Sprite InactiveTabBG, ActiveTabBG;
 
+    public void Start()
+    {
+        SwitchToTab(0);
+
+    }
     public void SwitchToTab(int TabID)
     {
         foreach (GameObject go in Tabs)
