@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class settingFunction : MonoBehaviour
 {
-    public List<Sprite> sprites = new List<Sprite>(); 
+    public List<float> sprites = new List<float>(); 
     public List<string> pattern = new List<string>();
     public bool active = false;
+    public GameObject prefabtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +61,9 @@ public class settingFunction : MonoBehaviour
         } else
         {
             active = true;
+            if (GameObject.Find("Rulebook").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Rulebook").GetComponent<rulebookMovement>().sprite2) {
+                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
+            }
         }
     }
 }

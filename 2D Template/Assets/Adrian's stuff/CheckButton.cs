@@ -7,43 +7,45 @@ public class CheckButton : MonoBehaviour
 {
     public bool active = false;
     public Transform transform;
-    public SpriteRenderer spriteRenderer;
     public Sprite sprit;
     public GameObject obj;
     public Camera camera;
     public bool runsTimes = false;
-    public static List<float> placements = new List<float>() {0.7f,-0.7f,-1f,-2f};
+    public static List<float> placements = new List<float>() { 0.7f, -0.7f, -1f, -2f };//please for the love of god GET THESE WORKING DUMBASS
+    public static List<string> objs = new List<string>() {"Rulebook", "Rulebook"};//and here
+    public static List<float> Size = new List<float>() { 0.025f, 0.025f}; //and here too
     public static int placementnumberInList = 0;
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         camera = Camera.main;
-        //obj = GameObject.Find("Rulebook");
+        obj = GameObject.Find(objs[0]);
+        placeEverything();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active == true) 
+        if (GameObject.Find("Passport").GetComponent<WhenClicked>().redMode == true) 
         {
+
             if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[0] == "correct") { 
 
             }
-            if (obj.GetComponent<SpriteRenderer>().sprite == sprit) {
-                placeEverything();   
-            }
-            
+            //if (obj.GetComponent<SpriteRenderer>().sprite == sprit)
+            //{
+
+            //}
+
         }
         else
         {
-            GetComponent<Renderer>().enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(gameObject);
             runsTimes = false;
             placementnumberInList = 0;
         }
-        Debug.Log(camera.WorldToScreenPoint(transform.position));
+        //Debug.Log(camera.WorldToScreenPoint(transform.position));
 
     }
 
@@ -51,27 +53,24 @@ public class CheckButton : MonoBehaviour
     {
         if (active == true)
         {
-            GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add(GetComponent<SpriteRenderer>().sprite);
+           // GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add();
         }
     }
     public void whenPressed()
     {
-        if (active == true){
-            active = false;
-        } else
-        {
-            active = true;
-        }
     }
     public void placeEverything()
     {
         if (runsTimes == false)
         {
-            GetComponent<Renderer>().enabled = true;
+            //GetComponent<Renderer>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().size = new Vector2(Size[placementnumberInList], Size[placementnumberInList + 1]);
             transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x + placements[placementnumberInList], obj.GetComponent<Transform>().transform.position.y + placements[placementnumberInList + 1], obj.GetComponent<Transform>().transform.position.z);
             runsTimes = true;
             placementnumberInList += 2;
+            obj = GameObject.Find(objs[placementnumberInList / 2]);
+
         }
     }
 }
