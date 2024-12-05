@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Android.Types;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class rulebookMovement : MonoBehaviour
     private float clickTime = 0f;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite, sprite2, sprite3;
+    public int spriteCount = 0;
+    public spriteHolder spriteholder;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,7 @@ public class rulebookMovement : MonoBehaviour
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
+        spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>();
     }
 
     // Update is called once per frame
@@ -33,8 +37,8 @@ public class rulebookMovement : MonoBehaviour
             {
                 clickTime += Time.deltaTime;
                 clickCheck = false;
-                GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                spriteCount = 1;
+                GetComponent<BoxCollider2D>().size = new Vector2(2.5f, 2f);
             }
             if (click == false)
             {
@@ -47,17 +51,17 @@ public class rulebookMovement : MonoBehaviour
                         {
                             ifClickedOn = true;
                             clicked = true;
-                            changeSprite(sprite2);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+                            spriteCount = 4;
+                            changeSprite(spriteholder.rulebookSpriteList[spriteCount]);
                             GetComponent<BoxCollider2D>().size = new Vector2(0.9f, 1.5f);
                         }
                         else
                         {
                             ifClickedOn = false;
                             clicked = false;
-                            changeSprite(sprite);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                            spriteCount = 0;
+                            changeSprite(spriteholder.rulebookSpriteList[spriteCount]);
+                            GetComponent<BoxCollider2D>().size = new Vector2(2.5f, 2f);
                         }
                     }
                 }
@@ -68,7 +72,7 @@ public class rulebookMovement : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane + 1;
+                mousePosition.z = -1;
                 transform.position = mousePosition;
                 //} else                                               
                 //{
@@ -81,6 +85,9 @@ public class rulebookMovement : MonoBehaviour
                 //}
                 //    follow = false;
                 //}
+            } else
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -1);
             }
         }
         else

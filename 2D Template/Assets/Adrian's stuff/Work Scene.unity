@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 762175647}
   - component: {fileID: 762175648}
   - component: {fileID: 762175649}
+  - component: {fileID: 762175650}
   m_Layer: 0
   m_Name: Left Arrow
   m_TagString: Untagged
@@ -339,6 +340,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+--- !u!61 &762175650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762175646}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &884436846
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +867,7 @@ GameObject:
   - component: {fileID: 1612476626}
   - component: {fileID: 1612476627}
   - component: {fileID: 1612476628}
+  - component: {fileID: 1612476629}
   m_Layer: 0
   m_Name: Right Arrow
   m_TagString: Untagged
@@ -927,6 +955,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+--- !u!61 &1612476629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612476625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1683480992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1fec3cccd1236438d33ce1b24055f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rulebookDefault: {fileID: 21300000, guid: f7c3a5f696061794f9a7653b978d2a6c, type: 3}
+  rulebookDefault: {fileID: -1680989992, guid: 69cf938d413a99d4aae46ca201af4f1c, type: 3}
   rulebookMap: {fileID: 21300000, guid: 4bf0454f74efb1549be0ec4882345f06, type: 3}
   rulebook1: {fileID: 21300000, guid: 4f14b65c73d61784db463303e6e75ce7, type: 3}
   rulebook2: {fileID: 21300000, guid: 37edb060e72e5b14d9f52c71ee80eac0, type: 3}
@@ -1090,7 +1144,13 @@ MonoBehaviour:
   rulebook7: {fileID: 21300000, guid: b7a660f1ce8013848bb381a477102d41, type: 3}
   rulebook8: {fileID: 21300000, guid: 70b1e69f8eb6904468fc7d27a830fe0e, type: 3}
   rulebook9: {fileID: 21300000, guid: a11d445f52325ab4c8373a3cbb05a9f2, type: 3}
-  rulebookBlank: {fileID: 21300000, guid: 7c9556e1b6c26744589442191693a547, type: 3}
+  rulebookCover: {fileID: -1461782758, guid: 65a3d59cbaa47dc48953040b4f62ab4c, type: 3}
+  rulebookCoreander: {fileID: 21300000, guid: 0328ad3f82f031e429e531840e89d775, type: 3}
+  rulebookDerekstad: {fileID: 21300000, guid: 0b1fe1162d8ac3e4ba780b739256b7cb, type: 3}
+  rulebookIchkersk: {fileID: 21300000, guid: a105fb64944e73242acafa81ea113b93, type: 3}
+  rulebookKeiraland: {fileID: 21300000, guid: de0af42f738560743b665fdf8a8f4663, type: 3}
+  rulebookKunitri: {fileID: 21300000, guid: d7893750f7c63244985d6acb1ea84b1e, type: 3}
+  rulebookDocuments: {fileID: 21300000, guid: 78708d552bb85394bb0704edf9fc6e2e, type: 3}
   rulebookSpriteList: []
   sprites2: []
   sprites3: []
@@ -1276,7 +1336,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.015705824, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1287,7 +1347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1.5}
+  m_Size: {x: 2.5, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &1920444315
 SpriteRenderer:
@@ -1364,3 +1424,5 @@ MonoBehaviour:
   sprite: {fileID: -1461782758, guid: 65a3d59cbaa47dc48953040b4f62ab4c, type: 3}
   sprite2: {fileID: -1680989992, guid: 69cf938d413a99d4aae46ca201af4f1c, type: 3}
   sprite3: {fileID: 21300000, guid: 4bf0454f74efb1549be0ec4882345f06, type: 3}
+  spriteCount: 0
+  spriteholder: {fileID: 0}

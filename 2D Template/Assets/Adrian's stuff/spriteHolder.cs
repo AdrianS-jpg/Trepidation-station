@@ -10,7 +10,7 @@ public class spriteHolder : MonoBehaviour
     {
         
     }
-    public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookBlank;
+    public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public List<Sprite> rulebookSpriteList;
     public List<Sprite> sprites2;
     public List<Sprite> sprites3;
@@ -20,7 +20,8 @@ public class spriteHolder : MonoBehaviour
         rulebookSpriteList.Add(rulebookDefault);
         rulebookSpriteList.Add(rulebookMap);
         rulebookSpriteList.Add(rulebook1);
-        rulebookSpriteList.Add(rulebookBlank);
+        rulebookSpriteList.Add(rulebookCoreander);
+        rulebookSpriteList.Add(rulebookCover);
     }
 
     // Update is called once per frame
