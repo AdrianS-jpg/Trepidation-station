@@ -51,7 +51,7 @@ public class rulebookMovement : MonoBehaviour
                         {
                             ifClickedOn = true;
                             clicked = true;
-                            spriteCount = 4;
+                            spriteCount = spriteholder.rulebookSpriteList.Count - 1;
                             changeSprite(spriteholder.rulebookSpriteList[spriteCount]);
                             GetComponent<BoxCollider2D>().size = new Vector2(0.9f, 1.5f);
                         }
