@@ -3,14 +3,14 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class AudioSetting : MonoBehaviour
+public class ASetting : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
 
-    public const string MUSIC_MIXER = "MusicVolume";
-    public const string SFX_MIXER = "SFXVolume";
+    public const string MIXER_MUSIC = "MusicVolume";
+    public const string MIXER_SFX = "SFXVolume";
 
     void Awake()
     {
@@ -32,11 +32,11 @@ public class AudioSetting : MonoBehaviour
 
     void SetMusicVolume(float value)
     {
-        mixer.SetFloat(MUSIC_MIXER, Mathf.Log10(value) * 20);
+        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(value) * 20);
     }
     void SetSFXVolume(float value)
     {
-        mixer.SetFloat(SFX_MIXER, Mathf.Log10(value) * 20);
+        mixer.SetFloat(MIXER_SFX, Mathf.Log10(value) * 20);
     }
 
 
