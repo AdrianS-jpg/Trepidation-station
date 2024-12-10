@@ -21,6 +21,11 @@ public class spriteHolder : MonoBehaviour
         rulebookSpriteList.Add(rulebookMap);
         rulebookSpriteList.Add(rulebook1);
         rulebookSpriteList.Add(rulebookCoreander);
+        rulebookSpriteList.Add(rulebookDerekstad);
+        rulebookSpriteList.Add(rulebookIchkersk);
+        rulebookSpriteList.Add(rulebookKeiraland);
+        rulebookSpriteList.Add(rulebookKunitri);
+        rulebookSpriteList.Add(rulebookDocuments);
         rulebookSpriteList.Add(rulebookCover);
     }
 

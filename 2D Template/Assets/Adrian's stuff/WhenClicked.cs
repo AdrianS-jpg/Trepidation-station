@@ -114,7 +114,7 @@ public class WhenClicked : MonoBehaviour
         {
             if (clicked == true)
             {
-                changeSprite(sprite3);
+                changeSprite(sprite2);
             } 
             else
             {
@@ -125,7 +125,7 @@ public class WhenClicked : MonoBehaviour
         else
         {
             redMode = false;
-            if (spriteRenderer.sprite == sprite3)
+            if (spriteRenderer.sprite == sprite2)
             {
                 changeSprite(sprite2);
             }

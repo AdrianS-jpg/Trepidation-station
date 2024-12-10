@@ -62,6 +62,8 @@ public class settingFunction : MonoBehaviour
         {
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Rulebook").GetComponent<rulebookMovement>().sprite2) {
+                GameObject.Find("Text1 (Clone)").GetComponent<CheckButton>();
+                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
                 Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
             }
         }

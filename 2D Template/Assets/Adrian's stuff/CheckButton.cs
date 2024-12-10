@@ -11,9 +11,10 @@ public class CheckButton : MonoBehaviour
     public GameObject obj;
     public Camera camera;
     public bool runsTimes = false;
-    public static List<float> placements = new List<float>() { 0.7f, -0.7f, -1f, -2f };//please for the love of god GET THESE WORKING DUMBASS
-    public static List<string> objs = new List<string>() {"Rulebook", "Rulebook"};//and here
-    public static List<float> Size = new List<float>() { 0.025f, 0.025f}; //and here too
+    public static List<GameObject> checkobjects = new List<GameObject>();
+    public static List<float> placements = new List<float>() { 0.8f, -0.5f, -1f, -2f };//please for the love of god GET THESE WORKING DUMBASS
+    public static List<string> objs = new List<string>() {"Rulebook", "Rulebook", "Rulebook"};//and here
+    public static List<float> Size = new List<float>() { 0.01859468f, 0.009756039f, 0.05f, 0.05f }; //and here too
     public static int placementnumberInList = 0;
     // Start is called before the first frame update
     void Start()
@@ -51,13 +52,11 @@ public class CheckButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (active == true)
-        {
-           // GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add();
-        }
+        //GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add();
     }
     public void whenPressed()
     {
+
     }
     public void placeEverything()
     {

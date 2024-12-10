@@ -21,10 +21,6 @@ public class rulebookflipping : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         rulebook = GameObject.Find("Rulebook");
         spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>();
-        Debug.Log(rulebook.GetComponent<Transform>().position.x);
-        Debug.Log(rulebook.GetComponent<Transform>().localPosition.x);
-        Debug.Log(rulebook.GetComponent<Transform>().TransformPoint(new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 1, rulebook.GetComponent<Transform>().localPosition.y, rulebook.GetComponent<Transform>().localPosition.z)));
-        
     }
 
     // Update is called once per frame
@@ -34,7 +30,6 @@ public class rulebookflipping : MonoBehaviour
         {
             if (active == false && first == false)
             {
-                Debug.Log("work");
                 global();
                 renderer.enabled = true;
                 coll.enabled = true;
@@ -43,20 +38,18 @@ public class rulebookflipping : MonoBehaviour
             else if (active == false){
                 if (side == false)
                 {
-                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 100, rulebook.GetComponent<Transform>().localPosition.y, -2);
+                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
                     side = true;
                 }
                 else if (side == true)
                 {
-                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 100, rulebook.GetComponent<Transform>().localPosition.y, -2);
+                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
                     side = false;
                 }
             }
             else if (active == true) {
-                Debug.Log("test");
                 renderer.enabled = false;
                 coll.enabled = false;
-                
             }
         }
         else
@@ -70,14 +63,16 @@ public class rulebookflipping : MonoBehaviour
     public void OnMouseDown()
     {
         if (active == false){
-            if (flip == false)
+
+            if (rulebook.GetComponent<rulebookMovement>().spriteCount == spriteholder.rulebookSpriteList.Count - 2)
             {
-                if (rulebook.GetComponent<rulebookMovement>().spriteCount == 3)
-                {
-                    rulebook.GetComponent<rulebookMovement>().spriteCount = 0;
-                    rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[0];
-                    Debug.Log("s");
-                }
+                rulebook.GetComponent<rulebookMovement>().spriteCount = 0;
+                rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[0];
+            }
+            else if (rulebook.GetComponent<rulebookMovement>().spriteCount == 0 && flip == false)
+            {
+                rulebook.GetComponent<rulebookMovement>().spriteCount = 0;
+                rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[0];
             }
             else
             {
@@ -85,12 +80,11 @@ public class rulebookflipping : MonoBehaviour
                 {
                     rulebook.GetComponent<rulebookMovement>().spriteCount--;
                 }
-                else
+                else if (flip == true)
                 {
-                    rulebook.GetComponent<rulebookMovement>().spriteCount++;
+                    rulebook.GetComponent<rulebookMovement>().spriteCount += 1;
                 }
                 rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[rulebook.GetComponent<rulebookMovement>().spriteCount];
-                Debug.Log(rulebook.GetComponent<rulebookMovement>().spriteCount);
             }
         }
     }
@@ -107,12 +101,12 @@ public class rulebookflipping : MonoBehaviour
     {
         if (side == false)
         {
-            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 100, rulebook.GetComponent<Transform>().localPosition.y, -2);
+            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
             side = true;
             flip = false;
         } else if (side == true) 
         {
-            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 100, rulebook.GetComponent<Transform>().localPosition.y, -2);
+            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
             side = false;
             flip = true;
         }
