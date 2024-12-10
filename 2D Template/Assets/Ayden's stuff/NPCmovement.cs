@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class NPCmovement : MonoBehaviour
 {
-    public enum Location { Traveling, Accepted, Denied, Middle}
+    public enum Location { Traveling, Accepted, Denied, Middle, GUN}
     public Transform centerscreen;
     public Transform Denied;
     public Transform Accepted;
+    public Transform GUN;
     public Location location = Location.Traveling;
     public float speed = 3f;
     public float wspeed;
@@ -51,6 +52,11 @@ public class NPCmovement : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.timeScale);
         }
+        if (location == Location.GUN)
+        {
+           transform.position = Denied.position;
+            
+        }
         //transform.position = new Vector2(transform.position.x, Mathf.Sin(Time.time * frequency)* wspeed  + yPos);
     }
     private void FixedUpdate()
@@ -78,6 +84,14 @@ public class NPCmovement : MonoBehaviour
             Destroy(ItemInstance);
         }
     }
+    public void Gunner()
+    {
+        if (location == Location.Middle)
+        {
+            location = Location.GUN;
+            Destroy(ItemInstance);
+        }
+    }
 
     public GameObject monster;
     public List<Sprite> allMonsters;
@@ -91,6 +105,12 @@ public class NPCmovement : MonoBehaviour
             location = Location.Traveling;
         }
         else if (location == Location.Denied)
+        {
+            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            transform.position = new Vector2(-11.2f, 0);
+            location = Location.Traveling;
+        }
+        else if (location == Location.GUN)
         {
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
             transform.position = new Vector2(-11.2f, 0);
