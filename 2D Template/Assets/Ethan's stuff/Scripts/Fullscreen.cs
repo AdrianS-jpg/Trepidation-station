@@ -2,15 +2,16 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Fullscreen : MonoBehaviour
 {
-   public void OnClickFullScreen()
+   public void Fullscene(bool is_fullscene)
    {
       
+        Screen.fullScreen = is_fullscene;
 
-
+        Debug.Log("Fullscreen is" + is_fullscene);
 
    }
 }
