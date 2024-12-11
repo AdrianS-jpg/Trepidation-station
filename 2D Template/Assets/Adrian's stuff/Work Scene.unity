@@ -792,7 +792,6 @@ MonoBehaviour:
   sprites: []
   pattern: []
   active: 0
-  prefabtext: {fileID: 1036896350346995326, guid: f9105b8f8ff792947b231cf7c17a3f55, type: 3}
 --- !u!1 &1612476625
 GameObject:
   m_ObjectHideFlags: 0

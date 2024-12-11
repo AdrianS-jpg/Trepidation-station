@@ -903,7 +903,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1262785087}
         m_TargetAssemblyTypeName: rulebookMovement, Assembly-CSharp
         m_MethodName: whenPressed
         m_Mode: 1
@@ -915,8 +915,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WhenClicked, Assembly-CSharp
+      - m_Target: {fileID: 843816240234703001, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+        m_TargetAssemblyTypeName: settingFunction, Assembly-CSharp
         m_MethodName: whenPressed
         m_Mode: 1
         m_Arguments:
@@ -939,7 +939,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1181746248}
         m_TargetAssemblyTypeName: rulebookflipping, Assembly-CSharp
         m_MethodName: whenPressed
         m_Mode: 1
@@ -951,7 +951,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 607812935}
         m_TargetAssemblyTypeName: rulebookflipping, Assembly-CSharp
         m_MethodName: whenPressed
         m_Mode: 1

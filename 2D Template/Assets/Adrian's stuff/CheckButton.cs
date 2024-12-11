@@ -11,7 +11,6 @@ public class CheckButton : MonoBehaviour
     public GameObject obj;
     public Camera camera;
     public bool runsTimes = false;
-    public static List<GameObject> checkobjects = new List<GameObject>();
     public static List<float> placements = new List<float>() { 0.8f, -0.5f, -1f, -2f };//please for the love of god GET THESE WORKING DUMBASS
     public static List<string> objs = new List<string>() {"Rulebook", "Rulebook", "Rulebook"};//and here
     public static List<float> Size = new List<float>() { 0.01859468f, 0.009756039f, 0.05f, 0.05f }; //and here too
@@ -31,7 +30,7 @@ public class CheckButton : MonoBehaviour
         if (GameObject.Find("Passport").GetComponent<WhenClicked>().redMode == true) 
         {
 
-            if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[0] == "correct") { 
+            if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[placementnumberInList / 2] == "correct") { 
 
             }
             //if (obj.GetComponent<SpriteRenderer>().sprite == sprit)

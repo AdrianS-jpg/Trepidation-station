@@ -19,6 +19,7 @@ public class WhenClicked : MonoBehaviour
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
+        transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 2);
     }
 
     // Update is called once per frame
@@ -65,7 +66,7 @@ public class WhenClicked : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane + 1;
+                mousePosition.z = -2;
                 transform.position = mousePosition;
                 //} else                                               
                 //{

@@ -7,7 +7,8 @@ public class settingFunction : MonoBehaviour
     public List<float> sprites = new List<float>(); 
     public List<string> pattern = new List<string>();
     public bool active = false;
-    public GameObject prefabtext;
+    public static List<GameObject> checkobjects = new List<GameObject>();
+    //public GameObject prefabtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,14 +44,16 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
-        int nc = Random.Range(1, 6);
-        if (nc < 6)
-        {
-            pattern.Add("correct");
-        }
-        else
-        {
-            pattern.Add("incorrect");
+        for (var i = 0; i < 3; i++) {
+            int nc = Random.Range(1, 6);
+            if (nc < 6)
+            {
+                pattern.Add("correct");
+            }
+            else
+            {
+                pattern.Add("incorrect");
+            }
         }
     }
     public void whenPressed()
@@ -62,9 +65,8 @@ public class settingFunction : MonoBehaviour
         {
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Rulebook").GetComponent<rulebookMovement>().sprite2) {
-                GameObject.Find("Text1 (Clone)").GetComponent<CheckButton>();
-                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
-                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
+                //Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
+                //Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
             }
         }
     }
