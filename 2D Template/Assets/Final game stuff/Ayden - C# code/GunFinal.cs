@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class Gun : MonoBehaviour
+public class GunFinal : MonoBehaviour
 {
     public UnityEvent Onclick;
     private void OnMouseDown()

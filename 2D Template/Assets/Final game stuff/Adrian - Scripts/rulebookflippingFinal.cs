@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rulebookflipping : MonoBehaviour
+public class rulebookflippingFinal : MonoBehaviour
 {
     public bool active = false;
     private Renderer renderer;
     private Transform transform;
     private GameObject rulebook;
     private BoxCollider2D coll;
-    private spriteHolder spriteholder;
+    private spriteHolderFInal spriteholder;
     public static bool side = false;
     public bool flip = false;
     public bool first = false;
@@ -20,7 +20,7 @@ public class rulebookflipping : MonoBehaviour
         transform = GetComponent<Transform>();
         coll = GetComponent<BoxCollider2D>();
         rulebook = GameObject.Find("Rulebook");
-        spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>();
+        spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolderFInal>();
     }
 
     // Update is called once per frame

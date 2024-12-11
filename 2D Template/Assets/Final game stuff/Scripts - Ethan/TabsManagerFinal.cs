@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TabsManager : MonoBehaviour
+public class TabsManagerFinal : MonoBehaviour
 {
 
     public GameObject[] Tabs;

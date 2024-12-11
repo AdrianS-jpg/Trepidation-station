@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Start_game : MonoBehaviour
+public class Start_gameFinal : MonoBehaviour
 {
     public string LevelName;
 

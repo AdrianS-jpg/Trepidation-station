@@ -6,7 +6,7 @@ using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class rulebookMovement : MonoBehaviour
+public class rulebookMovementFinal : MonoBehaviour
 {
     public Transform transform;
     public bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false, clicked = false;
@@ -14,7 +14,7 @@ public class rulebookMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite sprite, sprite2, sprite3;
     public int spriteCount = 0;
-    public spriteHolder spriteholder;
+    public spriteHolderFInal spriteholder;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class rulebookMovement : MonoBehaviour
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
-        spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>();
+        spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolderFInal>();
     }
 
     // Update is called once per frame

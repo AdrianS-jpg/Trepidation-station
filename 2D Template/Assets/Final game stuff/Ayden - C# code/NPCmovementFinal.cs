@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NPCmovement : MonoBehaviour
+public class NPCmovementFinal : MonoBehaviour
 {
     public enum Location { Traveling, Accepted, Denied, Middle, GUN}
     public Transform centerscreen;

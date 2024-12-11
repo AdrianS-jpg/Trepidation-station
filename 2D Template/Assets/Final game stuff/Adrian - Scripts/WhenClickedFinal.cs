@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
-public class WhenClicked : MonoBehaviour
+public class WhenClickedFinal : MonoBehaviour
 {
     public Transform transform;
     public bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false, clicked = false;

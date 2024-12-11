@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class callingPrefabs : MonoBehaviour
+public class callingPrefabsFinal : MonoBehaviour
 {
     public static 
     // Start is called before the first frame update

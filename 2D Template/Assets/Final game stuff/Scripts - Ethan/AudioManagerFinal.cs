@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour
+public class AudioManagerFinal : MonoBehaviour
 {
-   public static AudioManager instance;
+   public static AudioManagerFinal instance;
 
     [SerializeField] AudioMixer mixer;
     [SerializeField] AudioSource clickSource;

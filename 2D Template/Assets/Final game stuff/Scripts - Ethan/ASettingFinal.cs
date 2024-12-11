@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class ASetting : MonoBehaviour
+public class ASettingFinal : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;
     [SerializeField] Slider musicSlider;
@@ -20,14 +20,14 @@ public class ASetting : MonoBehaviour
 
     void Start()
     {
-        musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
-        sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.SFX_KEY, 1f);
+        musicSlider.value = PlayerPrefs.GetFloat(AudioManagerFinal.MUSIC_KEY, 1f);
+        sfxSlider.value = PlayerPrefs.GetFloat(AudioManagerFinal.SFX_KEY, 1f);
     }
 
     void OnDisable()
     {
-        PlayerPrefs.SetFloat(AudioManager.MUSIC_KEY, musicSlider.value);
-        PlayerPrefs.SetFloat(AudioManager.SFX_KEY, sfxSlider.value);
+        PlayerPrefs.SetFloat(AudioManagerFinal.MUSIC_KEY, musicSlider.value);
+        PlayerPrefs.SetFloat(AudioManagerFinal.SFX_KEY, sfxSlider.value);
     }
 
     void SetMusicVolume(float value)

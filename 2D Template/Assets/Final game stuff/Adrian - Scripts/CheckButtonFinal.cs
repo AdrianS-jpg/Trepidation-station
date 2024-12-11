@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckButton : MonoBehaviour
+public class CheckButtonFinal : MonoBehaviour
 {
     public bool active = false;
     public Transform transform;
@@ -28,10 +28,10 @@ public class CheckButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Passport").GetComponent<WhenClicked>().redMode == true) 
+        if (GameObject.Find("Passport").GetComponent<WhenClickedFinal>().redMode == true) 
         {
 
-            if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[0] == "correct") { 
+            if (GameObject.Find("Circle").GetComponent<settingFunctionFinal>().pattern[0] == "correct") { 
 
             }
             //if (obj.GetComponent<SpriteRenderer>().sprite == sprit)

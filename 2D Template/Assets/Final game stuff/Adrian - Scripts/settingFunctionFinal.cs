@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class settingFunction : MonoBehaviour
+public class settingFunctionFinal : MonoBehaviour
 {
     public List<float> sprites = new List<float>(); 
     public List<string> pattern = new List<string>();

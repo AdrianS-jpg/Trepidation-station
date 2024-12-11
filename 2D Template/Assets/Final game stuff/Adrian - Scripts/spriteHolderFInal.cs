@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class spriteHolder : MonoBehaviour
+public class spriteHolderFInal : MonoBehaviour
 {
     struct rulebookSprites
     {
