@@ -1512,7 +1512,7 @@ MonoBehaviour:
   wspeed: 5
   frequency: 1.5
   amplitude: 0.38
-  item: {fileID: 5318074366427783402, guid: 9d32eb2ec8122ed4f91745f79bc411ed, type: 3}
+  item: {fileID: 2972636292427595726, guid: 5e9f4462c1365654a97978ed0a2c6636, type: 3}
   monster: {fileID: 1020685289}
   allMonsters:
   - {fileID: 21300000, guid: 038c50db84b5c4b47949e9878104caac, type: 3}

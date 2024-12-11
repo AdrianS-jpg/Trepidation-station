@@ -38,12 +38,12 @@ public class rulebookflipping : MonoBehaviour
             else if (active == false){
                 if (side == false)
                 {
-                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
+                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 70, rulebook.GetComponent<Transform>().localPosition.y - 40, -3);
                     side = true;
                 }
                 else if (side == true)
                 {
-                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
+                    transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 70, rulebook.GetComponent<Transform>().localPosition.y - 40, -3);
                     side = false;
                 }
             }
@@ -101,12 +101,12 @@ public class rulebookflipping : MonoBehaviour
     {
         if (side == false)
         {
-            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
+            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -3);
             side = true;
             flip = false;
         } else if (side == true) 
         {
-            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -2);
+            transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 90, rulebook.GetComponent<Transform>().localPosition.y - 50, -3);
             side = false;
             flip = true;
         }

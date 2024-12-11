@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Android.Types;
 using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -72,7 +70,7 @@ public class rulebookMovement : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = -1;
+                mousePosition.z = -2;
                 transform.position = mousePosition;
                 //} else                                               
                 //{
@@ -87,7 +85,7 @@ public class rulebookMovement : MonoBehaviour
                 //}
             } else
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -1);
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -2);
             }
         }
         else
