@@ -11,9 +11,8 @@ public class spriteHolder : MonoBehaviour
         
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
+    public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIcherskOpen, passportKeiraland, passportKeiralandOpen;
     public List<Sprite> rulebookSpriteList;
-    public List<Sprite> sprites2;
-    public List<Sprite> sprites3;
     // Start is called before the first frame update
     void Start()
     {

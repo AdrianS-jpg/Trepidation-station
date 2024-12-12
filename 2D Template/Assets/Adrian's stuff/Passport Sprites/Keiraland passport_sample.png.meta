@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d1e13a3aafdf05447984fd903124ad6f
+guid: 4d959263ff703dd4f9ea8e7d98ad0ed2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,26 +103,50 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: passport kunitri 1_0
+      name: Keiraland passport_sample_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 89
-        width: 416
-        height: 477
+        x: 56
+        y: 23
+        width: 103
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 5, y: 0, z: 4, w: 8}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb2c909e10a38564da795e06bf8be4bc
-      internalID: -2027375451
+      spriteID: 8b6a51b5c20670d4c888755e7b549adc
+      internalID: 702482175
       vertices: []
       indices: 
       edges: []
@@ -138,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      passport kunitri 1_0: -2027375451
+      Keiraland passport_sample_0: 702482175
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

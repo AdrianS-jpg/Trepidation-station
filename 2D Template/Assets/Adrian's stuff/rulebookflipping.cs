@@ -25,7 +25,7 @@ public class rulebookflipping : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (rulebook.GetComponent<SpriteRenderer>().sprite != spriteholder.rulebookCover)
         {
             if (active == false && first == false)
@@ -50,6 +50,7 @@ public class rulebookflipping : MonoBehaviour
             else if (active == true) {
                 renderer.enabled = false;
                 coll.enabled = false;
+                first = false;
             }
         }
         else
@@ -64,10 +65,10 @@ public class rulebookflipping : MonoBehaviour
     {
         if (active == false){
 
-            if (rulebook.GetComponent<rulebookMovement>().spriteCount == spriteholder.rulebookSpriteList.Count - 2)
+            if (rulebook.GetComponent<rulebookMovement>().spriteCount == spriteholder.rulebookSpriteList.Count - 2 && flip == true)
             {
-                rulebook.GetComponent<rulebookMovement>().spriteCount = 0;
-                rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[0];
+                rulebook.GetComponent<rulebookMovement>().spriteCount = spriteholder.rulebookSpriteList.Count - 2;
+                rulebook.GetComponent<SpriteRenderer>().sprite = spriteholder.rulebookSpriteList[spriteholder.rulebookSpriteList.Count - 2];
             }
             else if (rulebook.GetComponent<rulebookMovement>().spriteCount == 0 && flip == false)
             {

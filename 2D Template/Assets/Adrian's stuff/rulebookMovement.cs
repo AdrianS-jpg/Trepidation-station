@@ -35,8 +35,8 @@ public class rulebookMovement : MonoBehaviour
             {
                 clickTime += Time.deltaTime;
                 clickCheck = false;
-                spriteCount = 1;
-                GetComponent<BoxCollider2D>().size = new Vector2(2.5f, 2f);
+                spriteCount = 0;
+                GetComponent<BoxCollider2D>().size = new Vector2(3.235898f, 2f);
             }
             if (click == false)
             {
@@ -59,7 +59,7 @@ public class rulebookMovement : MonoBehaviour
                             clicked = false;
                             spriteCount = 0;
                             changeSprite(spriteholder.rulebookSpriteList[spriteCount]);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2.5f, 2f);
+                            GetComponent<BoxCollider2D>().size = new Vector2(3.235898f, 2f);
                         }
                     }
                 }

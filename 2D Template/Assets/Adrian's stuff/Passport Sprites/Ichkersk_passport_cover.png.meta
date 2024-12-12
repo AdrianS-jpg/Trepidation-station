@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f689e88372ac89f4f97a295ddfda49e1
+guid: 9db62eaa509697540a94e0e8279020a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,26 +103,50 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: passport kunitri sample (1)_0
+      name: Ichkersk_passport_cover_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 90
-        width: 410
-        height: 476
+        x: 32
+        y: 87
+        width: 33
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 0, z: 0, w: 12}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f4c5af75173ee4a80c3df44e9cf5b5
-      internalID: -844861190
+      spriteID: fec2bd3397602dc4c9b921a487caacb8
+      internalID: 659031374
       vertices: []
       indices: 
       edges: []
@@ -138,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      passport kunitri sample (1)_0: -844861190
+      Ichkersk_passport_cover_0: 659031374
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,6 +16,11 @@ public class WhenClicked : MonoBehaviour
     {
         //sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookDefault;
         //sprite3 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookBlank;
+        int number = Random.Range(1, 6);
+        if (number == 1)
+        {
+
+        }
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
@@ -110,25 +115,14 @@ public class WhenClicked : MonoBehaviour
 
     public void whenPressed()
     {
+        Debug.Log("work");
         if (redMode == false)
         {
-            if (clicked == true)
-            {
-                changeSprite(sprite2);
-            } 
-            else
-            {
-                changeSprite(sprite);
-            }
             redMode = true;
         }
         else
         {
             redMode = false;
-            if (spriteRenderer.sprite == sprite2)
-            {
-                changeSprite(sprite2);
-            }
         }
     }
 }

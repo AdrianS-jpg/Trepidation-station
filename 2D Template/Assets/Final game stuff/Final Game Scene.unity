@@ -2056,7 +2056,6 @@ MonoBehaviour:
   sprites: []
   pattern: []
   active: 0
-  prefabtext: {fileID: 1036896350346995326, guid: f9105b8f8ff792947b231cf7c17a3f55, type: 3}
 --- !u!212 &643357739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2943,17 +2942,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rulebookDefault: {fileID: -1680989992, guid: 69cf938d413a99d4aae46ca201af4f1c, type: 3}
   rulebookMap: {fileID: 603812093, guid: 5a1cb1f678f47b144b2f6d5e9281ade2, type: 3}
-  rulebook1: {fileID: 21300000, guid: 4f14b65c73d61784db463303e6e75ce7, type: 3}
-  rulebook2: {fileID: 21300000, guid: 37edb060e72e5b14d9f52c71ee80eac0, type: 3}
-  rulebook3: {fileID: 21300000, guid: 85a2449996d5bba46a81ec7193ea5fb8, type: 3}
-  rulebook4: {fileID: 21300000, guid: 91023b44bc34845429658853091e4afc, type: 3}
-  rulebook5: {fileID: 21300000, guid: 9306dbfe6f7e0f44cb2320e1c71b39aa, type: 3}
-  rulebook6: {fileID: 21300000, guid: fc95cfa48a3218d45bd68136d94ce576, type: 3}
-  rulebook7: {fileID: 21300000, guid: b7a660f1ce8013848bb381a477102d41, type: 3}
-  rulebook8: {fileID: 21300000, guid: 70b1e69f8eb6904468fc7d27a830fe0e, type: 3}
-  rulebook9: {fileID: 21300000, guid: a11d445f52325ab4c8373a3cbb05a9f2, type: 3}
+  rulebook1: {fileID: -280108965, guid: 4f14b65c73d61784db463303e6e75ce7, type: 3}
+  rulebook2: {fileID: 391110321, guid: 37edb060e72e5b14d9f52c71ee80eac0, type: 3}
+  rulebook3: {fileID: 1543580237, guid: 85a2449996d5bba46a81ec7193ea5fb8, type: 3}
+  rulebook4: {fileID: 890171889, guid: 91023b44bc34845429658853091e4afc, type: 3}
+  rulebook5: {fileID: -1242562306, guid: 9306dbfe6f7e0f44cb2320e1c71b39aa, type: 3}
+  rulebook6: {fileID: 1420444500, guid: fc95cfa48a3218d45bd68136d94ce576, type: 3}
+  rulebook7: {fileID: -1137430003, guid: b7a660f1ce8013848bb381a477102d41, type: 3}
+  rulebook8: {fileID: -423943657, guid: 70b1e69f8eb6904468fc7d27a830fe0e, type: 3}
+  rulebook9: {fileID: 1522320638, guid: a11d445f52325ab4c8373a3cbb05a9f2, type: 3}
   rulebookCover: {fileID: -1461782758, guid: 65a3d59cbaa47dc48953040b4f62ab4c, type: 3}
-  rulebookCoreander: {fileID: 21300000, guid: 0328ad3f82f031e429e531840e89d775, type: 3}
+  rulebookCoreander: {fileID: -44816338, guid: 0328ad3f82f031e429e531840e89d775, type: 3}
   rulebookDerekstad: {fileID: 21300000, guid: 0b1fe1162d8ac3e4ba780b739256b7cb, type: 3}
   rulebookIchkersk: {fileID: 21300000, guid: a105fb64944e73242acafa81ea113b93, type: 3}
   rulebookKeiraland: {fileID: 21300000, guid: de0af42f738560743b665fdf8a8f4663, type: 3}
@@ -3259,7 +3258,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.25, y: 1.98}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 0.88, y: 1.49}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
