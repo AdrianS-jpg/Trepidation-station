@@ -35,4 +35,6 @@ public class TabsManager : MonoBehaviour
         TabButtons[TabID].rectTransform.sizeDelta = ActiveTabButtonSize;
 
     }
+
+
 }
