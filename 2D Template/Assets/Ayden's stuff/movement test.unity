@@ -2665,6 +2665,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1676828123973747406, guid: 424db39e24e121540a6ea464a34ebda1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 553c97930aee23e429895d1842b0c80b, type: 3}
+    - target: {fileID: 1676828123973747406, guid: 424db39e24e121540a6ea464a34ebda1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3728700696144076750, guid: c32b42f08e81bdf49b5b58ff5d505a1b, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 424db39e24e121540a6ea464a34ebda1, type: 3}
