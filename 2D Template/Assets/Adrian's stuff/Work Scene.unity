@@ -268,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762175646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -342.2, y: -74.7, z: -4560}
+  m_LocalPosition: {x: -342.2, y: -74.7, z: -4}
   m_LocalScale: {x: 100, y: 100, z: 50.666668}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -316,12 +316,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a7eec25f9f7fa742b18094f6115ccbc, type: 3}
+  m_Sprite: {fileID: -1236918683, guid: 53a39a93afcadcc458b5f328df876b5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3325, y: 0.195}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -359,8 +359,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.3325, y: 0.195}
+    newSize: {x: 0.3325, y: 0.195}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -820,7 +820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612476625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -195.5, y: -56.6, z: -4560}
+  m_LocalPosition: {x: -170, y: -78, z: -4}
   m_LocalScale: {x: 100, y: 100, z: 50.666668}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -868,12 +868,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 692bb49b6dacd8248b7ee84a1d6225ee, type: 3}
+  m_Sprite: {fileID: -1290422365, guid: 9e13fcf4204ad6f4b929a30e6f74bfee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3325, y: 0.195}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -911,8 +911,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.3325, y: 0.195}
+    newSize: {x: 0.3325, y: 0.195}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

@@ -30,6 +30,12 @@ public class WhenClicked : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
+        {
+            redMode = true;
+        } else { 
+            redMode = false;
+        }
         if (redMode == false) {
             GetComponent<BoxCollider2D>().enabled = true;
             if (click == true)
@@ -116,13 +122,6 @@ public class WhenClicked : MonoBehaviour
     public void whenPressed()
     {
         Debug.Log("work");
-        if (redMode == false)
-        {
-            redMode = true;
-        }
-        else
-        {
-            redMode = false;
-        }
+        
     }
 }

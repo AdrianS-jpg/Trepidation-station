@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CheckButton : MonoBehaviour
@@ -11,6 +12,8 @@ public class CheckButton : MonoBehaviour
     public GameObject obj;
     public Camera camera;
     public bool runsTimes = false;
+    public string whatThisIs;
+    public static List<string> whats = new List<string>() {""}; // rulebook box placements? could do in the vector
     public static List<float> placements = new List<float>() { 0.8f, -0.5f, -1f, -2f };//please for the love of god GET THESE WORKING DUMBASS
     public static List<string> objs = new List<string>() {"Rulebook", "Rulebook", "Rulebook"};//and here
     public static List<float> Size = new List<float>() { 0.01859468f, 0.009756039f, 0.05f, 0.05f }; //and here too
@@ -61,6 +64,9 @@ public class CheckButton : MonoBehaviour
     {
         if (runsTimes == false)
         {
+            //new idea: computer knows where to put boxes because of original vector in which it is spawned into, the (x, y, z) coordinate bc it changes immiedently. 
+            //or just use the vector itself as the coordinates
+            //i might be both stupid and smart at the same time chat
             //GetComponent<Renderer>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<BoxCollider2D>().size = new Vector2(Size[placementnumberInList], Size[placementnumberInList + 1]);
