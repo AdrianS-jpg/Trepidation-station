@@ -36,7 +36,7 @@ public class NPCmovement : MonoBehaviour
         Debug.Log(location);
         if (location == Location.Traveling)
         {
-           transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed * Time.timeScale);
+           transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed * Time.deltaTime);
             if (transform.position == centerscreen.position)
             {
                 location = Location.Middle;
@@ -46,11 +46,11 @@ public class NPCmovement : MonoBehaviour
         }
         if (location == Location.Accepted && item.gameObject.GetComponent<SpriteRenderer>().enabled) // Monster only moves to the right when accpeted, and the passport is collected 
         {
-            transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.timeScale);
+            transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.deltaTime);
         }
         if (location == Location.Denied)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.timeScale);
+            transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.deltaTime);
         }
         if (location == Location.GUN)
         {
@@ -125,6 +125,7 @@ public class NPCmovement : MonoBehaviour
     private void DropItem()
     {
         ItemInstance = Instantiate(item, transform.position, transform.rotation);
+        ItemInstance.transform.position = new(0, -3);
     }
 
 
