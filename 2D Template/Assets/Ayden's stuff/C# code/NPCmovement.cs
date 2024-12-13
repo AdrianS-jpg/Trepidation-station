@@ -125,6 +125,7 @@ public class NPCmovement : MonoBehaviour
     private void DropItem()
     {
         ItemInstance = Instantiate(item, transform.position, transform.rotation);
+        ItemInstance.transform.position = new(0, -3);
     }
 
 
