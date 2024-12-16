@@ -5,7 +5,8 @@ using UnityEngine;
 public class settingFunction : MonoBehaviour
 {
     public List<string> sprites = new List<string>(); 
-    public List<string> pattern = new List<string>();
+    public List<Sprite> pattern = new List<Sprite>();
+    public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
     public static List<string> checkobjects = new List<string>();
     public GameObject prefabtext;
@@ -24,13 +25,17 @@ public class settingFunction : MonoBehaviour
         {
             if (sprites.Count == 2)
             {
-                if (sprites[0] == sprites[1])
+                if (sprites[0] == (sprites[1] + "sf") || sprites[1] == (sprites[0] + "sf"))
                 {
                     GetComponent<SpriteRenderer>().color = Color.green;
                 }
+                else if (sprites[0] == (sprites[1] + "err") || sprites[1] == (sprites[0] + "err"))
+                {
+                    GetComponent <SpriteRenderer>().color = Color.red;
+                }
                 else 
                 {
-                    GetComponent<SpriteRenderer>().color = Color.red;
+                    GetComponent<SpriteRenderer>().color = Color.yellow;
                 }
                 sprites[0] = sprites[1];
                 sprites.RemoveAt(1);
@@ -44,17 +49,7 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
-        for (var i = 0; i < 3; i++) {
-            int nc = Random.Range(1, 6);
-            if (nc < 6)
-            {
-                pattern.Add("correct");
-            }
-            else
-            {
-                pattern.Add("incorrect");
-            }
-        }
+        
     }
     public void whenPressed()
     {
@@ -65,22 +60,30 @@ public class settingFunction : MonoBehaviour
         {
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 1) {
-                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
-                Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
+                //-5.320902 x 
+                //-0.4612478 y
+                //-4.405 x
+                //0.139 y
+                Instantiate(prefabtext, new Vector3(-0.05f, 0, 0), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(-1.284f, 0.1f, 1), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(-1.223f, 0.7882f, 2), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(-0.4159f, 0.600f, 3), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(0.449f, 0.736f, 4), Quaternion.identity);
             } else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 2)
             {
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(0.8f, 0.5f, 5), Quaternion.identity);
             }
-            else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount > 3 || GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount <= 7)
+            else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount > 3 && GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount <= 7)
             {
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(2, 0, 6), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(2, 0, 7), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(2, 0, 8), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(2, 0, 9), Quaternion.identity);
             }
             else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 8)
             {
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
-                Instantiate(prefabtext, new Vector3(1, 0, 0), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(3, 0, 10), Quaternion.identity);
+                Instantiate(prefabtext, new Vector3(3, 0, 11), Quaternion.identity);
             }
         }
     }
