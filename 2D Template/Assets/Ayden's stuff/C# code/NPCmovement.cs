@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class NPCmovement : MonoBehaviour
-{
+{ 
     public enum Location { Traveling, Accepted, Denied, Middle, GUN}
     public Transform centerscreen;
     public Transform Denied;
@@ -17,6 +18,7 @@ public class NPCmovement : MonoBehaviour
     public float amplitude;
     float xPos;
     float yPos;
+    public Deskbuttons targetscript; 
 
     public GameObject item;
     //public bool inMiddle;
@@ -28,12 +30,12 @@ public class NPCmovement : MonoBehaviour
         monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
         xPos = transform.position.x; 
         yPos = transform.position.y;
+        targetscript = GameObject.Find("Button Manager").GetComponent<Deskbuttons>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(location);
         if (location == Location.Traveling)
         {
            transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed * Time.deltaTime);
@@ -56,6 +58,19 @@ public class NPCmovement : MonoBehaviour
         {
            transform.position = Denied.position;
             
+        }
+        if (targetscript.gun == true)
+        {
+            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 5);
+            if (location == Location.Middle)
+            {
+                location = Location.GUN;
+                Destroy(ItemInstance);
+            }
+        }
+        if (targetscript.gun == false)
+        {
+            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 6);
         }
         //transform.position = new Vector2(transform.position.x, Mathf.Sin(Time.time * frequency)* wspeed  + yPos);
     }
@@ -85,12 +100,21 @@ public class NPCmovement : MonoBehaviour
         }
     }
     public void Gunner()
-    {
-        if (location == Location.Middle)
+    {   
+        if (targetscript.gun == true)
         {
-            location = Location.GUN;
-            Destroy(ItemInstance);
+            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 5);
+            if (location == Location.Middle)
+            {
+                location = Location.GUN;
+                Destroy(ItemInstance);
+            }
         }
+        if (targetscript.gun == false)
+        {
+            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 6);
+        }
+        
     }
 
     public GameObject monster;

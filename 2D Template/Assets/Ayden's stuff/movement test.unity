@@ -354,6 +354,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1111858264}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195598262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1583,6 +1595,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1111858264}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &924896514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2287,6 +2311,7 @@ MonoBehaviour:
   wspeed: 5
   frequency: 1.5
   amplitude: 0.38
+  targetscript: {fileID: 0}
   item: {fileID: 5318074366427783402, guid: 9d32eb2ec8122ed4f91745f79bc411ed, type: 3}
   monster: {fileID: 1020685289}
   allMonsters:
@@ -2326,6 +2351,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1bea3649eb21e32418b3c934b8d3fc11, type: 3}
   - {fileID: 21300000, guid: 8aa98d015174f1848a532677d5df0e44, type: 3}
   - {fileID: 21300000, guid: 6bc1418ef19082e4ba6acd80ecb237cf, type: 3}
+  - {fileID: 21300000, guid: ff2476998c335a24fa69df09757732d7, type: 3}
+  - {fileID: 21300000, guid: 99fd76baa15538047bfa397903b80ed1, type: 3}
 --- !u!1 &1111858260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,7 +2366,6 @@ GameObject:
   - component: {fileID: 1111858264}
   - component: {fileID: 1111858263}
   - component: {fileID: 1111858265}
-  - component: {fileID: 1111858266}
   m_Layer: 0
   m_Name: Mosin_nagant
   m_TagString: Untagged
@@ -2407,7 +2433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111858260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110.2, y: -279.9, z: 6}
+  m_LocalPosition: {x: 102, y: -192, z: 6}
   m_LocalScale: {x: 189.62274, y: 107.59493, z: 42.616116}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2575,27 +2601,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!50 &1111858266
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111858260}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1118170749
 GameObject:
   m_ObjectHideFlags: 0
