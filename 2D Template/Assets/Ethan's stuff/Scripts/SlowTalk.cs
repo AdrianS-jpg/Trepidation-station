@@ -6,14 +6,16 @@ using UnityEngine;
 public class SlowTalk : MonoBehaviour
 {
    [SerializeField] public float talkingSpeed = 50f;
-   public void Run(string textToType, TMP_Text textLabel)
+   public Coroutine Run(string textToType, TMP_Text textLabel)
     {
-        StartCoroutine(routine:TypeText(textToType, textLabel));
+        return StartCoroutine(routine:TypeText(textToType, textLabel));
     }
 
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
     {
-        yield return new WaitForSeconds(2);
+        textLabel.text = string.Empty;
+
+        
 
         float t = 0;
         int charIndex = 0;
@@ -24,7 +26,7 @@ public class SlowTalk : MonoBehaviour
                 charIndex = Mathf.FloorToInt(t);
             charIndex = Mathf.Clamp(value: charIndex, min: 0, max: textToType.Length);
 
-            textLabel.text = textToType.Substring(startIndex:0, length: charIndex);
+            textLabel.text = textToType.Substring(startIndex:0, length:charIndex);
 
             yield return null;
         }
