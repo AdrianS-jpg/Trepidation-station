@@ -791,8 +791,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites: []
   pattern: []
+  papers: []
   active: 0
   prefabtext: {fileID: 1036896350346995326, guid: f9105b8f8ff792947b231cf7c17a3f55, type: 3}
+  Canvas: {fileID: 1683480995}
 --- !u!1 &1612476625
 GameObject:
   m_ObjectHideFlags: 0

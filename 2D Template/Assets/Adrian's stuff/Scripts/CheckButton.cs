@@ -13,8 +13,20 @@ public class CheckButton : MonoBehaviour
     public Camera camera;
     public bool runsTimes = false;
     public string whatThisIs;
-    public static List<float> Size = new List<float>() { 0.02025991f, 0.007444256f, 0.01097764f, 0.005743125f, 0.01305398f, 0.005743125f, 0.008274899f, 0.002899706f, 0.01515058f, 0.003617398f }; //and here too
-    public static List<string> corrects = new List<string>() {"correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct"};
+    public static List<float> Size = new List<float>() { 
+        0.02025991f, 0.007444256f, 
+        0.01097764f, 0.005743125f, 
+        0.01305398f, 0.005743125f, 
+        0.008274899f, 0.002899706f, 
+        0.01515058f, 0.003617398f, 
+        0.02337617f, 0.008992958f,
+        0.008211082f, 0.01036148f, 
+        0.0225562f, 0.003995122f, 
+        0.0225562f, 0.003995122f, 
+        0.0225562f, 0.003995122f,
+        0.02340841f, 0.009243746f,
+        0.01551636f, 0.009243746f}; //and here too
+    public static List<string> corrects = new List<string>() {"correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct"};
     // Start is called before the first frame update
     void Start()
     {
@@ -63,12 +75,14 @@ public class CheckButton : MonoBehaviour
             //or just use the vector itself as the coordinates
             //i might be both stupid and smart at the same time chat
             //GetComponent<Renderer>().enabled = true;
-            if (transform.localPosition.z >= 0 && transform.localPosition.z <= 11)
+            Debug.Log(transform.position.z);
+            if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
-                whatThisIs = corrects[(int) transform.localPosition.z];
+                whatThisIs = corrects[(int) (transform.position.z + 0.1f)];
+                Debug.Log(whatThisIs);
                 GetComponent<BoxCollider2D>().enabled = true;
-                GetComponent<BoxCollider2D>().size = new Vector2(Size[(int) transform.localPosition.z * 2], Size[(int) (transform.localPosition.z * 2) + 1]);
-                transform.position = new Vector3(GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.x + transform.localPosition.x, GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.y + transform.localPosition.y, -3);
+                GetComponent<BoxCollider2D>().size = new Vector2(Size[(int) (transform.position.z + 0.1f) * 2], Size[(int) ((transform.position.z + 0.1f) * 2) + 1]);
+                transform.position = new Vector3(GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.y + transform.position.y, -3);
                 runsTimes = true;
             }
             else
