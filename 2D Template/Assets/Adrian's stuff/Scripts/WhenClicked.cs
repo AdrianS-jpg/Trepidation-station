@@ -116,7 +116,7 @@ public class WhenClicked : MonoBehaviour
 
     void changeSprite(Sprite s)
     {
-            spriteRenderer.sprite = s;
+        spriteRenderer.sprite = s;
     }
 
     public void whenPressed()

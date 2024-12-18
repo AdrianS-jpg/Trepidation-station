@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class rulebookflipping : MonoBehaviour
 {
-    public bool active = false;
+    public bool active = true;
     private Renderer renderer;
     private Transform transform;
     private GameObject rulebook;
@@ -16,7 +16,7 @@ public class rulebookflipping : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        renderer.enabled = false;
+        renderer.enabled = true;
         transform = GetComponent<Transform>();
         coll = GetComponent<BoxCollider2D>();
         rulebook = GameObject.Find("Rulebook");
@@ -25,7 +25,7 @@ public class rulebookflipping : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         if (rulebook.GetComponent<SpriteRenderer>().sprite != spriteholder.rulebookCover)
         {
             if (active == false && first == false)
@@ -35,7 +35,8 @@ public class rulebookflipping : MonoBehaviour
                 coll.enabled = true;
                 first = true;
             }
-            else if (active == false){
+            else if (active == false)
+            {
                 if (side == false)
                 {
                     transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 75, rulebook.GetComponent<Transform>().localPosition.y - 55, -3);
@@ -47,7 +48,8 @@ public class rulebookflipping : MonoBehaviour
                     side = false;
                 }
             }
-            else if (active == true) {
+            else if (active == true) 
+            {
                 renderer.enabled = false;
                 coll.enabled = false;
                 first = false;
@@ -92,9 +94,12 @@ public class rulebookflipping : MonoBehaviour
 
     public void whenPressed()
     {
-        if (active == false){
+        if (active == false)
+        {
             active = true;
-        } else {
+        } 
+        else if (active == true)
+        {
             active = false;
         }
     }
@@ -105,13 +110,12 @@ public class rulebookflipping : MonoBehaviour
             transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x - 75, rulebook.GetComponent<Transform>().localPosition.y - 55, -3);
             side = true;
             flip = false;
-        } else if (side == true) 
+        } 
+        else if (side == true) 
         {
             transform.localPosition = new Vector3(rulebook.GetComponent<Transform>().localPosition.x + 75, rulebook.GetComponent<Transform>().localPosition.y - 55, -3);
             side = false;
             flip = true;
         }
-        
-        
     }
 }

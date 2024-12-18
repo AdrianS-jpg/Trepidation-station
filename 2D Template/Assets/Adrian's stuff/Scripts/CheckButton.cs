@@ -38,7 +38,7 @@ public class CheckButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Passport").GetComponent<WhenClicked>().redMode == true) 
+        if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true) 
         {
 
             //if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[placementnumberInList / 2] == "correct") { 

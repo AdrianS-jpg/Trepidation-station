@@ -11,10 +11,11 @@ public class settingFunction : MonoBehaviour
     public static List<string> checkobjects = new List<string>();
     public GameObject prefabtext;
     public Canvas Canvas;
+    public int passportnumber;
     // Start is called before the first frame update
     void Start()
     {
-        drop();
+        passportnumber = Random.Range(0, 5);
         GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
         GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -26,7 +27,7 @@ public class settingFunction : MonoBehaviour
         {
             if (sprites.Count == 2)
             {
-                if (sprites[0] == (sprites[1] + "sf") || sprites[1] == (sprites[0] + "sf"))
+                if (sprites[0] == (sprites[1] + "corr") || sprites[1] == (sprites[0] + "corr"))
                 {
                     GetComponent<SpriteRenderer>().color = Color.green;
                 }
@@ -37,6 +38,7 @@ public class settingFunction : MonoBehaviour
                 else 
                 {
                     GetComponent<SpriteRenderer>().color = Color.yellow;
+                    drop();
                 }
                 sprites[0] = sprites[1];
                 sprites.RemoveAt(1);
@@ -50,7 +52,11 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
-        
+        passportnumber = Random.Range(0, 5);
+        Debug.Log(passportnumber);
+        GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
+        GameObject.Find("Passport").GetComponent<WhenClicked>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
+        GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2) + 1];
     }
     public void whenPressed()
     {
@@ -61,16 +67,14 @@ public class settingFunction : MonoBehaviour
         {
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 1) {
-                //-5.320902 x 
-                //-0.4612478 y
-                //-4.405 x
-                //0.139 y
+                Debug.Log("asdg");
                 spawnClone(-0.05f, 0f, 0f);
                 spawnClone(-1.284f, 0.1f, 1f);
                 spawnClone(-1.223f, 0.7882f, 2f);
                 spawnClone(-0.4159f, 0.600f, 3f);
                 spawnClone(0.449f, 0.736f, 4f);
-            } else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 2)
+            } 
+            else if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 2)
             {
                 spawnClone(-1.1f, 0.6f, 5);
             }
@@ -86,10 +90,14 @@ public class settingFunction : MonoBehaviour
                 spawnClone(-1, 0.15f, 10);
                 spawnClone(-1, -0.5f, 11);
             }
-            //if (GameObject.Find("Passport(Clone)").GetComponent<WhenClicked>())
-            //{
-
-            //}
+            if (GameObject.Find("Passport").GetComponent<WhenClicked>().ifClickedOn == true)
+            {
+                spawnClone(0, 0, 12);
+                spawnClone(0, 0, 13);
+                spawnClone(0, 0, 14);
+                spawnClone(0, 0, 15);
+                spawnClone(0, 0, 16);
+            }
         }
     }
 

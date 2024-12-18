@@ -11,8 +11,9 @@ public class spriteHolder : MonoBehaviour
         
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
-    public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIcherskOpen, passportKeiraland, passportKeiralandOpen;
+    public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
     public List<Sprite> rulebookSpriteList;
+    public List<Sprite> passportSpriteList;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,16 @@ public class spriteHolder : MonoBehaviour
         rulebookSpriteList.Add(rulebookKunitri);
         rulebookSpriteList.Add(rulebookDocuments);
         rulebookSpriteList.Add(rulebookCover);
+        passportSpriteList.Add(passportKunitri);
+        passportSpriteList.Add(passportKunitriOpen);
+        passportSpriteList.Add(passportCoreander);
+        passportSpriteList.Add(passportCoreanderOpen);
+        passportSpriteList.Add(passportDerekstad);
+        passportSpriteList.Add(passportDerekstadOpen);
+        passportSpriteList.Add(passportIchkersk);
+        passportSpriteList.Add(passportIchkerskOpen);
+        passportSpriteList.Add(passportKeiraland);
+        passportSpriteList.Add(passportKeiralandOpen);
     }
 
     // Update is called once per frame
