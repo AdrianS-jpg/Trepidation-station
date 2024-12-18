@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 034e08c50202bd647bc3850c5aec38e1
+guid: 29dd6ba9b13630c40a54bc7a634c106d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mosin_nagant_0
+      name: Cobb_N_QuitButton_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 84
-        width: 200
-        height: 30
+        x: 372
+        y: 50
+        width: 635
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c247de92af8f033498f201e3f4d83e7e
-      internalID: -581353452
+      spriteID: 7df25b2896118804899088c280ae1146
+      internalID: -144522094
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mosin_nagant_0: -581353452
+      Cobb_N_QuitButton_0: -144522094
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

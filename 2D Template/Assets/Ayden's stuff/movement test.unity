@@ -691,21 +691,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &253559322
-Transform:
+--- !u!224 &253559322
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253559321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.128, y: -139.979, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 79.95864, y: 51.674835, z: 42.616116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 973690407}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 73}
+  m_SizeDelta: {x: 0, y: 2.800003}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &253559324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2010,7 +2015,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 253559322}
   - {fileID: 1756348298}
   - {fileID: 2124758776}
   - {fileID: 2076260254}
@@ -2023,6 +2027,7 @@ RectTransform:
   - {fileID: 742118913}
   - {fileID: 924896512}
   - {fileID: 195598260}
+  - {fileID: 253559322}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2353,6 +2358,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6bc1418ef19082e4ba6acd80ecb237cf, type: 3}
   - {fileID: 21300000, guid: ff2476998c335a24fa69df09757732d7, type: 3}
   - {fileID: 21300000, guid: 99fd76baa15538047bfa397903b80ed1, type: 3}
+  - {fileID: 21300000, guid: df96a186447d9f944a5956dbf947c2d4, type: 3}
 --- !u!1 &1111858260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,12 +2420,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 034e08c50202bd647bc3850c5aec38e1, type: 3}
+  m_Sprite: {fileID: -581353452, guid: 034e08c50202bd647bc3850c5aec38e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 2, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2433,8 +2439,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111858260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102, y: -192, z: 6}
-  m_LocalScale: {x: 189.62274, y: 107.59493, z: 42.616116}
+  m_LocalPosition: {x: 102, y: -193.48, z: 6}
+  m_LocalScale: {x: 189.62274, y: 111.89873, z: 42.616116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 973690407}
@@ -2458,6 +2464,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1020685294}
         m_TargetAssemblyTypeName: NPCmovement, Assembly-CSharp
         m_MethodName: Gunner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2138648909}
+        m_TargetAssemblyTypeName: Deskbuttons, Assembly-CSharp
+        m_MethodName: Gun_out
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2496,8 +2514,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
+    oldSize: {x: 2, y: 0.3}
+    newSize: {x: 2, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

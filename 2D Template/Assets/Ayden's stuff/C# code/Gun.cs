@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class Gun : MonoBehaviour
 {
     public UnityEvent Onclick;
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         Onclick.Invoke();
     }
