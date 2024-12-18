@@ -2010,7 +2010,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 253559322}
   - {fileID: 1756348298}
   - {fileID: 2124758776}
   - {fileID: 2076260254}
@@ -2023,6 +2022,7 @@ RectTransform:
   - {fileID: 742118913}
   - {fileID: 924896512}
   - {fileID: 195598260}
+  - {fileID: 253559322}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
