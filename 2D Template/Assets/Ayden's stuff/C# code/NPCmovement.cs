@@ -57,20 +57,6 @@ public class NPCmovement : MonoBehaviour
         if (location == Location.GUN)
         {
            transform.position = Denied.position;
-            
-        }
-        if (targetscript.gun == true)
-        {
-            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 5);
-            if (location == Location.Middle)
-            {
-                location = Location.GUN;
-                Destroy(ItemInstance);
-            }
-        }
-        if (targetscript.gun == false)
-        {
-            GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 6);
         }
         //transform.position = new Vector2(transform.position.x, Mathf.Sin(Time.time * frequency)* wspeed  + yPos);
     }
@@ -110,10 +96,10 @@ public class NPCmovement : MonoBehaviour
                 Destroy(ItemInstance);
             }
         }
-        if (targetscript.gun == false)
-        {
+        /*if (targetscript.gun == false)
+        {*/
             GameObject.Find("Mosin_nagant").transform.localPosition = new Vector3(102, -192, 6);
-        }
+        //}
         
     }
 

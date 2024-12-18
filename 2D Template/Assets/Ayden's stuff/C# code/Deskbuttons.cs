@@ -53,6 +53,7 @@ public class Deskbuttons : MonoBehaviour
             }
             
         }
+
     }
     public void light_gun()
     {
