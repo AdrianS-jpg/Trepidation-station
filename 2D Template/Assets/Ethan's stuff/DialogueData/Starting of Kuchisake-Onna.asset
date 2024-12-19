@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
-  m_Name: Test
+  m_Name: Starting of Kuchisake-Onna
   m_EditorClassIdentifier: 
   dialogue:
-  - Have you heard of our lord and savior free shavocado....?
-  - No? Well may your trip downstairs be pleasant, Cheers mate!!!!
+  - '*Heavy Breathing*'
+  - Uhm...Hello?
+  - Do...Do you think I'm Beautiful?
   responses: []
