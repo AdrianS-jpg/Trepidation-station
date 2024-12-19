@@ -27,6 +27,7 @@ public class spriteHolder : MonoBehaviour
         rulebookSpriteList.Add(rulebookKunitri);
         rulebookSpriteList.Add(rulebookDocuments);
         rulebookSpriteList.Add(rulebookCover);
+
         passportSpriteList.Add(passportKunitri);
         passportSpriteList.Add(passportKunitriOpen);
         passportSpriteList.Add(passportCoreander);

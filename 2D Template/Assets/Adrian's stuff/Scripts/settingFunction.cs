@@ -5,7 +5,7 @@ using UnityEngine;
 public class settingFunction : MonoBehaviour
 {
     public List<string> sprites = new List<string>(); 
-    public List<Sprite> pattern = new List<Sprite>();
+    public List<string> pattern = new List<string>() {"Bigfoot01"};
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
     public static List<string> checkobjects = new List<string>();
@@ -52,9 +52,17 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
+        // get this to function correctly, it's not hooked up to anything. maybe make temp button for it?
         passportnumber = Random.Range(0, 5);
         Debug.Log(passportnumber);
-        GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
+        if (GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Passport").GetComponent<WhenClicked>().sprite)
+        {
+            GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2)];
+        } else
+        {
+            GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2) + 1];
+        }
+        
         GameObject.Find("Passport").GetComponent<WhenClicked>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
         GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2) + 1];
     }
@@ -90,13 +98,36 @@ public class settingFunction : MonoBehaviour
                 spawnClone(-1, 0.15f, 10);
                 spawnClone(-1, -0.5f, 11);
             }
+
             if (GameObject.Find("Passport").GetComponent<WhenClicked>().ifClickedOn == true)
             {
-                spawnClone(0, 0, 12);
-                spawnClone(0, 0, 13);
-                spawnClone(0, 0, 14);
-                spawnClone(0, 0, 15);
-                spawnClone(0, 0, 16);
+                if (passportnumber == 0 || passportnumber == 3)
+                {
+                    spawnClone(-1f, -1.1f, 12);
+                    spawnClone(0.9f, -0.25f, 13);
+                    spawnClone(0.9f, -0.70f, 14);
+                    spawnClone(0.9f, -1.05f, 15);
+                    spawnClone(0.9f, -1.40f, 16);
+                }
+                else // finish this
+                {
+                    Debug.Log("askljfhasljkdfh");
+                    spawnClone(1f, -1f, 12);
+                    spawnClone(-0.9f, -0.25f, 13);
+                    spawnClone(-0.9f, -0.70f, 14);
+                    spawnClone(-0.9f, -1.07f, 15);
+                    spawnClone(-0.9f, -1.50f, 16);
+                }
+
+            }
+            if (GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled == true)
+            {
+                //spawnClone(0, 0, 17);
+                //spawnClone(0, 0, 18);
+                //spawnClone(0, 0, 19);
+                //spawnClone(0, 0, 20);
+                //spawnClone(0, 0, 21);
+                //set this up to the ID prefab
             }
         }
     }

@@ -25,8 +25,14 @@ public class CheckButton : MonoBehaviour
         0.0225562f, 0.003995122f, 
         0.0225562f, 0.003995122f,
         0.02340841f, 0.009243746f,
-        0.01551636f, 0.009243746f}; //and here too
-    public static List<string> corrects = new List<string>() {"correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct"};
+        0.01551636f, 0.009243746f,
+        0.01803832f, 0.01869354f,
+        0.03211192f, 0.006273255f,
+        0.03211192f, 0.005332447f,
+        0.03211192f, 0.005332447f,
+        0.03211192f, 0.005332447f}; //and here too
+    public string nameOfPlace;
+    public static List<string> corrects = new List<string>() {"correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct"};
     // Start is called before the first frame update
     void Start()
     {
@@ -78,20 +84,18 @@ public class CheckButton : MonoBehaviour
             Debug.Log(transform.position.z);
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
-                whatThisIs = corrects[(int) (transform.position.z + 0.1f)];
-                Debug.Log(whatThisIs);
-                GetComponent<BoxCollider2D>().enabled = true;
-                GetComponent<BoxCollider2D>().size = new Vector2(Size[(int) (transform.position.z + 0.1f) * 2], Size[(int) ((transform.position.z + 0.1f) * 2) + 1]);
-                transform.position = new Vector3(GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find("Rulebook").GetComponent<Transform>().transform.position.y + transform.position.y, -3);
-                runsTimes = true;
+                nameOfPlace = "Rulebook";
             }
-            else
+            else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
             {
-                GetComponent<BoxCollider2D>().enabled = true;
-                //GetComponent<BoxCollider2D>().size = new Vector2(Size[placementnumberInList], Size[placementnumberInList + 1]);
-                //transform.position = new Vector3(obj.GetComponent<Transform>().transform.position.x + placements[placementnumberInList], obj.GetComponent<Transform>().transform.position.y + placements[placementnumberInList + 1], obj.GetComponent<Transform>().transform.position.z);
-                runsTimes = true;
+                nameOfPlace = "Passport";
             }
+            whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
+            Debug.Log(whatThisIs);
+            GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().size = new Vector2(Size[(int)(transform.position.z + 0.1f) * 2], Size[(int)((transform.position.z + 0.1f) * 2) + 1]);
+            transform.position = new Vector3(GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.y + transform.position.y, -3);
+            runsTimes = true;
 
         }
     }

@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class WhenClicked : MonoBehaviour
+public class idMovement : MonoBehaviour
 {
     public Transform transform;
-    public bool ifClickedOn = false, follow = false, click = false, clickCheck = false, redMode = false, clicked = false;
+    public bool follow = false, click = false, clickCheck = false, redMode = false;
     private float clickTime = 0f;
     public SpriteRenderer spriteRenderer;
-    public Sprite sprite, sprite2;
-    public int number;
+    public Sprite sprite;
+
     // Start is called before the first frame update
     void Start()
     {
-        //
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
-        transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 2);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
     }
 
     // Update is called once per frame
@@ -27,43 +26,44 @@ public class WhenClicked : MonoBehaviour
         if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
         {
             redMode = true;
-        } else { 
+        }
+        else
+        {
             redMode = false;
         }
-        if (redMode == false) {
+        if (redMode == false)
+        {
             GetComponent<BoxCollider2D>().enabled = true;
             if (click == true)
             {
                 clickTime += Time.deltaTime;
                 clickCheck = false;
-                GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
             }
             if (click == false)
             {
-                if (clickCheck == false)
-                {
-                    if (clickTime <= 0.15f && clickTime >= 0.000000001f)
-                    {
-                        follow = false;
-                        if (ifClickedOn == false)
-                        {
-                            ifClickedOn = true;
-                            clicked = true;
-                            changeSprite(sprite2);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
-                        }
-                        else
-                        {
-                            ifClickedOn = false;
-                            clicked = false;
-                            changeSprite(sprite);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
-                        }
-                    }
-                }
+                //if (clickCheck == false)
+                //{
+                //    if (clickTime <= 0.15f && clickTime >= 0.000000001f)
+                //    {
+                //        follow = false;
+                //        if (ifClickedOn == false)
+                //        {
+                //            ifClickedOn = true;
+                //            clicked = true;
+                //            changeSprite(sprite2);
+                //            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+                //            GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
+                //        }
+                //        else
+                //        {
+                //            ifClickedOn = false;
+                //            clicked = false;
+                //            changeSprite(sprite);
+                //            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
+                //            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                //        }
+                //    }
+                //}
                 clickCheck = true;
             }
             if (follow == true)
@@ -85,7 +85,8 @@ public class WhenClicked : MonoBehaviour
                 //    follow = false;
                 //}
             }
-        } else
+        }
+        else
         {
             GetComponent<BoxCollider2D>().enabled = false;
         }
@@ -101,10 +102,10 @@ public class WhenClicked : MonoBehaviour
     }
     void OnMouseUp()
     {
-        if (redMode == false) 
+        if (redMode == false)
         {
-        click = false;
-        follow = false;
+            click = false;
+            follow = false;
         }
     }
 
@@ -116,6 +117,8 @@ public class WhenClicked : MonoBehaviour
     public void whenPressed()
     {
         Debug.Log("work");
-        
+
     }
 }
+
+
