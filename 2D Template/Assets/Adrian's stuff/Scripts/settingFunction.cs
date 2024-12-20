@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,17 @@ using UnityEngine;
 public class settingFunction : MonoBehaviour
 {
     public List<string> sprites = new List<string>(); 
-    public List<string> pattern = new List<string>() {"Bigfoot01"};
+    public List<string> pattern = new List<string>() {"err191Bigfoot", "asdf"};
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
     public static List<string> checkobjects = new List<string>();
     public GameObject prefabtext;
     public Canvas Canvas;
     public int passportnumber;
+    public int patternNum = 0;
     // Start is called before the first frame update
     void Start()
     {
-        passportnumber = Random.Range(0, 5);
         GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
         GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -27,18 +28,18 @@ public class settingFunction : MonoBehaviour
         {
             if (sprites.Count == 2)
             {
-                if (sprites[0] == (sprites[1] + "corr") || sprites[1] == (sprites[0] + "corr"))
+                if (sprites[0] == (sprites[1] + "orr") || sprites[1] == (sprites[0] + "orr"))
                 {
                     GetComponent<SpriteRenderer>().color = Color.green;
                 }
                 else if (sprites[0] == (sprites[1] + "err") || sprites[1] == (sprites[0] + "err"))
                 {
-                    GetComponent <SpriteRenderer>().color = Color.red;
+                    GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 else 
                 {
                     GetComponent<SpriteRenderer>().color = Color.yellow;
-                    drop();
+                    //drop();
                 }
                 sprites[0] = sprites[1];
                 sprites.RemoveAt(1);
@@ -53,8 +54,13 @@ public class settingFunction : MonoBehaviour
     public void drop()
     {
         // get this to function correctly, it's not hooked up to anything. maybe make temp button for it?
-        passportnumber = Random.Range(0, 5);
-        Debug.Log(passportnumber);
+        // this IS supposed to run when you call a new person so idk
+        // maybe run this with turning the sprite on and the collider
+        if (pattern[0].Substring(0 , 3) == "err")
+        {
+            CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))].Length - 3,3) + "err";
+        }
+        Debug.Log(CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))]);
         if (GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Passport").GetComponent<WhenClicked>().sprite)
         {
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2)];
@@ -101,32 +107,36 @@ public class settingFunction : MonoBehaviour
 
             if (GameObject.Find("Passport").GetComponent<WhenClicked>().ifClickedOn == true)
             {
-                if (passportnumber == 0 || passportnumber == 3)
-                {
+                //if (passportnumber == 0 || passportnumber == 3)
+                //{
                     spawnClone(-1f, -1.1f, 12);
                     spawnClone(0.9f, -0.25f, 13);
                     spawnClone(0.9f, -0.70f, 14);
                     spawnClone(0.9f, -1.05f, 15);
                     spawnClone(0.9f, -1.40f, 16);
-                }
-                else // finish this
-                {
-                    Debug.Log("askljfhasljkdfh");
-                    spawnClone(1f, -1f, 12);
-                    spawnClone(-0.9f, -0.25f, 13);
-                    spawnClone(-0.9f, -0.70f, 14);
-                    spawnClone(-0.9f, -1.07f, 15);
-                    spawnClone(-0.9f, -1.50f, 16);
-                }
+                //}
+                //else 
+                //// finish this
+                ////yo past adrian your stupid it's already done dummy
+                ////idiot
+                ////fool
+                //{
+                //    Debug.Log("askljfhasljkdfh");
+                //    spawnClone(1f, -1f, 12);
+                //    spawnClone(-0.9f, -0.25f, 13);
+                //    spawnClone(-0.9f, -0.70f, 14);
+                //    spawnClone(-0.9f, -1.07f, 15);
+                //    spawnClone(-0.9f, -1.50f, 16);
+                //}
 
             }
             if (GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled == true)
             {
-                //spawnClone(0, 0, 17);
-                //spawnClone(0, 0, 18);
-                //spawnClone(0, 0, 19);
-                //spawnClone(0, 0, 20);
-                //spawnClone(0, 0, 21);
+                spawnClone(-0.77f, 0.29f, 17);
+                spawnClone(0.4f, 0.55f, 18);
+                spawnClone(0.4f, 0.27f, 19);
+                spawnClone(0.4f, 0.01f, 20);
+                spawnClone(0.37f, -0.21f, 21);
                 //set this up to the ID prefab
             }
         }

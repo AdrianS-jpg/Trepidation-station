@@ -14,7 +14,7 @@ public class CheckButton : MonoBehaviour
     public bool runsTimes = false;
     public string whatThisIs;
     public static List<float> Size = new List<float>() { 
-        0.02025991f, 0.007444256f, 
+        0.02025991f, 0.007444256f, //0
         0.01097764f, 0.005743125f, 
         0.01305398f, 0.005743125f, 
         0.008274899f, 0.002899706f, 
@@ -26,13 +26,23 @@ public class CheckButton : MonoBehaviour
         0.0225562f, 0.003995122f,
         0.02340841f, 0.009243746f,
         0.01551636f, 0.009243746f,
+        //11 ^ 
+        //12 v
         0.01803832f, 0.01869354f,
         0.03211192f, 0.006273255f,
         0.03211192f, 0.005332447f,
         0.03211192f, 0.005332447f,
-        0.03211192f, 0.005332447f}; //and here too
+        0.03211192f, 0.005332447f, 
+        //17 V
+        0.01013526f, 0.009875286f, 
+        0.02158399f, 0.003514871f,
+        0.02198755f, 0.003074671f, 
+        0.02198755f, 0.003835016f, 
+        0.02190684f, 0.004235197f}; //and here too
+    // list for sizes
+    // this is nessesary i promise
     public string nameOfPlace;
-    public static List<string> corrects = new List<string>() {"correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct", "correct"};
+    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "cityorr", "classorr", "picture", "name", "birth", "weight", "class"};
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +99,10 @@ public class CheckButton : MonoBehaviour
             else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
             {
                 nameOfPlace = "Passport";
+            }
+            else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
+            {
+                nameOfPlace = "ID";
             }
             whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
             Debug.Log(whatThisIs);

@@ -638,6 +638,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1579959693}
+        m_TargetAssemblyTypeName: settingFunction, Assembly-CSharp
+        m_MethodName: drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245591387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +808,7 @@ MonoBehaviour:
   prefabtext: {fileID: 1036896350346995326, guid: f9105b8f8ff792947b231cf7c17a3f55, type: 3}
   Canvas: {fileID: 1683480995}
   passportnumber: 0
+  patternNum: 0
 --- !u!1 &1612476625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1117,7 @@ MonoBehaviour:
   passportIchkerskOpen: {fileID: 959937786, guid: 4ce1f24ff43347f47949c94864b39c25, type: 3}
   passportKeiraland: {fileID: -202399527, guid: 1c40b2073cc1feb41b97756c46d6ed27, type: 3}
   passportKeiralandOpen: {fileID: 702482175, guid: 4d959263ff703dd4f9ea8e7d98ad0ed2, type: 3}
+  Bigfoot: {fileID: -339205139, guid: 2b4d04c5e0afbd44e9397ba043c89d91, type: 3}
   rulebookSpriteList: []
   passportSpriteList: []
 --- !u!1 &1906817085
@@ -1537,6 +1551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Passport
       objectReference: {fileID: 0}
+    - target: {fileID: 843816240234703004, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bfbc2fee212016e448dfef41569e44f2, type: 3}
     - target: {fileID: 843816240234703005, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1589,10 +1607,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843816240234703006, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 843816240234703006, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 843816240234703007, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bfbc2fee212016e448dfef41569e44f2, type: 3}
     - target: {fileID: 843816240234703007, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
       propertyPath: sprite2
       value: 
-      objectReference: {fileID: 959937786, guid: 4ce1f24ff43347f47949c94864b39c25, type: 3}
+      objectReference: {fileID: -339205139, guid: 2b4d04c5e0afbd44e9397ba043c89d91, type: 3}
     m_RemovedComponents:
     - {fileID: 843816240234703001, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
     m_AddedGameObjects: []
