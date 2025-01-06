@@ -38,7 +38,7 @@ public class CheckButton : MonoBehaviour
         0.02158399f, 0.003514871f,
         0.02198755f, 0.003074671f, 
         0.02198755f, 0.003835016f, 
-        0.02190684f, 0.004235197f}; //and here too
+        0.02190684f, 0.004235197f}; 
     // list for sizes
     // this is nessesary i promise
     public string nameOfPlace;

@@ -12,9 +12,10 @@ public class spriteHolder : MonoBehaviour
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
-    public Sprite Bigfoot;
+    public Sprite Bigfoot, Frank, Blink, Phillip;
     public List<Sprite> rulebookSpriteList;
     public List<Sprite> passportSpriteList;
+    public List<Sprite> characterSpriteList;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,10 @@ public class spriteHolder : MonoBehaviour
         passportSpriteList.Add(passportKeiraland);
         passportSpriteList.Add(passportKeiralandOpen);
 
-
+        characterSpriteList.Add(Bigfoot);
+        characterSpriteList.Add(Frank);
+        characterSpriteList.Add(Blink);
+        characterSpriteList.Add(Phillip);
     }
 
     // Update is called once per frame

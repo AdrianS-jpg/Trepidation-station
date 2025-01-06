@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class settingFunction : MonoBehaviour
 {
     public List<string> sprites = new List<string>(); 
-    public List<string> pattern = new List<string>() {"err191Bigfoot", "asdf"};
+    private List<string> pattern = new List<string>() {"err1410"};
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
     public static List<string> checkobjects = new List<string>();
@@ -53,24 +54,24 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
+        Debug.Log(pattern[patternNum].Substring(3, 2));
+        passportnumber = Convert.ToInt32(pattern[0].Substring(5, 1));
         // get this to function correctly, it's not hooked up to anything. maybe make temp button for it?
         // this IS supposed to run when you call a new person so idk
         // maybe run this with turning the sprite on and the collider
-        if (pattern[0].Substring(0 , 3) == "err")
+        if (pattern[patternNum].Substring(0 , 3) == "err")
         {
-            CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))].Length - 3,3) + "err";
+            CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Length - 3,3) + "err";
+            Debug.Log(CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))]);
         }
-        Debug.Log(CheckButton.corrects[Convert.ToInt32(pattern[0].Substring(2, 2))]);
         if (GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Passport").GetComponent<WhenClicked>().sprite)
         {
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2)];
-        } else
-        {
-            GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2) + 1];
         }
         
         GameObject.Find("Passport").GetComponent<WhenClicked>().sprite = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
-        GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2) + 1];
+        GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().characterSpriteList[Convert.ToInt32(pattern[patternNum].Substring(6,1))];
+        patternNum++;
     }
     public void whenPressed()
     {
@@ -107,27 +108,27 @@ public class settingFunction : MonoBehaviour
 
             if (GameObject.Find("Passport").GetComponent<WhenClicked>().ifClickedOn == true)
             {
-                //if (passportnumber == 0 || passportnumber == 3)
-                //{
+                if (passportnumber == 0 || passportnumber == 3)
+                {
                     spawnClone(-1f, -1.1f, 12);
                     spawnClone(0.9f, -0.25f, 13);
                     spawnClone(0.9f, -0.70f, 14);
                     spawnClone(0.9f, -1.05f, 15);
                     spawnClone(0.9f, -1.40f, 16);
-                //}
-                //else 
-                //// finish this
-                ////yo past adrian your stupid it's already done dummy
-                ////idiot
-                ////fool
-                //{
-                //    Debug.Log("askljfhasljkdfh");
-                //    spawnClone(1f, -1f, 12);
-                //    spawnClone(-0.9f, -0.25f, 13);
-                //    spawnClone(-0.9f, -0.70f, 14);
-                //    spawnClone(-0.9f, -1.07f, 15);
-                //    spawnClone(-0.9f, -1.50f, 16);
-                //}
+                }
+                else
+                // finish this
+                //yo past adrian your stupid it's already done dummy
+                //idiot
+                //fool
+                {
+                    Debug.Log("askljfhasljkdfh");
+                        spawnClone(1f, -1f, 12);
+                        spawnClone(-0.9f, -0.25f, 13);
+                        spawnClone(-0.9f, -0.70f, 14);
+                        spawnClone(-0.9f, -1.07f, 15);
+                        spawnClone(-0.9f, -1.50f, 16);
+                    }
 
             }
             if (GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled == true)
