@@ -12,10 +12,12 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueObject testDialogue;
 
     private SlowTalk slowTalk;
+    private ResponseHandler responseHandler;
 
     private void Start()
     {
         slowTalk = GetComponent<SlowTalk>();
+        responseHandler = GetComponent<ResponseHandler> ();
         CloseDialogueBox();
         ShowDialogue(testDialogue);
     }
@@ -31,16 +33,28 @@ public class DialogueUI : MonoBehaviour
     {
         
 
-        foreach (string dialogue in dialogueObject.Dialogue)
+        
+        for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
+            string dialogue = dialogueObject.Dialogue[i];
             yield return slowTalk.Run(dialogue, textLabel);
-            //yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));              // This is if we want it to be an input for the next dialogue instead of it ending and going to the next piece.
-            yield return new WaitForSeconds(2);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));              // This is if we want it to be an input for the next dialogue instead of it ending and going to the next piece.
+            //yield return new WaitForSeconds(2);
 
+            if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.Responses != null && dialogueObject.HasResponses) break;
+
+            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
+        }
+
+        if (dialogueObject.HasResponses)
+        {
+            responseHandler.ShowResponses(dialogueObject.Responses);
+        }
+        else
+        {
+            CloseDialogueBox();
         }
         
-
-        CloseDialogueBox();
     }
 
     private void CloseDialogueBox()

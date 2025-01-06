@@ -9,5 +9,6 @@ public class DialogueObject : ScriptableObject
 
     public string[] Dialogue => dialogue;
 
+    public bool HasResponses => Responses != null && Responses.Length > 0;
     public Responses[] Responses => responses;
 }
