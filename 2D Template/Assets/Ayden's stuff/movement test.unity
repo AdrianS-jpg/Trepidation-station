@@ -1829,6 +1829,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1020685291}
   - {fileID: 721361031}
   - {fileID: 253559322}
   - {fileID: 1756348298}
@@ -1839,7 +1840,6 @@ RectTransform:
   - {fileID: 1981890053}
   - {fileID: 1111858262}
   - {fileID: 438171805}
-  - {fileID: 1020685291}
   - {fileID: 742118913}
   - {fileID: 924896512}
   - {fileID: 195598260}
@@ -2066,7 +2066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020685289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -475.59586, y: 42.616116, z: 6}
+  m_LocalPosition: {x: -475.59586, y: 42.616116, z: -6}
   m_LocalScale: {x: 29.83128, y: 29.83128, z: 42.616116}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2176,6 +2176,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: df96a186447d9f944a5956dbf947c2d4, type: 3}
   - {fileID: 21300000, guid: 94976f6bfc2d1fd45a5f3a93016090e2, type: 3}
   - {fileID: 21300000, guid: 1b34ad8dad189a44c80cc6454aa64137, type: 3}
+  - {fileID: 21300000, guid: 4fae6c6a1846cf447bd2a91f41f72e0f, type: 3}
+  - {fileID: 21300000, guid: 89b02a4b4d960294ea2a34c47ca19cff, type: 3}
+  - {fileID: 21300000, guid: 63791a0d7c3ffe34cac7c1c66b33cd6f, type: 3}
 --- !u!1 &1111858260
 GameObject:
   m_ObjectHideFlags: 0
