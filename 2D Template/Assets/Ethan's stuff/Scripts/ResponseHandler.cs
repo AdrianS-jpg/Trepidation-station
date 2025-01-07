@@ -39,17 +39,17 @@ public class ResponseHandler : MonoBehaviour
 
     private void OnPickedResponse(Responses response)
     {
-        //responseBox.gameObject.SetActive(false);
+        responseBox.gameObject.SetActive(false);
 
-        //foreach (GameObjectbutton in tempResponseButtons)
-        //{
-        //    //Destroy(button);
-        //}
-        //tempResponseButtons.Clear();
+        foreach (GameObject button in tempResponseButtons)
+        {
+            Destroy(button);
+        }
+        tempResponseButtons.Clear();
 
-        //dialogueUI.ShowDialogue(response.DiaLogueObject);
+        dialogueUI.ShowDialogue(response.DiaLogueObject);
 
-        
+
 
     }
 

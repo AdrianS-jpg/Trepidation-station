@@ -16,9 +16,9 @@ MonoBehaviour:
   - "Uhm\u2026Hello?"
   - "Do\u2026Do you think I\u2019m Beautiful?"
   responses:
-  - responseText: Yes Slay
-    dialogueObject: {fileID: 0}
-  - responseText: 
-    dialogueObject: {fileID: 0}
-  - responseText: 
-    dialogueObject: {fileID: 0}
+  - responseText: Yes
+    dialogueObject: {fileID: 11400000, guid: f87d863711747df4eb585653c1a2d488, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: f87d863711747df4eb585653c1a2d488, type: 2}
+  - responseText: I don't know
+    dialogueObject: {fileID: 11400000, guid: 434ac30e15afef14e8c6b671389a6bab, type: 2}
