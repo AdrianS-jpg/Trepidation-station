@@ -113,9 +113,4 @@ public class WhenClicked : MonoBehaviour
         spriteRenderer.sprite = s;
     }
 
-    public void whenPressed()
-    {
-        Debug.Log("work");
-        
-    }
 }

@@ -859,18 +859,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1309238778}
-        m_TargetAssemblyTypeName: WhenClicked, Assembly-CSharp
-        m_MethodName: whenPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1579959693}
         m_TargetAssemblyTypeName: settingFunction, Assembly-CSharp
         m_MethodName: whenPressed
@@ -898,18 +886,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1612476628}
         m_TargetAssemblyTypeName: rulebookflipping, Assembly-CSharp
         m_MethodName: whenPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1579959693}
-        m_TargetAssemblyTypeName: settingFunction, Assembly-CSharp
-        m_MethodName: drop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -962,17 +938,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 843816240234703005, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
   m_PrefabInstance: {fileID: 843816239194983781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1309238778 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 843816240234703007, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
-  m_PrefabInstance: {fileID: 843816239194983781}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e0e43c2adbdd148834d61ed487e2b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1579959690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1042,8 @@ MonoBehaviour:
   Canvas: {fileID: 1683480995}
   passportnumber: 0
   patternNum: 0
+  end: 0
+  spriteHolder: {fileID: 0}
 --- !u!1 &1612476625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,12 +1354,16 @@ MonoBehaviour:
   passportKeiraland: {fileID: -202399527, guid: 1c40b2073cc1feb41b97756c46d6ed27, type: 3}
   passportKeiralandOpen: {fileID: 702482175, guid: 4d959263ff703dd4f9ea8e7d98ad0ed2, type: 3}
   Bigfoot: {fileID: -339205139, guid: 2b4d04c5e0afbd44e9397ba043c89d91, type: 3}
-  Frank: {fileID: 21300000, guid: 150d1dde4f024034596020bab2f9921f, type: 3}
-  Blink: {fileID: 21300000, guid: 0401316385c7ea941992277cf0681f8f, type: 3}
-  Phillip: {fileID: 21300000, guid: 222a761684422da44ba142a6d877b19a, type: 3}
+  Frank: {fileID: 1050221242, guid: 150d1dde4f024034596020bab2f9921f, type: 3}
+  Blink: {fileID: -972650962, guid: 0401316385c7ea941992277cf0681f8f, type: 3}
+  Phillip: {fileID: -1564524741, guid: 222a761684422da44ba142a6d877b19a, type: 3}
+  Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
+  BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
+  BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}
   rulebookSpriteList: []
   passportSpriteList: []
   characterSpriteList: []
+  IDSpriteList: []
 --- !u!1 &1906817085
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,16 +72,13 @@ public class CheckButton : MonoBehaviour
             runsTimes = false;
         }
         //Debug.Log(camera.WorldToScreenPoint(transform.position));
+        //tf is THIS ^
 
     }
 
     void OnMouseDown()
     {
         GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add(whatThisIs);
-    }
-    public void whenPressed()
-    {
-
     }
     public void placeEverything()
     {
@@ -91,10 +88,61 @@ public class CheckButton : MonoBehaviour
             //or just use the vector itself as the coordinates
             //i might be both stupid and smart at the same time chat
             //GetComponent<Renderer>().enabled = true;
-            Debug.Log(transform.position.z);
+
+            //not sure why this exists imma be fully honest but hey
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
                 nameOfPlace = "Rulebook";
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 3))
+                {
+                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                    {
+                        corrects[12] = "rulebookbannerfell";
+
+                    }
+                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                    {
+                        corrects[13] = "rulebookschichberg";
+                    }
+                    else
+                    {
+                        corrects[14] = "rulebookrivengrad";
+                    }
+                }
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 4))
+                {
+                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                    {
+                        corrects[12] = "rulebooktoadtown";
+
+                    }
+                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                    {
+                        corrects[13] = "rulebookfrogville";
+                    }
+                    else
+                    {
+                        corrects[14] = "rulebookeastfrog";
+                    }
+                }
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 4))
+                {
+                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                    {
+                        corrects[12] = "rulebookkukyo";
+
+                    }
+                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                    {
+                        corrects[13] = "rulebookhasegawa";
+                    }
+                    else
+                    {
+                        corrects[14] = "rulebookkixin";
+                    }
+                }
+                // yo future adrian get this done ^
+                // it's just the names of the towns
             }
             else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
             {
@@ -105,7 +153,6 @@ public class CheckButton : MonoBehaviour
                 nameOfPlace = "ID";
             }
             whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
-            Debug.Log(whatThisIs);
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<BoxCollider2D>().size = new Vector2(Size[(int)(transform.position.z + 0.1f) * 2], Size[(int)((transform.position.z + 0.1f) * 2) + 1]);
             transform.position = new Vector3(GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.y + transform.position.y, -3);

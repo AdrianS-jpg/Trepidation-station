@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eae124653cd7b6f49a27e7a9d45ec9ae
+guid: 5912b1abfa4b99746aa39aa86ca01bfb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Passport_whiskers_0
+      name: Entry ticket (foreigners only)_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 22
-        width: 103
-        height: 119
+        x: 57
+        y: 100
+        width: 101
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a8fa11d1fee9f24e8ee567443f443ad
-      internalID: 1801846989
+      spriteID: 8c800ec4f4d7cc946ad9f384a639e7ae
+      internalID: 144390291
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Passport_whiskers_0: 1801846989
+      Entry ticket (foreigners only)_0: 144390291
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

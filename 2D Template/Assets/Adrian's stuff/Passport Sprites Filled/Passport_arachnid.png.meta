@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eae124653cd7b6f49a27e7a9d45ec9ae
+guid: 66369ecc8da469f48bb965e5065c846b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Passport_whiskers_0
+      name: Passport_arachnid_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 22
-        width: 103
-        height: 119
+        x: 82
+        y: 43
+        width: 106
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a8fa11d1fee9f24e8ee567443f443ad
-      internalID: 1801846989
+      spriteID: 0899b94a3cae62e4c9e1bc2299dc1bff
+      internalID: -1434497754
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Passport_whiskers_0: 1801846989
+      Passport_arachnid_0: -1434497754
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
