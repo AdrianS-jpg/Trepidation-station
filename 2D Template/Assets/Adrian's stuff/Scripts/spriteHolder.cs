@@ -12,7 +12,7 @@ public class spriteHolder : MonoBehaviour
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
-    public Sprite Bigfoot, Frank, Blink, Phillip;
+    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi;
     public Sprite Ticket, BigfootCore, BlinkCore;
     public List<Sprite> rulebookSpriteList;
     public List<Sprite> passportSpriteList;
@@ -32,8 +32,6 @@ public class spriteHolder : MonoBehaviour
         rulebookSpriteList.Add(rulebookDocuments);
         rulebookSpriteList.Add(rulebookCover);
 
-        passportSpriteList.Add(passportKunitri);
-        passportSpriteList.Add(passportKunitriOpen);
         passportSpriteList.Add(passportCoreander);
         passportSpriteList.Add(passportCoreanderOpen);
         passportSpriteList.Add(passportDerekstad);
@@ -42,11 +40,14 @@ public class spriteHolder : MonoBehaviour
         passportSpriteList.Add(passportIchkerskOpen);
         passportSpriteList.Add(passportKeiraland);
         passportSpriteList.Add(passportKeiralandOpen);
+        passportSpriteList.Add(passportKunitri);
+        passportSpriteList.Add(passportKunitriOpen);
 
         characterSpriteList.Add(Bigfoot);
         characterSpriteList.Add(Frank);
         characterSpriteList.Add(Blink);
         characterSpriteList.Add(Phillip);
+        characterSpriteList.Add(Yanagi);
 
         IDSpriteList.Add(Ticket);
         IDSpriteList.Add(BigfootCore);

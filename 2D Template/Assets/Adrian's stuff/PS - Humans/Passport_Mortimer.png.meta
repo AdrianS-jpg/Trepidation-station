@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b2d4e84d4ef2d349a9b3ddd20983f13
+guid: 893591582c2f647459cb88e0d50718f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,28 +129,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Kunitri_passport 1_0
-      rect:
-        serializedVersion: 2
-        x: 439
-        y: 301
-        width: 202
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 6, y: 0, z: 8, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 245677412aaf17944947330475da9233
-      internalID: -1173555509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -161,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Kunitri_passport 1_0: -1173555509
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

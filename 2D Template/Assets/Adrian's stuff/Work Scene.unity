@@ -1044,6 +1044,7 @@ MonoBehaviour:
   patternNum: 0
   end: 0
   spriteHolder: {fileID: 0}
+  splus: 0
 --- !u!1 &1612476625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,9 +1344,9 @@ MonoBehaviour:
   rulebookKeiraland: {fileID: 21300000, guid: de0af42f738560743b665fdf8a8f4663, type: 3}
   rulebookKunitri: {fileID: 21300000, guid: d7893750f7c63244985d6acb1ea84b1e, type: 3}
   rulebookDocuments: {fileID: 21300000, guid: 78708d552bb85394bb0704edf9fc6e2e, type: 3}
-  passportKunitri: {fileID: -1173555509, guid: 9b2d4e84d4ef2d349a9b3ddd20983f13, type: 3}
+  passportKunitri: {fileID: 746367015, guid: a79ea4680dcd913439bb8b34893574cf, type: 3}
   passportKunitriOpen: {fileID: -844861190, guid: f689e88372ac89f4f97a295ddfda49e1, type: 3}
-  passportCoreander: {fileID: 21300000, guid: bfbc2fee212016e448dfef41569e44f2, type: 3}
+  passportCoreander: {fileID: -1133692058, guid: bfbc2fee212016e448dfef41569e44f2, type: 3}
   passportCoreanderOpen: {fileID: -435127465, guid: b8c18043ce3ed544aa1bce50e7184925, type: 3}
   passportDerekstad: {fileID: -1644662364, guid: 8a124e4ef7c27214fb305dbb7da33ef2, type: 3}
   passportDerekstadOpen: {fileID: 1174036074, guid: 80071037b7f7c1c4cb71f149038cabab, type: 3}
@@ -1357,6 +1358,7 @@ MonoBehaviour:
   Frank: {fileID: 1050221242, guid: 150d1dde4f024034596020bab2f9921f, type: 3}
   Blink: {fileID: -972650962, guid: 0401316385c7ea941992277cf0681f8f, type: 3}
   Phillip: {fileID: -1564524741, guid: 222a761684422da44ba142a6d877b19a, type: 3}
+  Yanagi: {fileID: 1111078842, guid: 3723a55b2de13d0458ed605264d15119, type: 3}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}

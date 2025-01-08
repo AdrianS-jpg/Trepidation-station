@@ -8,7 +8,13 @@ using UnityEngine;
 public class settingFunction : MonoBehaviour
 {
     public List<string> sprites = new List<string>(); 
-    private List<string> pattern = new List<string>() {"err14101", "orr00010", "orr00122", ""};
+    public List<string> pattern = new List<string>() {
+        "err14001", //bigfoot
+        "orr00410", //frank
+        "orr00022", //blink
+        "err153302", //phillip
+        "orr00340", //yanagi
+                    };
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
     public static List<string> checkobjects = new List<string>();
@@ -65,6 +71,11 @@ public class settingFunction : MonoBehaviour
             if (s.Contains("err"))
             {
                 CheckButton.corrects[splus] = CheckButton.corrects[splus].Remove(CheckButton.corrects[splus].Length - 3, 3) + "orr";
+            } 
+            if (s == "city")
+            {
+                CheckButton.corrects[splus] = "rulebook";
+                Debug.Log(splus);
             }
             splus++;
         }
@@ -75,6 +86,9 @@ public class settingFunction : MonoBehaviour
         // get this to function correctly, it's not hooked up to anything. maybe make temp button for it?
         // this IS supposed to run when you call a new person so idk
         // maybe run this with turning the sprite on and the collider
+        //
+        //it works now (somewhat)
+        //collider is NOT being turned on that shit is not happening
         if (pattern[patternNum].Substring(0, 3) == "err")
         {
             CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Length - 3, 3) + "err";
@@ -110,7 +124,6 @@ public class settingFunction : MonoBehaviour
         { 
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 1) {
-                Debug.Log("asdg");
                 spawnClone(-0.05f, 0f, 0f);
                 spawnClone(-1.284f, 0.1f, 1f);
                 spawnClone(-1.223f, 0.7882f, 2f);
@@ -136,7 +149,7 @@ public class settingFunction : MonoBehaviour
 
             if (GameObject.Find("Passport").GetComponent<WhenClicked>().ifClickedOn == true)
             {
-                if (passportnumber == 0 || passportnumber == 3)
+                if (passportnumber == 5 || passportnumber == 2)
                 {
                     spawnClone(1f, -1f, 12);
                     spawnClone(-0.9f, -0.25f, 13);
@@ -171,8 +184,12 @@ public class settingFunction : MonoBehaviour
                 //ok its done
                 //I LIED FUCKER DO THIS SHIT
                 //set this do it wont spawn when it's on the ticket sprite
+
+                //nah man imma do my own thing
+                //jkjk ill do this over the weekend or smth im too lazy to do it now
             }
         }
+        //Debug.Log(CheckButton.corrects[8]);
     }
 
     public void spawnClone(float x, float y, float z)

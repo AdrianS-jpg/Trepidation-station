@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9db62eaa509697540a94e0e8279020a4
+guid: 8a124e4ef7c27214fb305dbb7da33ef2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 27
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ichkersk_passport_cover_0
+      name: Derekstad_Passport_Cover_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 87
-        width: 33
-        height: 48
+        x: 68
+        y: 77
+        width: 40
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fec2bd3397602dc4c9b921a487caacb8
-      internalID: 659031374
+      spriteID: 52ad7bc82f202164a8f8a648d7d954d0
+      internalID: -1644662364
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ichkersk_passport_cover_0: 659031374
+      Derekstad_Passport_Cover_0: -1644662364
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

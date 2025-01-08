@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -41,7 +42,11 @@ public class CheckButton : MonoBehaviour
         0.02190684f, 0.004235197f}; 
     // list for sizes
     // this is nessesary i promise
+
+    //yeah yeah there is no other possible way guys i promise 
+    //past adrian casually saving my ass when he labeled the hitbox sizes
     public string nameOfPlace;
+    //right this is fucked uhh somehow gotta get this to work
     public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "cityorr", "classorr", "picture", "name", "birth", "weight", "class"};
     // Start is called before the first frame update
     void Start()
@@ -93,56 +98,103 @@ public class CheckButton : MonoBehaviour
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
                 nameOfPlace = "Rulebook";
-                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 3))
+                Debug.Log((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(5, 1))));
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(5,1))) + 3))
                 {
-                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                    if (Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Length) == 9)
                     {
-                        corrects[12] = "rulebookbannerfell";
-
+                        corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(8,1)) + 7] = "city";
+                        Debug.Log(corrects[9]);
+                        Debug.Log(corrects[15]);
                     }
-                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
-                    {
-                        corrects[13] = "rulebookschichberg";
-                    }
-                    else
-                    {
-                        corrects[14] = "rulebookrivengrad";
-                    }
+                    
                 }
-                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 4))
-                {
-                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
-                    {
-                        corrects[12] = "rulebooktoadtown";
+                //if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 3))
+                //{
+                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                //    {
+                //        corrects[7] = "rulebookbannerfell";
 
-                    }
-                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
-                    {
-                        corrects[13] = "rulebookfrogville";
-                    }
-                    else
-                    {
-                        corrects[14] = "rulebookeastfrog";
-                    }
-                }
-                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount >= 4))
-                {
-                    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
-                    {
-                        corrects[12] = "rulebookkukyo";
+                //    }
+                //    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                //    {
+                //        corrects[8] = "rulebookschichberg";
+                //    }
+                //    else
+                //    {
+                //        corrects[9] = "rulebookrivengrad";
+                //    }
+                //}
+                //else if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 4))
+                //{
+                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                //    {
+                //        corrects[7] = "rulebookgreatvida";
 
-                    }
-                    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
-                    {
-                        corrects[13] = "rulebookhasegawa";
-                    }
-                    else
-                    {
-                        corrects[14] = "rulebookkixin";
-                    }
-                }
+                //    }
+                //    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                //    {
+                //        corrects[8] = "rulebooknewunity";
+                //    }
+                //    else
+                //    {
+                //        corrects[9] = "rulebookitchdotio";
+                //    }
+                //}
+                //else if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 5))
+                //{
+                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                //    {
+                //        corrects[7] = "rulebookpatrigrad";
+
+                //    }
+                //    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                //    {
+                //        corrects[8] = "rulebookkusolnov";
+                //    }
+                //    else
+                //    {
+                //        corrects[9] = "rulebookmirsalva";
+                //    }
+                //}
+                //else if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 6))
+                //{
+                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                //    {
+                //        corrects[7] = "rulebooktoadtown";
+
+                //    }
+                //    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                //    {
+                //        corrects[8] = "rulebookfrogville";
+                //    }
+                //    else
+                //    {
+                //        corrects[9] = "rulebookeastfrog";
+                //    }
+                //}
+                //else if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 7))
+                //{
+                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
+                //    {
+                //        corrects[7] = "rulebookkukyo";
+
+                //    }
+                //    else if ((transform.position.z + 0.1f) >= 8 && transform.position.z <= 9)
+                //    {
+                //        corrects[8] = "rulebookhasegawa";
+                //    }
+                //    else
+                //    {
+                //        corrects[9] = "rulebookkixin";
+                //    }
+                //}
                 // yo future adrian get this done ^
                 // it's just the names of the towns
+
+                //ok
+                //it done
+                //Debug.Log(corrects[8]);
             }
             else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
             {
