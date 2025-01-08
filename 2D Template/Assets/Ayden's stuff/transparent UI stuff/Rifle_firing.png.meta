@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2a9b2102ff5c9b45a19421c69da70ae
+guid: 92ca79b90e5b2c24b8e0f55960cb2711
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rifle_aiming_0
+      name: Rifle_firing_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 78
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01ff76bffb2fe0a4380d897f012bb304
-      internalID: -391203024
+      spriteID: c7bb9900cb67fb1428fe623b2162cb60
+      internalID: 576914456
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rifle_aiming_0: -391203024
+      Rifle_firing_0: 576914456
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
