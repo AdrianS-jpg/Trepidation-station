@@ -18,7 +18,9 @@ public class NPCmovement : MonoBehaviour
     public float amplitude;
     float xPos;
     float yPos;
-    public Deskbuttons targetscript; 
+    public Deskbuttons targetscript;
+    public GameObject monster;
+    public List<Sprite> allMonsters;
 
     public GameObject item;
     //public bool inMiddle;
@@ -28,6 +30,7 @@ public class NPCmovement : MonoBehaviour
     void Start()
     {
         monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+        Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
         xPos = transform.position.x; 
         yPos = transform.position.y;
         targetscript = GameObject.Find("Button Manager").GetComponent<Deskbuttons>();
@@ -103,26 +106,26 @@ public class NPCmovement : MonoBehaviour
         
     }
 
-    public GameObject monster;
-    public List<Sprite> allMonsters;
-
     public void Call()
     {
         if (location == Location.Accepted)
         {
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
         }
         else if (location == Location.Denied)
         {
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
         }
         else if (location == Location.GUN)
         {
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
+            Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
         }
@@ -138,8 +141,6 @@ public class NPCmovement : MonoBehaviour
         ItemInstance.transform.position = new(0, -3.5f);
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Item") && location == Location.Accepted ||  location == Location.Denied) //If the monster collides with the item only if they are accepted or denied 
@@ -148,8 +149,4 @@ public class NPCmovement : MonoBehaviour
             item.GetComponent<SpriteRenderer>().enabled = false;  
         }
     }
-
-
-
-
 }
