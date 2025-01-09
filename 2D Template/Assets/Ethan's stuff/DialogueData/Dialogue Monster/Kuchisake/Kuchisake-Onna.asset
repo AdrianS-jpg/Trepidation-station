@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Kuchisake-Onna
   m_EditorClassIdentifier: 
   dialogue:
-  - "Uhm\u2026Hello?"
+  - '*Heavy Breathing*'
+  - ' '
   - "Do\u2026Do you think I\u2019m Beautiful?"
   responses:
   - responseText: Yes

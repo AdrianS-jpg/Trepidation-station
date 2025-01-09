@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Acceptance
   m_EditorClassIdentifier: 
   dialogue:
-  - ....   Thank you...Sir...
+  - '*Deep breath*   Thank you...Sir...'
   responses: []

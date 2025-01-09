@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - OoO, Thank you good sir!
-  - Carry on
+  - ' '
   - Have a splendid day!
   responses: []
