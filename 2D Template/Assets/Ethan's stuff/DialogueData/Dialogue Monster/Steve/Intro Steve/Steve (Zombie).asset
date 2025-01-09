@@ -14,16 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - 
-  - ..... Here...
-  - 
+  - '*Deep breath* Here.'
   - How is.. the air... in there?....
   - 
   - Is it nice? To still be breathing?
-  - Is it nice? To still be breathing?
-  - ...... I guess I am....It hurts...
+  - ' '
+  - '*Another Gasp* I guess I am....It hurts...'
   - Do your lungs...does your breath hurt too?
   responses:
   - responseText: 'Yes '
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 16173cdc4ce902641a81faaf2effaa6f, type: 2}
   - responseText: No
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 453086b69299a204089d8ce83df70919, type: 2}

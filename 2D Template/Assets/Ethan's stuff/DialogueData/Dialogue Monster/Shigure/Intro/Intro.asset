@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogue:
   - 
   - . . .
-  - .........................
-  - ...Documents?
+  - '[They are staring off into space]'
+  - ' '
   - Here, whatever
   - 
   - By the way, whoever you guys have making the passports is a total jerk.
@@ -24,7 +24,6 @@ MonoBehaviour:
   - They got my species wrong. Do I look like a vampire to you?
   - "Of course not! I got pointy, fluffy ears and a freaking tail, how the hell am
     I a vampire?! I have a slight craving for blood but still\u2026"
-  - 
   - . . .
   - Just let me through.
   responses: []

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: I DON'T KNOW
   m_EditorClassIdentifier: 
   dialogue:
+  - '*Looks Confused*'
   - . . .
   responses: []

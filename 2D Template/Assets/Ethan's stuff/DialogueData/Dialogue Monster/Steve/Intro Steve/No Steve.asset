@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Oh...So you're privileged...
-  - .........
+  - "[Steve goes silent for a few seconds}\r"
   - No matter, I probably shouldn't give in to my envy....... It is not your fault, 
     Is it?
   responses: []
