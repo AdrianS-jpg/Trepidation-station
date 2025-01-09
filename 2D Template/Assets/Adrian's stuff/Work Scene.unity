@@ -1043,7 +1043,7 @@ MonoBehaviour:
   passportnumber: 0
   patternNum: 0
   end: 0
-  spriteHolder: {fileID: 0}
+  spriteHolder: {fileID: 1717582761}
   splus: 0
 --- !u!1 &1612476625
 GameObject:
@@ -1359,9 +1359,18 @@ MonoBehaviour:
   Blink: {fileID: -972650962, guid: 0401316385c7ea941992277cf0681f8f, type: 3}
   Phillip: {fileID: -1564524741, guid: 222a761684422da44ba142a6d877b19a, type: 3}
   Yanagi: {fileID: 1111078842, guid: 3723a55b2de13d0458ed605264d15119, type: 3}
+  David: {fileID: 1479602739, guid: 00364c66573589540949ca40810dbbcf, type: 3}
+  Fiona: {fileID: 1417467594, guid: 1627ea5d99501134888cf2f3f370e7d3, type: 3}
+  Ichigo: {fileID: 1965868663, guid: c1a069caee82dfc4f8f07cd7e8f72f4d, type: 3}
+  Mavis: {fileID: 783999621, guid: e533313578db2c44f86111e468f13fa5, type: 3}
+  Whiskers: {fileID: 1801846989, guid: eae124653cd7b6f49a27e7a9d45ec9ae, type: 3}
+  Kumiko: {fileID: -948337560, guid: 9c9da27f24427c441a9541a60b0e56dd, type: 3}
+  Shigure: {fileID: 1624531255, guid: 85c733ab5051fb9489fca73c14382fd9, type: 3}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}
+  DavidCore: {fileID: -51091784, guid: 28bc509482c5bb545858e56dae97a683, type: 3}
+  FionaCore: {fileID: -354665122, guid: ee05cf215a25135468887ae64df3c1c8, type: 3}
   rulebookSpriteList: []
   passportSpriteList: []
   characterSpriteList: []
@@ -1801,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bfbc2fee212016e448dfef41569e44f2, type: 3}
+    - target: {fileID: 843816240234703004, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 843816240234703005, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
       propertyPath: m_RootOrder
       value: -1

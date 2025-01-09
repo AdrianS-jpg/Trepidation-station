@@ -47,7 +47,7 @@ public class CheckButton : MonoBehaviour
     //past adrian casually saving my ass when he labeled the hitbox sizes
     public string nameOfPlace;
     //right this is fucked uhh somehow gotta get this to work
-    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "cityorr", "classorr", "picture", "name", "birth", "weight", "class"};
+    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "city", "classorr", "picture", "name", "birth", "weight", "class"};
     // Start is called before the first frame update
     void Start()
     {
@@ -98,14 +98,23 @@ public class CheckButton : MonoBehaviour
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
                 nameOfPlace = "Rulebook";
-                Debug.Log((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(5, 1))));
-                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(5,1))) + 3))
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(5,1))) + 3))
                 {
-                    if (Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Length) == 9)
+                    if (Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(3, 2)) >= 15 && Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(3, 2)) <= 17)
                     {
-                        corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(8,1)) + 7] = "city";
-                        Debug.Log(corrects[9]);
-                        Debug.Log(corrects[15]);
+                        Debug.Log(Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Length));
+                        corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(9, 1)) + 7] = "cityerr";
+                    }
+                    else if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 9)
+                    {
+                        Debug.Log("aksjhdkjashdflashdkflasdf");
+                        corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(9, 1)) + 7] = "cityorr";
+
+                    }
+                    else
+                    {
+                        //corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum])] = "rulebook";
+
                     }
                     
                 }
