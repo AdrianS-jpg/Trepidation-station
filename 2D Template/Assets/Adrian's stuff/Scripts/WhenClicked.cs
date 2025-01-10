@@ -71,7 +71,7 @@ public class WhenClicked : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = -2;
+                mousePosition.z = 0;
                 transform.position = mousePosition;
                 //} else                                               
                 //{
@@ -84,6 +84,10 @@ public class WhenClicked : MonoBehaviour
                 //}
                 //    follow = false;
                 //}
+            }
+            else
+            {
+               
             }
         } else
         {
@@ -105,6 +109,8 @@ public class WhenClicked : MonoBehaviour
         {
         click = false;
         follow = false;
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
+            GameObject.Find("Circle").GetComponent<settingFunction>().zvalue--;
         }
     }
 

@@ -35,10 +35,10 @@ public class rulebookMovement : MonoBehaviour
             {
                 clickTime += Time.deltaTime;
                 clickCheck = false;
-                spriteCount = 0;
+                //spriteCount = 0;
                 GetComponent<BoxCollider2D>().size = new Vector2(3.235898f, 2f);
             }
-            if (click == false)
+            else if (click == false)
             {
                 if (clickCheck == false)
                 {
@@ -70,7 +70,7 @@ public class rulebookMovement : MonoBehaviour
                 //if (transform.position.x <= 5 && transform.position.x >= -5)
                 //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = -2;
+                mousePosition.z = 0;
                 transform.position = mousePosition;
                 //} else                                               
                 //{
@@ -83,9 +83,11 @@ public class rulebookMovement : MonoBehaviour
                 //}
                 //    follow = false;
                 //}
+                
             } else
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -2);
+                
+                
             }
         }
         else
@@ -108,6 +110,8 @@ public class rulebookMovement : MonoBehaviour
         {
             click = false;
             follow = false;
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
+            GameObject.Find("Circle").GetComponent<settingFunction>().zvalue--;
         }
     }
 

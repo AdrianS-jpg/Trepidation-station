@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class idMovement : MonoBehaviour
+public class xtradocMovements : MonoBehaviour
 {
     public Transform transform;
     public bool follow = false, click = false, clickCheck = false, redMode = false;
@@ -11,7 +11,7 @@ public class idMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite sprite;
 
-    // Start is called before the first frame update
+    // hey wait a min ive seen this newfangled sht before
     void Start()
     {
         transform = GetComponent<Transform>();
@@ -20,7 +20,7 @@ public class idMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
     }
 
-    // Update is called once per frame
+    // i swear this wasn't used when i got it
     void Update()
     {
         if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
@@ -41,53 +41,17 @@ public class idMovement : MonoBehaviour
             }
             if (click == false)
             {
-                //if (clickCheck == false)
-                //{
-                //    if (clickTime <= 0.15f && clickTime >= 0.000000001f)
-                //    {
-                //        follow = false;
-                //        if (ifClickedOn == false)
-                //        {
-                //            ifClickedOn = true;
-                //            clicked = true;
-                //            changeSprite(sprite2);
-                //            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-                //            GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
-                //        }
-                //        else
-                //        {
-                //            ifClickedOn = false;
-                //            clicked = false;
-                //            changeSprite(sprite);
-                //            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                //            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
-                //        }
-                //    }
-                //}
                 clickCheck = true;
             }
             if (follow == true)
             {
-                //if (transform.position.x <= 5 && transform.position.x >= -5)
-                //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0;
                 transform.position = mousePosition;
-                //} else                                               
-                //{
-                //if (transform.position.x <= -5) 
-                //{
-                //    transform.position = new Vector3 (-5, transform.position.y, transform.position.z);
-                //} else
-                //{
-                //    transform.position = new Vector3(5, transform.position.y, transform.position.z);
-                //}
-                //    follow = false;
-                //}
             }
             else
             {
-               
+                
             }
         }
         else

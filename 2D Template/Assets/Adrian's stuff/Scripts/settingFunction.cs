@@ -11,18 +11,19 @@ public class settingFunction : MonoBehaviour
     public List<string> sprites = new List<string>();
     [System.NonSerialized]
     public List<string> pattern = new List<string>() {
-        "err1400010", //bigfoot
-        "orr0040102", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
-        "orr0000222", //blink    Once you understand it though, you can never forget it!
-        "err1530302", //phillip  Lets use this --> "err1520401" as an example!
-        "orr0030400", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
-        "err1200531", //david    (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
-        "orr0000640", //fiona    (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
-        "orr0020702", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
-        "orr0010800", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
-        "orr0010902", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
-        "orr0041002", //kumiko   That's all, Folks! your comprehensive guide to Adrian's weird, confusing, strange set of characters!
-        "orr0031100", //shigure  
+        "err14000100", //bigfoot
+        "orr00401020", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
+        "orr00002220", //blink    Once you understand it though, you can never forget it!
+        "err15303020", //phillip  Lets use this --> "err1520401" as an example!
+        "orr00304000", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
+        "err12005310", //david    (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
+        "orr00006401", //fiona    (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
+        "orr00207020", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
+        "orr00108000", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
+        "orr00109020", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
+        "orr00410020", //kumiko   That's all, Folks! your comprehensive guide to Adrian's weird, confusing, strange set of characters!
+        "orr00311000", //shigure  
+        "orr00412000", //spindler
         };
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
@@ -34,6 +35,8 @@ public class settingFunction : MonoBehaviour
     public bool end = false;
     public GameObject spriteHolder;
     public int splus = 0;
+    public int zvalue = 0;
+    public Sprite blankButton, redButton, yellowbutton, greenbutton;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,17 +53,26 @@ public class settingFunction : MonoBehaviour
         {
             if (sprites.Count == 2)
             {
-                if (sprites[0] == (sprites[1] + "orr") || sprites[1] == (sprites[0] + "orr"))
+                if (sprites[0].Contains("orr") || sprites[1].Contains("orr"))
                 {
-                    GetComponent<SpriteRenderer>().color = Color.green;
+                    if (sprites[0] == (sprites[1] + "orr") || sprites[1] == (sprites[0] + "orr") || sprites[0] == sprites[1])
+                    {
+                        GetComponent<SpriteRenderer>().sprite = greenbutton;
+                    }
+                } else if (sprites[0].Contains("err") || sprites[1].Contains("err"))
+                {
+                    if (sprites[0] == (sprites[1] + "err") || sprites[1] == (sprites[0] + "err") || sprites[0] == sprites[1])
+                    {
+                        GetComponent<SpriteRenderer>().sprite = redButton;
+                    }
                 }
-                else if (sprites[0] == (sprites[1] + "err") || sprites[1] == (sprites[0] + "err"))
+                else if (sprites[0] == sprites[1])
                 {
-                    GetComponent<SpriteRenderer>().color = Color.red;
+                    GetComponent<SpriteRenderer>().sprite = greenbutton;
                 }
-                else 
+                else
                 {
-                    GetComponent<SpriteRenderer>().color = Color.yellow;
+                    GetComponent<SpriteRenderer>().sprite = yellowbutton;
                     //drop();
                 }
                 sprites[0] = sprites[1];
@@ -69,12 +81,13 @@ public class settingFunction : MonoBehaviour
         } else
         {
             sprites.Clear();
-            GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<SpriteRenderer>().sprite = blankButton;
         }
     }
 
     public void drop()
     {
+        zvalue = 0;
         adding();
         if (end == false) { 
             splus = 0;
@@ -99,7 +112,7 @@ public class settingFunction : MonoBehaviour
             // maybe run this with turning the sprite on and the collider
             //
             //it works now (somewhat)
-            //collider is NOT being turned on that shit is not happening
+            //collider is NOT being turned on that sht is not happening
             if (pattern[patternNum].Substring(0, 3) == "err")
             {
                 CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Length - 3, 3) + "err";
@@ -126,6 +139,17 @@ public class settingFunction : MonoBehaviour
             {
                 GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = spriteHolder.GetComponent<spriteHolder>().passportSpriteList[(passportnumber * 2)];
             }
+            if (pattern[patternNum].Substring(10, 1) == "0") 
+            {
+                GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = false;
+                GameObject.Find("xtra documents").GetComponent<BoxCollider2D>().enabled = false;
+            } else
+            {
+                GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().sprite = spriteHolder.GetComponent<spriteHolder>().specialItemSpriteList[Convert.ToInt32(pattern[patternNum].Substring(10,1)) - 1];
+                GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("xtra documents").GetComponent<BoxCollider2D>().enabled = true;
+            }
+
 
             GameObject.Find("Passport").GetComponent<WhenClicked>().sprite = spriteHolder.GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
             GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = spriteHolder.GetComponent<spriteHolder>().characterSpriteList[Convert.ToInt32(pattern[patternNum].Substring(6, 2))];
@@ -198,11 +222,20 @@ public class settingFunction : MonoBehaviour
                 //set this up to the ID prefab
 
                 //ok its done
-                //I LIED FUCKER DO THIS SHIT
+                //I LIED FKER DO THIS SHT
                 //set this do it wont spawn when it's on the ticket sprite
 
                 //nah man imma do my own thing
                 //jkjk ill do this over the weekend or smth im too lazy to do it now
+
+                //yo sunday adrian do this pleas
+            }
+            if (GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled == true)
+            {
+                spawnClone(-0.1f, 0.2f, 22);
+                spawnClone(0f ,0f, 23);
+                spawnClone(0f, -0.6f, 24);
+               
             }
         }
         //Debug.Log(CheckButton.corrects[8]);

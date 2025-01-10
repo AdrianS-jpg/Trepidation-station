@@ -61,6 +61,7 @@ public class rulebookflipping : MonoBehaviour
             coll.enabled = false;
             first = false;
         }
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Rulebook").GetComponent<rulebookMovement>().transform.localPosition.z - 0.5f);
     }
 
     public void OnMouseDown()

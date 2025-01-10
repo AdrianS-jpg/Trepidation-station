@@ -14,16 +14,16 @@ public class CheckButton : MonoBehaviour
     public Camera camera;
     public bool runsTimes = false;
     public string whatThisIs;
-    public static List<float> Size = new List<float>() { 
+    public static List<float> Size = new List<float>() {
         0.02025991f, 0.007444256f, //0
-        0.01097764f, 0.005743125f, 
-        0.01305398f, 0.005743125f, 
-        0.008274899f, 0.002899706f, 
-        0.01515058f, 0.003617398f, 
+        0.01097764f, 0.005743125f,
+        0.01305398f, 0.005743125f,
+        0.008274899f, 0.002899706f,
+        0.01515058f, 0.003617398f,
         0.02337617f, 0.008992958f,
-        0.008211082f, 0.01036148f, 
-        0.0225562f, 0.003995122f, 
-        0.0225562f, 0.003995122f, 
+        0.008211082f, 0.01036148f,
+        0.0225562f, 0.003995122f,
+        0.0225562f, 0.003995122f,
         0.0225562f, 0.003995122f,
         0.02340841f, 0.009243746f,
         0.01551636f, 0.009243746f,
@@ -35,19 +35,27 @@ public class CheckButton : MonoBehaviour
         0.03211192f, 0.005332447f,
         0.03211192f, 0.005332447f, 
         //17 V
-        0.01013526f, 0.009875286f, 
+        0.01013526f, 0.009875286f,
         0.02158399f, 0.003514871f,
-        0.02198755f, 0.003074671f, 
-        0.02198755f, 0.003835016f, 
-        0.02190684f, 0.004235197f}; 
+        0.02198755f, 0.003074671f,
+        0.02198755f, 0.003835016f,
+        0.02190684f, 0.004235197f,
+        //21 ^
+        //22 v
+        0.02551817f, 0.003587304f,
+        0.02700807f, 0.003067695f,
+        0.02742732f, 0.004620694f,
+        };
     // list for sizes
     // this is nessesary i promise
 
     //yeah yeah there is no other possible way guys i promise 
     //past adrian casually saving my ass when he labeled the hitbox sizes
     public string nameOfPlace;
-    //right this is fucked uhh somehow gotta get this to work
-    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "city", "classorr", "picture", "name", "birth", "weight", "class"};
+    //right this is fked uhh somehow gotta get this to work
+
+    //well it works now sooooooooo
+    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "city", "classorr", "picture", "name", "birth", "weight", "class", "name", "origin", "thing"};
     // Start is called before the first frame update
     void Start()
     {
@@ -111,11 +119,11 @@ public class CheckButton : MonoBehaviour
                         corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(9, 1)) + 7] = "cityorr";
 
                     }
-                    else
-                    {
+                    //else
+                    //{
                         //corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum])] = "rulebook";
 
-                    }
+                    //}
                     
                 }
                 //if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 3))
@@ -204,6 +212,9 @@ public class CheckButton : MonoBehaviour
                 //ok
                 //it done
                 //Debug.Log(corrects[8]);
+
+                //yo past adrians yall are fkin stupid cmon man
+                //there was a way easier way to do it, even if it took me a concerningly longer time to do it, it's much more efficient i promise
             }
             else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
             {
@@ -212,6 +223,9 @@ public class CheckButton : MonoBehaviour
             else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
             {
                 nameOfPlace = "ID";
+            } else
+            {
+                nameOfPlace = "xtra documents";
             }
             whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
             GetComponent<BoxCollider2D>().enabled = true;
