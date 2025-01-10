@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Why, good day to you! If we could please make these matters quick, that would
+    be splendid!
+  - 
+  - "I have an auction to attend, I mustn't be late you know! All the best items
+    will be sold if this doesn\u2019t go quickly."
+  - 
+  - "There\u2019s this one specific piec\u2013"
+  - 
+  - "Why, how silly of me! I mustn\u2019t let me talk your head off, that\u2019s
+    for sure."
   responses: []

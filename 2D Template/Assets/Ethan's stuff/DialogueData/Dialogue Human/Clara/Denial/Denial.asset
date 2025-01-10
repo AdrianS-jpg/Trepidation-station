@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Denial
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Dude, what.
+  - 
+  - Eugh, thanks for nothing.
   responses: []

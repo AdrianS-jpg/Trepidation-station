@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Threat
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - HOW DARE YOU, LET ME THROUGH RIGHT NOOOWWWWWWW
+  - 
+  - "DON\u2019T TALK TO ME LIKE THAT! DO YOU EVEN KNOW WHO MY MOM IS?! SHE\u2019S
+    THE WORLD\u2019S MOST RENOWNED PHOTOGRAPHER EVER I WILL CALL HER RIGHT NOW AND
+    HAVE YOU FIRED!!!"
+  - 
   responses: []

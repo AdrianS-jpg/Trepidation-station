@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - 
+  - Yes, alright.
+  - "What\u2019s it like over there?"
+  - 
+  - "Ah, it\u2019s ok sorry I bothered you."
   responses: []
