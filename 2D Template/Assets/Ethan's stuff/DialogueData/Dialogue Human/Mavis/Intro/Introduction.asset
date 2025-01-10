@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Ph, look at this lovely darling!
+  - 
+  - I have my papers right here, sir. Must be awful working somewhere so gray and
+    drab. Though,it could look great for my next photoshoot. The dullness would make
+    my subjects POP!
+  - 
+  - Oh you flatter me!
   responses: []

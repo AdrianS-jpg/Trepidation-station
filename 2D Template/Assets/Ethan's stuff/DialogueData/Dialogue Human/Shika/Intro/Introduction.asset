@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - ...
+  - What are you looking at?
+  - 
+  - Yeah, yeah, ok, whatever.
+  - 
+  - "Like what is even the point of this, why can\u2019t you just like let me in...?"
+  - 
+  - Lame.
   responses: []

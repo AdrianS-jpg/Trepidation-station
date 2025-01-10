@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
+  m_Name: Accept 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - You may carry on.
+  - "Thank you! What a fine young lad. You remind me of this one auctioneer I knew,
+    way back\u2013"
+  - Sir, please leave.
+  - "Aha! Sorry about that, I\u2019ll be on my way."
+  responses: []

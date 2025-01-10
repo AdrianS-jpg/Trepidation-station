@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Threat
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Excuse me?
+  - 
+  - Pardon me, but I need to get through.
+  - 
+  - "DON\u2019T DISRESPECT ME! YOU MUST LET ME PASS!!"
+  - 
   responses: []

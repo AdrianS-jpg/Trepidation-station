@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Threat
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - "Ha! You\u2019re joking with me, aren\u2019t you lad?"
+  - 
+  - "Oh, come on now! I can\u2019t be late! I\u2019ve been searching for this piece
+    and\u2013"
+  - 
+  - Well, how rude of you! Let me through this instant, I demand it.
+  - ' '
+  - This is ABSURD! Let me through NOW!!
   responses: []

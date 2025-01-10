@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Denial
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - What? No!
+  - 
+  - But I need to see a doctor!
+  - 
+  - "Fine, but I\u2019m taking all of your tissues."
+  - 
+  - Yeah *cough* yeah *sniffle*.
   responses: []

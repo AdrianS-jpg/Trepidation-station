@@ -12,5 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Threat
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Excuse me?
+  - 
+  - Well then, how about I just head on through?
+  - 
+  - All I want to do is find out why so many species seem to be disappearing over
+    the border.
+  - "There have been multiple exotic and endangered birds said to have been captured
+    and brought here to be \u2018sold for parts\u2019."
+  - 
+  - Can you please just let me through?
+  - 
+  - 
+  - 
   responses: []

@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Accept
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - "Are you sure you don\u2019t want to see my real eye, it\u2019s in my pocket
+    right now. It\u2019s like, super gross and decayed."
+  - 
+  - "Aww, you\u2019re missing out."
+  - 
   responses: []

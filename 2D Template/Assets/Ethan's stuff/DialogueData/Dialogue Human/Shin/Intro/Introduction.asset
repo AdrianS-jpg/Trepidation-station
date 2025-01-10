@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - 
+  - "That\u2019s like, really rude of you to comment on my face, by the way."
+  - 
+  - "Yeah you better be sorry, or I\u2019ll show you my REAL eye"
+  - 
+  - Just kidding.
+  - 
   responses: []

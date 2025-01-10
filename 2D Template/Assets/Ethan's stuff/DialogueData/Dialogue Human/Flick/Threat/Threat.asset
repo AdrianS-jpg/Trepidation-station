@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
   m_Name: Threat
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Ugh, You serious?!
+  - 
+  - "C\u2019MON BRO! All ya gotta do is let me just pass on through."
+  - 
+  - "UUUGGGHHhh\u2026"
+  - "Look, I got a couple of Benny\u2019s in my wallet, how about I give ya one,
+    and you just never saw me here, alright?"
+  - 
+  - "Nah, nah, just a simple exchange! Or I could just walk on through and you get
+    nothin\u2019...So what's it gonna be?"
   responses: []
