@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NPCmovement : MonoBehaviour
+public class NPCmovementfinal : MonoBehaviour
 { 
     public enum Location { Traveling, Accepted, Denied, Middle, GUN}
     public Transform centerscreen;
@@ -30,7 +29,7 @@ public class NPCmovement : MonoBehaviour
 
     void Start()
     {
-        monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
+        monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
         Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
         xPos = transform.position.x; 
         yPos = transform.position.y;
@@ -78,7 +77,7 @@ public class NPCmovement : MonoBehaviour
         if (location == Location.Middle)
         {
             location = Location.Accepted;
-            GameObject.Find("Circle").GetComponent<settingFunction>().reset();
+            Destroy(ItemInstance);
         } 
     }
     public void denyer()
@@ -86,7 +85,7 @@ public class NPCmovement : MonoBehaviour
         if (location == Location.Middle)
         {
             location = Location.Denied;
-            GameObject.Find("Circle").GetComponent<settingFunction>().reset();
+            Destroy(ItemInstance);
         }
     }
     public void Gunner()
@@ -97,7 +96,7 @@ public class NPCmovement : MonoBehaviour
             if (location == Location.Middle)
             {
                 location = Location.GUN;
-                GameObject.Find("Circle").GetComponent<settingFunction>().reset();
+                Destroy(ItemInstance);
             }
         }
         /*if (targetscript.gun == false)
@@ -111,21 +110,21 @@ public class NPCmovement : MonoBehaviour
     {
         if (location == Location.Accepted)
         {
-            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11,2))];
+            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
         }
         else if (location == Location.Denied)
         {
-            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
+            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
         }
         else if (location == Location.GUN)
         {
-            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
+            monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Random.Range(0, allMonsters.Count)];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
@@ -138,7 +137,8 @@ public class NPCmovement : MonoBehaviour
 
     private void DropItem()
     {
-        GameObject.Find("Circle").GetComponent<settingFunction>().drop();
+        ItemInstance = Instantiate(item, transform.position, transform.rotation);
+        ItemInstance.transform.position = new(0, -3.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

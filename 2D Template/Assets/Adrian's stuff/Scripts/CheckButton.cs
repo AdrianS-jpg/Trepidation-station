@@ -231,6 +231,7 @@ public class CheckButton : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<BoxCollider2D>().size = new Vector2(Size[(int)(transform.position.z + 0.1f) * 2], Size[(int)((transform.position.z + 0.1f) * 2) + 1]);
             transform.position = new Vector3(GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.y + transform.position.y, -3);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 3);
             runsTimes = true;
 
         }

@@ -1881,6 +1881,7 @@ MonoBehaviour:
   Kumiko: {fileID: -948337560, guid: 9c9da27f24427c441a9541a60b0e56dd, type: 3}
   Shigure: {fileID: 1624531255, guid: 85c733ab5051fb9489fca73c14382fd9, type: 3}
   Spindler: {fileID: -1434497754, guid: 66369ecc8da469f48bb965e5065c846b, type: 3}
+  Rufus: {fileID: 1220958391, guid: f4f13c08d708713429fcafa8f6b87992, type: 3}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}

@@ -11,19 +11,21 @@ public class settingFunction : MonoBehaviour
     public List<string> sprites = new List<string>();
     [System.NonSerialized]
     public List<string> pattern = new List<string>() {
-        "err14000100", //bigfoot
-        "orr00401020", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
-        "orr00002220", //blink    Once you understand it though, you can never forget it!
-        "err15303020", //phillip  Lets use this --> "err1520401" as an example!
-        "orr00304000", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
-        "err12005310", //david    (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
-        "orr00006401", //fiona    (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
-        "orr00207020", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
-        "orr00108000", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
-        "orr00109020", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
-        "orr00410020", //kumiko   That's all, Folks! your comprehensive guide to Adrian's weird, confusing, strange set of characters!
-        "orr00311000", //shigure  
-        "orr00412000", //spindler
+        "err1400010019", //bigfoot
+        "orr0040102002", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
+        "orr0000222018", //blink    Once you understand it though, you can never forget it!
+        "err1530302007", //phillip  Lets use this --> "err1520401" as an example!
+        "orr0030400015", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
+        "err1200531023", //david    (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
+        "orr0000640122", //fiona    (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
+        "orr0020702016", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
+        "orr0010800020", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
+        "orr0010902014", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
+        "orr0041002040", //kumiko   That's all, Folks! your comprehensive guide to Adrian's weird, confusing, strange set of characters!
+        "orr0031100009", //shigure  
+        "orr0041200000", //spindler Thanks, 1/9/2025 Adrian! It's 
+
+
         };
     public List<Sprite> papers = new List<Sprite>();
     public bool active = false;
@@ -68,7 +70,7 @@ public class settingFunction : MonoBehaviour
                 }
                 else if (sprites[0] == sprites[1])
                 {
-                    GetComponent<SpriteRenderer>().sprite = greenbutton;
+                    //GetComponent<SpriteRenderer>().sprite = greenbutton;
                 }
                 else
                 {
@@ -87,6 +89,7 @@ public class settingFunction : MonoBehaviour
 
     public void drop()
     {
+       
         zvalue = 0;
         adding();
         if (end == false) { 
@@ -153,6 +156,16 @@ public class settingFunction : MonoBehaviour
 
             GameObject.Find("Passport").GetComponent<WhenClicked>().sprite = spriteHolder.GetComponent<spriteHolder>().passportSpriteList[passportnumber * 2];
             GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = spriteHolder.GetComponent<spriteHolder>().characterSpriteList[Convert.ToInt32(pattern[patternNum].Substring(6, 2))];
+            GameObject.Find("Passport").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("Passport").GetComponent<WhenClicked>().sprite;
+            GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("Passport").GetComponent<Transform>().position = new Vector2(0, -3.5f);
+            GameObject.Find("ID").GetComponent<Transform>().position = new Vector2(0, -3.5f);
+            GameObject.Find("xtra documents").GetComponent<Transform>().position = new Vector2(0, -3.5f);
+            GameObject.Find("Passport").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Passport").GetComponent<Transform>().localPosition.x, GameObject.Find("Passport").GetComponent<Transform>().localPosition.y, -1);
+            GameObject.Find("ID").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Passport").GetComponent<Transform>().localPosition.x, GameObject.Find("Passport").GetComponent<Transform>().localPosition.y, -1);
+            GameObject.Find("xtra documents").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Passport").GetComponent<Transform>().localPosition.x, GameObject.Find("Passport").GetComponent<Transform>().localPosition.y, -1);
         }
     }
     public void whenPressed()
@@ -229,6 +242,11 @@ public class settingFunction : MonoBehaviour
                 //jkjk ill do this over the weekend or smth im too lazy to do it now
 
                 //yo sunday adrian do this pleas
+
+                //nuh uh
+                //gawd DAMN am i lazy dude i gotta get this to work please
+                //eeh actually i could just cut this
+                //i literally have better things to be working on rn
             }
             if (GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled == true)
             {
@@ -256,5 +274,12 @@ public class settingFunction : MonoBehaviour
         {
             patternNum++;
         }
+    }
+    public void reset()
+    {
+        GameObject.Find("Passport").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }

@@ -12,7 +12,7 @@ public class spriteHolder : MonoBehaviour
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
-    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler;
+    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler, Rufus;
     public Sprite Ticket, BigfootCore, BlinkCore, DavidCore, FionaCore;
     public Sprite FionaItem;
     public List<Sprite> rulebookSpriteList;
@@ -58,6 +58,7 @@ public class spriteHolder : MonoBehaviour
         characterSpriteList.Add(Kumiko);
         characterSpriteList.Add(Shigure);
         characterSpriteList.Add(Spindler);
+        characterSpriteList.Add(Rufus);
 
         IDSpriteList.Add(Ticket);
         IDSpriteList.Add(BigfootCore);

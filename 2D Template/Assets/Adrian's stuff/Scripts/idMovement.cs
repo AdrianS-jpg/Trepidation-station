@@ -73,6 +73,7 @@ public class idMovement : MonoBehaviour
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0;
                 transform.position = mousePosition;
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
                 //} else                                               
                 //{
                 //if (transform.position.x <= -5) 

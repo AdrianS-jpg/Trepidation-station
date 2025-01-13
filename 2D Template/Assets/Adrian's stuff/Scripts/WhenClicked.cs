@@ -36,8 +36,14 @@ public class WhenClicked : MonoBehaviour
             {
                 clickTime += Time.deltaTime;
                 clickCheck = false;
-                GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                if (spriteRenderer.sprite == sprite) {
+                    GetComponent<BoxCollider2D>().offset = new Vector2(-0.02257007f, 0.01128542f);
+                    GetComponent<BoxCollider2D>().size = new Vector2(1.638872f, 2.227854f);
+                } else
+                {
+                    GetComponent<BoxCollider2D>().offset = new Vector2(-0.004040837f, -0.01341939f);
+                    GetComponent<BoxCollider2D>().size = new Vector2(4.022908f, 4.673654f);
+                }
             }
             if (click == false)
             {
@@ -51,16 +57,16 @@ public class WhenClicked : MonoBehaviour
                             ifClickedOn = true;
                             clicked = true;
                             changeSprite(sprite2);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
+                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.004040837f, -0.01341939f);
+                            GetComponent<BoxCollider2D>().size = new Vector2(4.022908f, 4.673654f);
                         }
                         else
                         {
                             ifClickedOn = false;
                             clicked = false;
                             changeSprite(sprite);
-                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.1414819f, 0.1061118f);
-                            GetComponent<BoxCollider2D>().size = new Vector2(2.202598f, 2.627044f);
+                            GetComponent<BoxCollider2D>().offset = new Vector2(-0.02257007f, 0.01128542f);
+                            GetComponent<BoxCollider2D>().size = new Vector2(1.638872f, 2.227854f);
                         }
                     }
                 }
@@ -73,6 +79,7 @@ public class WhenClicked : MonoBehaviour
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0;
                 transform.position = mousePosition;
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
                 //} else                                               
                 //{
                 //if (transform.position.x <= -5) 
