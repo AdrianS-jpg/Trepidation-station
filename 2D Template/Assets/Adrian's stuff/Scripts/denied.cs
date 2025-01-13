@@ -40,4 +40,7 @@ public class denied : MonoBehaviour
             // }
         }
     }
+    void OnCollisionEnter(){
+        
+    }
 }
