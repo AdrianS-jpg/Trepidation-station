@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class NPCmovement : MonoBehaviour
@@ -30,6 +31,7 @@ public class NPCmovement : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("Circle").GetComponent<settingFunction>().adding();
         monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
         Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
         xPos = transform.position.x; 
@@ -111,6 +113,7 @@ public class NPCmovement : MonoBehaviour
     {
         if (location == Location.Accepted)
         {
+            GameObject.Find("Circle").GetComponent<settingFunction>().adding();
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11,2))];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
@@ -118,6 +121,7 @@ public class NPCmovement : MonoBehaviour
         }
         else if (location == Location.Denied)
         {
+            GameObject.Find("Circle").GetComponent<settingFunction>().adding();
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
@@ -125,6 +129,7 @@ public class NPCmovement : MonoBehaviour
         }
         else if (location == Location.GUN)
         {
+            GameObject.Find("Circle").GetComponent<settingFunction>().adding();
             monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);

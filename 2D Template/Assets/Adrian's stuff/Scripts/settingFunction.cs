@@ -21,10 +21,11 @@ public class settingFunction : MonoBehaviour
         "orr0020702016", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
         "orr0010800020", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
         "orr0010902014", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
-        "orr0041002040", //kumiko   That's all, Folks! your comprehensive guide to Adrian's weird, confusing, strange set of characters!
-        "orr0031100009", //shigure  
-        "orr0041200000", //spindler Thanks, 1/9/2025 Adrian! It's 
-
+        "orr0041002040", //kumiko   Thanks, 1/9/2025 Adrian! It's great to have all of this information. However, I noticed a couple of extra numbers on the end there. Mind telling us what those are?
+        "orr0031100009", //shigure  *pushes 1/9/25 Adrian aside* Here, I got this one. Hi, I'm 1/13/2025 Adrian here to explain the extra numbers I added later on! Let's use --> "err1520401032" as an example!
+        "orr0041200000", //spindler (0) this is the variable that corresponds to whether if I need another extra document or not. 
+        "orr0021300032", //rufus    (32) this is the number that links to Ayden's list of sprites. I didn't want to add another 50 sprites to the spriteholder, so I just used his. He won't mind. This is the sprite that walks up to the screen and leaves when you start the game.
+        "orr0031400012" //steve     Why thank you, 1/13/2025 Adrian
 
         };
     public List<Sprite> papers = new List<Sprite>();
@@ -91,7 +92,7 @@ public class settingFunction : MonoBehaviour
     {
        
         zvalue = 0;
-        adding();
+        
         if (end == false) { 
             splus = 0;
             foreach (string s in CheckButton.corrects.ToList())

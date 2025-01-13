@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 936478052}
   - component: {fileID: 936478051}
   m_Layer: 0
-  m_Name: Left Arrow
+  m_Name: Right Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1872,7 +1872,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1236918683, guid: 53a39a93afcadcc458b5f328df876b5c, type: 3}
+  m_Sprite: {fileID: -1290422365, guid: 9e13fcf4204ad6f4b929a30e6f74bfee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2536,7 +2536,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1680989992, guid: 69cf938d413a99d4aae46ca201af4f1c, type: 3}
+  m_Sprite: {fileID: -1461782758, guid: 65a3d59cbaa47dc48953040b4f62ab4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2564,7 +2564,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 0.88, y: 1.49}
     newSize: {x: 0.88, y: 1.49}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2581,7 +2581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020331886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -264, y: -196, z: -1}
+  m_LocalPosition: {x: -326, y: -187, z: -1}
   m_LocalScale: {x: 60.000225, y: 60.000225, z: -1.0001509}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3308,7 +3308,7 @@ GameObject:
   - component: {fileID: 1130414941}
   - component: {fileID: 1130414942}
   m_Layer: 0
-  m_Name: Right Arrow
+  m_Name: Left Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3396,7 +3396,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1290422365, guid: 9e13fcf4204ad6f4b929a30e6f74bfee, type: 3}
+  m_Sprite: {fileID: -1236918683, guid: 53a39a93afcadcc458b5f328df876b5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4818,6 +4818,8 @@ MonoBehaviour:
   Kumiko: {fileID: -948337560, guid: 9c9da27f24427c441a9541a60b0e56dd, type: 3}
   Shigure: {fileID: 1624531255, guid: 85c733ab5051fb9489fca73c14382fd9, type: 3}
   Spindler: {fileID: -1434497754, guid: 66369ecc8da469f48bb965e5065c846b, type: 3}
+  Rufus: {fileID: 0}
+  Steve: {fileID: 0}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}
