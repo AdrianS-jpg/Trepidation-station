@@ -32,7 +32,8 @@ public class NPCmovement : MonoBehaviour
     void Start()
     {
         GameObject.Find("Circle").GetComponent<settingFunction>().adding();
-        monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(11, 2))];
+        monster.GetComponent<SpriteRenderer>().sprite = allMonsters[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum - 1].Substring(11, 2))];
+        GameObject.Find("Circle").GetComponent<settingFunction>().reset();
         Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
         xPos = transform.position.x; 
         yPos = transform.position.y;

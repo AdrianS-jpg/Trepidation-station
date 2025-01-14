@@ -12,7 +12,7 @@ public class settingFunction : MonoBehaviour
     [System.NonSerialized]
     public List<string> pattern = new List<string>() {
         "err1400010019", //bigfoot
-        "orr0040102002", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
+        "orr0040102001", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
         "orr0000222018", //blink    Once you understand it though, you can never forget it!
         "err1530302007", //phillip  Lets use this --> "err1520401" as an example!
         "orr0030400015", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
@@ -43,7 +43,7 @@ public class settingFunction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        patternNum = -1;
+        patternNum = 0;
         spriteHolder = GameObject.Find("SpriteHolder");
         GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
         GetComponent<SpriteRenderer>().color = Color.white;
