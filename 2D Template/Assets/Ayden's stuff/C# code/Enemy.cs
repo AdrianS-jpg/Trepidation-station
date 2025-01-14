@@ -25,8 +25,8 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Fire");
         SceneManager.UnloadSceneAsync(LevelName);
-        FindObjectOfType<NPCmovement>().location=NPCmovement.Location.GUN;
-        //FindObjectOfType<NPCmovement>().Call();
-        FindObjectOfType<NPCmovement>().Gunner();
+        FindObjectOfType<NPCmovement>().location = NPCmovement.Location.GUN;
+        FindObjectOfType<NPCmovement>().denyer();
+        
     }
 }
