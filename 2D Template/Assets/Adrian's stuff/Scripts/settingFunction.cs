@@ -9,6 +9,7 @@ public class settingFunction : MonoBehaviour
 {
     
     public List<string> sprites = new List<string>();
+    public List<GameObject> spritesgo = new List<GameObject>();
     [System.NonSerialized]
     public List<string> pattern = new List<string>() {
         "err1400010019", //bigfoot
@@ -78,12 +79,16 @@ public class settingFunction : MonoBehaviour
                     GetComponent<SpriteRenderer>().sprite = yellowbutton;
                     //drop();
                 }
+                //spritesgo[0].GetComponent<SpriteRenderer>().enabled = false;
                 sprites[0] = sprites[1];
+                spritesgo[0] = spritesgo[1];
                 sprites.RemoveAt(1);
+                spritesgo.RemoveAt(1);
             }
         } else
         {
             sprites.Clear();
+            
             GetComponent<SpriteRenderer>().sprite = blankButton;
         }
     }
@@ -160,7 +165,7 @@ public class settingFunction : MonoBehaviour
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("Passport").GetComponent<WhenClicked>().sprite;
             GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = true;
-            GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = true;
+            //GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("Passport").GetComponent<Transform>().position = new Vector2(0, -3.5f);
             GameObject.Find("ID").GetComponent<Transform>().position = new Vector2(0, -3.5f);
             GameObject.Find("xtra documents").GetComponent<Transform>().position = new Vector2(0, -3.5f);
@@ -174,8 +179,10 @@ public class settingFunction : MonoBehaviour
         if (active == true)
         {
             active = false;
+            GameObject.Find("Square").GetComponent<SpriteRenderer>().color = new Color(GameObject.Find("Square").GetComponent<SpriteRenderer>().color.r, GameObject.Find("Square").GetComponent<SpriteRenderer>().color.b, GameObject.Find("Square").GetComponent<SpriteRenderer>().color.g, 0f);
         } else
-        { 
+        {
+            GameObject.Find("Square").GetComponent<SpriteRenderer>().color = new Color(GameObject.Find("Square").GetComponent<SpriteRenderer>().color.r, GameObject.Find("Square").GetComponent<SpriteRenderer>().color.b, GameObject.Find("Square").GetComponent<SpriteRenderer>().color.g, 0.75f);
             active = true;
             if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 1) {
                 spawnClone(-0.05f, 0f, 0f);
@@ -257,6 +264,7 @@ public class settingFunction : MonoBehaviour
                
             }
         }
+        
         //Debug.Log(CheckButton.corrects[8]);
     }
 
