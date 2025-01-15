@@ -123,6 +123,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16035350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16035352}
+  - component: {fileID: 16035351}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!68 &16035351
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16035350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 13.576153, y: 8.352102}
+  - {x: 13.576153, y: 8.3624525}
+  - {x: -4.66965, y: 8.3459635}
+  - {x: -4.703045, y: -5.0744133}
+  - {x: 13.593559, y: -5.04064}
+  - {x: 13.595452, y: 8.368756}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &16035352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16035350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4544907, y: -1.6778471, z: 21.772741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &23813081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1612,7 @@ GameObject:
   - component: {fileID: 1776285584}
   - component: {fileID: 1776285583}
   - component: {fileID: 1776285585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,12 +1627,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776285581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2773407, y: 0.4423438, z: 0.0008621216}
+  m_LocalPosition: {x: 0.2773407, y: 0.4423438, z: 0.0008544922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1776285583
 EdgeCollider2D:
@@ -1593,10 +1651,11 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -9.586626, y: 4.5663753}
-  - {x: 8.928832, y: 4.559826}
-  - {x: 9.033125, y: 4.559787}
-  - {x: 9.035374, y: -5.439292}
-  - {x: -9.58378, y: -5.446495}
+  - {x: -9.5785265, y: 5.0833144}
+  - {x: 8.539153, y: 5.0830107}
+  - {x: 9.047469, y: 5.052427}
+  - {x: 9.035373, y: -6.1351123}
+  - {x: -9.628672, y: -6.0974245}
   - {x: -9.579909, y: 4.563916}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -1615,6 +1674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Monster: {fileID: 1294508942}
+  time: 0
+  LevelName: Game Over
 --- !u!50 &1776285585
 Rigidbody2D:
   serializedVersion: 4

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ayden's stuff/gun test.unity
     guid: 1686390becc0fdf42b7ff3af9f1299f1
+  - enabled: 1
+    path: Assets/Ayden's stuff/Game Over.unity
+    guid: 909dc594195270b458e8734b71a967f7
   m_configObjects: {}
