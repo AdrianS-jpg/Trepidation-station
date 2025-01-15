@@ -15,13 +15,13 @@ public class ResponseHandler : MonoBehaviour
 
     private void Start()
     {
-        dialogueUI = GetComponent<DialogueUI>();
+        dialogueUI = GetComponent<DialogueUI>();       //Grabs the DiaUI
     }
     public void ShowResponses(Responses[] responses)
     {
         float responseBoxHeight = 0;
 
-        foreach (Responses response in responses)
+        foreach (Responses response in responses)            //Code that retrieves the responses
         {
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
             responseButton.gameObject.SetActive(true);
@@ -43,9 +43,9 @@ public class ResponseHandler : MonoBehaviour
 
         foreach (GameObject button in tempResponseButtons)
         {
-            Destroy(button);
+            Destroy(button);                     // This destroys the button when the dialogue ends if there is no response.
         }
-        tempResponseButtons.Clear();
+        tempResponseButtons.Clear();                // Clears after all the responses are done
 
         dialogueUI.ShowDialogue(response.DiaLogueObject);
 
