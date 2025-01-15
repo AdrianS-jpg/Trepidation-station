@@ -74,6 +74,7 @@ public class idMovement : MonoBehaviour
                 mousePosition.z = 0;
                 transform.position = mousePosition;
                 transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
+
                 //} else                                               
                 //{
                 //if (transform.position.x <= -5) 
@@ -113,6 +114,9 @@ public class idMovement : MonoBehaviour
             follow = false;
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
             GameObject.Find("Circle").GetComponent<settingFunction>().zvalue--;
+            GameObject.Find("Square").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Square").GetComponent<Transform>().localPosition.x, GameObject.Find("Square").GetComponent<Transform>().localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 1);
+            GameObject.Find("Button").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Button").GetComponent<Transform>().localPosition.x, GameObject.Find("Button").GetComponent<Transform>().localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 20);
+            GameObject.Find("Circle").GetComponent<Transform>().localPosition = new Vector3(GameObject.Find("Circle").GetComponent<Transform>().localPosition.x, GameObject.Find("Circle").GetComponent<Transform>().localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 2);
         }
     }
 

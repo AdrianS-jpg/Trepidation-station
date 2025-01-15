@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 28cfaf427c9217f4f90d15dbdc6153d6
+guid: 7e8e6847ece5a0240a2b873676bd1af8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,11 +131,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Entry card lilian_0
+      name: Entry_card ciar_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 25
+        x: 42
+        y: 11
         width: 193
         height: 138
       alignment: 0
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fe32f3eb5de3a241bfa5a4af9293ff9
-      internalID: -598298892
+      spriteID: 9b209468907acc740893c0f20be21c71
+      internalID: 1975192572
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Entry card lilian_0: -598298892
+      Entry_card ciar_0: 1975192572
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

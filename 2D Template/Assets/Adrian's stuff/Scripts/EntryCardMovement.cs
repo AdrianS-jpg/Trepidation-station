@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class xtradocMovements : MonoBehaviour
+public class EntryCardMovement : MonoBehaviour
 {
     public Transform transform;
     public bool follow = false, click = false, clickCheck = false, redMode = false;
@@ -11,7 +11,7 @@ public class xtradocMovements : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite sprite;
 
-    // hey wait a min ive seen this newfangled sht before
+    // ok dude like cmon man there's no way its the same
     void Start()
     {
         transform = GetComponent<Transform>();
@@ -20,7 +20,7 @@ public class xtradocMovements : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
     }
 
-    // i swear this wasn't used when i got it
+    // i promise like theres no way 
     void Update()
     {
         if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
@@ -52,7 +52,7 @@ public class xtradocMovements : MonoBehaviour
             }
             else
             {
-                
+
             }
         }
         else

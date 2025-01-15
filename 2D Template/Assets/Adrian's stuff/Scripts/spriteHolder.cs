@@ -12,14 +12,16 @@ public class spriteHolder : MonoBehaviour
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
-    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler, Rufus, Steve;
-    public Sprite Ticket, BigfootCore, BlinkCore, DavidCore, FionaCore;
+    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler, Rufus, Steve, Lillian, Veronie;
+    public Sprite Ticket, BigfootCore, BlinkCore, DavidCore, FionaCore, LillianCore;
     public Sprite FionaItem;
+    public Sprite LillianEntry;
     public List<Sprite> rulebookSpriteList;
     public List<Sprite> passportSpriteList;
     public List<Sprite> characterSpriteList;
     public List<Sprite> specialItemSpriteList;
     public List<Sprite> IDSpriteList;
+    public List<Sprite> entryCardSpriteList;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,14 +62,19 @@ public class spriteHolder : MonoBehaviour
         characterSpriteList.Add(Spindler);
         characterSpriteList.Add(Rufus);
         characterSpriteList.Add(Steve);
+        characterSpriteList.Add(Lillian);
+        characterSpriteList.Add(Veronie);
 
         IDSpriteList.Add(Ticket);
         IDSpriteList.Add(BigfootCore);
         IDSpriteList.Add(BlinkCore);
         IDSpriteList.Add(DavidCore);
         IDSpriteList.Add(FionaCore);
+        IDSpriteList.Add(LillianCore);
 
         specialItemSpriteList.Add(FionaItem);
+
+        entryCardSpriteList.Add(LillianEntry);
     }
 
     // Update is called once per frame

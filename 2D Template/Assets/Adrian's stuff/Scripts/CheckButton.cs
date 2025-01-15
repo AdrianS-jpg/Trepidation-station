@@ -45,6 +45,15 @@ public class CheckButton : MonoBehaviour
         0.02551817f, 0.003587304f,
         0.02700807f, 0.003067695f,
         0.02742732f, 0.004620694f,
+        //24 ^
+        //25 v
+        0.02331869f, 0.004310818f,
+        0.02332804f, 0.003392152f,
+        0.02312684f, 0.003608044f,
+        0.02312684f, 0.003105424f,
+        0.02312684f, 0.002728462f,
+        0.008934576f, 0.008382924f,
+
         };
     // list for sizes
     // this is nessesary i promise
@@ -55,7 +64,7 @@ public class CheckButton : MonoBehaviour
     //right this is fked uhh somehow gotta get this to work
 
     //well it works now sooooooooo
-    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "city", "classorr", "picture", "name", "birth", "weight", "class", "name", "origin", "thing"};
+    public static List<string> corrects = new List<string>() {"rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "rulebook", "pictureorr", "nameorr", "birthorr", "city", "classorr", "picture", "name", "birth", "weight", "class", "name", "origin", "thing", "nameorr", "birthorr", "classorr", "weightorr", "originorr", "pictureorr"};
     // Start is called before the first frame update
     void Start()
     {
@@ -68,39 +77,49 @@ public class CheckButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true) 
+        if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
         {
 
             //if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[placementnumberInList / 2] == "correct") { 
 
-//            }
+            //            }
             //if (obj.GetComponent<SpriteRenderer>().sprite == sprit)
             //{
 
             //}
+            if (FindObjectOfType<settingFunction>().spritesgo.Count == 2)
+            {
+                Debug.Log("as");
+                if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0] && gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[1])
+                {
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    Debug.Log("wrok");
+                }
+                else
+                {
+                    Debug.Log("not");
+                }
+            }
+            //else if (FindObjectOfType<settingFunction>().spritesgo.Count == 1)
+            //{
+            //    Debug.Log("asd");
+            //    if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0])
+            //    {
+            //        GetComponent<SpriteRenderer>().enabled = false;
+            //    }
 
+            //}
         }
         else
         {
             Destroy(gameObject);
             runsTimes = false;
-        // if (FindObjectOfType<settingFunction>().spritesgo.Count == 2) { 
-        //     Debug.Log("sleep");
-        //     if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0] && gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[1])
-        //     {
-        //         GetComponent<SpriteRenderer>().enabled = false;
-        //     }
-        // } else if (FindObjectOfType<settingFunction>().spritesgo.Count == 1){
-        //     Debug.Log("sleep");
-        //     if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0]){
-        //         GetComponent<SpriteRenderer>().enabled = false;
-        //     }
-        // }
 
-        //^ things DO NOT DELETE
 
-        //Debug.Log(camera.WorldToScreenPoint(transform.position));
-        //tf is THIS ^
+            //^ things DO NOT DELETE
+
+            //Debug.Log(camera.WorldToScreenPoint(transform.position));
+            //tf is THIS ^
         }
 
     }
@@ -110,6 +129,19 @@ public class CheckButton : MonoBehaviour
         GameObject.Find("Circle").GetComponent<settingFunction>().sprites.Add(whatThisIs);
         GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo.Add(gameObject);
         GetComponent<SpriteRenderer>().enabled = true;
+        //if (FindObjectOfType<settingFunction>().spritesgo.Count == 2)
+        //{
+            Debug.Log("as");
+            if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0] && gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[1])
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+                Debug.Log("wrok");
+            }
+            else
+            {
+                Debug.Log("not");
+            }
+        //}
     }
     public void placeEverything()
     {
@@ -168,9 +200,12 @@ public class CheckButton : MonoBehaviour
             else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
             {
                 nameOfPlace = "ID";
-            } else
+            } else if (((transform.position.z + 0.1f) >= 22 && transform.position.z <= 24))
             {
                 nameOfPlace = "xtra documents";
+            } else if (((transform.position.z + 0.1f) >= 25 && transform.position.z <= 31))
+            {
+                nameOfPlace = "Entry Card";
             }
             whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
             GetComponent<BoxCollider2D>().enabled = true;
