@@ -84,19 +84,24 @@ public class CheckButton : MonoBehaviour
         {
             Destroy(gameObject);
             runsTimes = false;
-        }
-        if (FindObjectOfType<settingFunction>().spritesgo.Count == 2) { 
-            if (gameObject == FindObjectOfType<settingFunction>().spritesgo[0] || gameObject == FindObjectOfType<settingFunction>().spritesgo[1])
-            {
+        // if (FindObjectOfType<settingFunction>().spritesgo.Count == 2) { 
+        //     Debug.Log("sleep");
+        //     if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0] && gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[1])
+        //     {
+        //         GetComponent<SpriteRenderer>().enabled = false;
+        //     }
+        // } else if (FindObjectOfType<settingFunction>().spritesgo.Count == 1){
+        //     Debug.Log("sleep");
+        //     if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0]){
+        //         GetComponent<SpriteRenderer>().enabled = false;
+        //     }
+        // }
 
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().enabled = false;
-            }
-        }
+        //^ things DO NOT DELETE
+
         //Debug.Log(camera.WorldToScreenPoint(transform.position));
         //tf is THIS ^
+        }
 
     }
 
@@ -174,6 +179,25 @@ public class CheckButton : MonoBehaviour
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 3);
             runsTimes = true;
 
+        }
+
+    }
+    public void sleep(){
+        Debug.Log("sleep");
+        if (FindObjectOfType<settingFunction>().spritesgo.Count == 2) { 
+            Debug.Log("as");
+            if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0] && gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[1])
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+                Debug.Log("wrok");
+            } else {
+                Debug.Log("not");
+            }
+        } else if (FindObjectOfType<settingFunction>().spritesgo.Count == 1){
+            Debug.Log("asd");
+            if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0]){
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
 }

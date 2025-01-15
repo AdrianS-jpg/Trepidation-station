@@ -59,27 +59,38 @@ public class settingFunction : MonoBehaviour
             {
                 if (sprites[0].Contains("orr") || sprites[1].Contains("orr"))
                 {
+                    Debug.Log("g");
                     if (sprites[0] == (sprites[1] + "orr") || sprites[1] == (sprites[0] + "orr") || sprites[0] == sprites[1])
                     {
                         GetComponent<SpriteRenderer>().sprite = greenbutton;
+                    }else
+                    {
+                        GetComponent<SpriteRenderer>().sprite = yellowbutton;
+                        //drop();
+                        Debug.Log("d");
                     }
                 } else if (sprites[0].Contains("err") || sprites[1].Contains("err"))
                 {
                     if (sprites[0] == (sprites[1] + "err") || sprites[1] == (sprites[0] + "err") || sprites[0] == sprites[1])
                     {
                         GetComponent<SpriteRenderer>().sprite = redButton;
+                    }else
+                    {
+                        GetComponent<SpriteRenderer>().sprite = yellowbutton;
+                        //drop();
+                        Debug.Log("d");
                     }
-                }
-                else if (sprites[0] == sprites[1])
-                {
-                    //GetComponent<SpriteRenderer>().sprite = greenbutton;
+                    Debug.Log("f");
                 }
                 else
                 {
                     GetComponent<SpriteRenderer>().sprite = yellowbutton;
                     //drop();
+                    Debug.Log("d");
                 }
+                FindObjectOfType<CheckButton>().sleep();
                 //spritesgo[0].GetComponent<SpriteRenderer>().enabled = false;
+                Debug.Log("adsf");
                 sprites[0] = sprites[1];
                 spritesgo[0] = spritesgo[1];
                 sprites.RemoveAt(1);
@@ -88,7 +99,7 @@ public class settingFunction : MonoBehaviour
         } else
         {
             sprites.Clear();
-            
+            spritesgo.Clear();
             GetComponent<SpriteRenderer>().sprite = blankButton;
         }
     }
@@ -290,5 +301,8 @@ public class settingFunction : MonoBehaviour
         GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = false;
         GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = false;
 
+    }
+    public void test(){
+        
     }
 }
