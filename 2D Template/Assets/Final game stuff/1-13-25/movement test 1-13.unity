@@ -2646,7 +2646,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< HEAD
 --- !u!1001 &982162785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2779,29 +2778,11 @@ GameObject:
   m_PrefabInstance: {fileID: 982162785}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &982162788
-=======
---- !u!114 &973690411
->>>>>>> 199e637248bbc731e906bec47d6f71ff6df067e4
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 982162787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed3238c22217e0469c73dff5f443494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transform: {fileID: 0}
-  follow: 0
-  click: 0
-  clickCheck: 0
-  redMode: 0
-  spriteRenderer: {fileID: 0}
-  sprite: {fileID: 0}
-=======
   m_GameObject: {fileID: 973690403}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2839,7 +2820,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talkingSpeed: 15
->>>>>>> 199e637248bbc731e906bec47d6f71ff6df067e4
 --- !u!1 &995571207
 GameObject:
   m_ObjectHideFlags: 0
