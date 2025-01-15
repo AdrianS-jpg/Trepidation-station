@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class SlowTalk : MonoBehaviour
+public class SlowTalk : MonoBehaviour          // To make this note short, it allows you to change the speed of the dialogue.
 {
    [SerializeField] public float talkingSpeed = 50f;
    public Coroutine Run(string textToType, TMP_Text textLabel)

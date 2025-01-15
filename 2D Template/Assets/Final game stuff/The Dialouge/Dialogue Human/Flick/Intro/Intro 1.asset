@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a8dbe9035981e4ab935e7e26ddfb73, type: 3}
+  m_Name: Intro 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Sup dude.
+  - Documents.
+  - Oh yeah sure- *GAG*
+  - Hmm?
+  - BRO WHAT'S THAT SMELL?
+  - What smell?
+  - "IT\u2019S LIKE, TOTALLY BURNIN\u2019 OFF MY NOSE HAIRS!"
+  - Did you expect a checkpoint that hundreds of people go through a day to smell
+    good?
+  - Suck it up.
+  - "Fine! *Cough* Jerk\u2026"
+  responses: []

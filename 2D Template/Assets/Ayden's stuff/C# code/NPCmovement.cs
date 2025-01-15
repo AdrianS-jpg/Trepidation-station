@@ -7,7 +7,9 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class NPCmovement : MonoBehaviour
-{ 
+{
+    
+
     public enum Location { Traveling, Accepted, Denied, Middle, GUN}
     public Transform centerscreen;
     public Transform Denied;
@@ -43,12 +45,14 @@ public class NPCmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (location == Location.Traveling)
+        if (location == Location.Traveling)          
         {
            transform.position = Vector2.MoveTowards(transform.position, centerscreen.position, speed * Time.deltaTime);
             if (transform.position == centerscreen.position)
             {
-                location = Location.Middle;
+                location = Location.Middle;           // Code that makes it drop the Book and passport etc.
+                
+
                 DropItem();
 
             }
@@ -57,7 +61,7 @@ public class NPCmovement : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.deltaTime);
         }
-        if (location == Location.Denied)
+        if (location == Location.Denied)           // Monster moves left
         {
             transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.deltaTime);
         }
