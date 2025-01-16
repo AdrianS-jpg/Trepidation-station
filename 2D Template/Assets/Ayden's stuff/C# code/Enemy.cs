@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
         SceneManager.UnloadSceneAsync(LevelName);
         FindObjectOfType<NPCmovement>().location = NPCmovement.Location.GUN;
         FindObjectOfType<NPCmovement>().denyer();
+        FindObjectOfType<Days>().choices += 1;
         
     }
 }
