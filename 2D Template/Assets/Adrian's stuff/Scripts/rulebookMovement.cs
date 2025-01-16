@@ -17,8 +17,6 @@ public class rulebookMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //sprite2 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookDefault;
-        //sprite3 = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>().rulebookBlank;
         transform = GetComponent<Transform>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
@@ -67,23 +65,10 @@ public class rulebookMovement : MonoBehaviour
             }
             if (follow == true)
             {
-                //if (transform.position.x <= 5 && transform.position.x >= -5)
-                //{
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = -1;
                 transform.position = mousePosition;
                 transform.localPosition = new Vector3(transform.localPosition.x,transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue);
-                //} else                                               
-                //{
-                //if (transform.position.x <= -5) 
-                //{
-                //    transform.position = new Vector3 (-5, transform.position.y, transform.position.z);
-                //} else
-                //{
-                //    transform.position = new Vector3(5, transform.position.y, transform.position.z);
-                //}
-                //    follow = false;
-                //}
                 
             } else
             {

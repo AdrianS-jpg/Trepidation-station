@@ -12,8 +12,8 @@ public class spriteHolder : MonoBehaviour
     }
     public Sprite rulebookDefault, rulebookMap, rulebook1, rulebook2, rulebook3, rulebook4, rulebook5, rulebook6, rulebook7, rulebook8, rulebook9, rulebookCover, rulebookCoreander, rulebookDerekstad, rulebookIchkersk, rulebookKeiraland, rulebookKunitri, rulebookDocuments;
     public Sprite passportKunitri, passportKunitriOpen, passportCoreander, passportCoreanderOpen, passportDerekstad, passportDerekstadOpen, passportIchkersk, passportIchkerskOpen, passportKeiraland, passportKeiralandOpen;
-    public Sprite Bigfoot, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler, Rufus, Steve, Lillian, Veronie;
-    public Sprite Ticket, BigfootCore, BlinkCore, DavidCore, FionaCore, LillianCore;
+    public Sprite Flick, Frank, Blink, Phillip, Yanagi, David, Fiona, Ichigo, Mavis, Whiskers, Kumiko, Shigure, Spindler, Rufus, Steve, Lillian, Veronie, Mothman, Pebble, Jamie;
+    public Sprite Ticket, BigfootCore, BlinkCore, DavidCore, FionaCore, LillianCore, PebbleCore;
     public Sprite FionaItem;
     public Sprite LillianEntry;
     public List<Sprite> rulebookSpriteList;
@@ -47,7 +47,7 @@ public class spriteHolder : MonoBehaviour
         passportSpriteList.Add(passportKunitri);
         passportSpriteList.Add(passportKunitriOpen);
 
-        characterSpriteList.Add(Bigfoot);
+        characterSpriteList.Add(Flick);
         characterSpriteList.Add(Frank);
         characterSpriteList.Add(Blink);
         characterSpriteList.Add(Phillip);
@@ -64,6 +64,8 @@ public class spriteHolder : MonoBehaviour
         characterSpriteList.Add(Steve);
         characterSpriteList.Add(Lillian);
         characterSpriteList.Add(Veronie);
+        characterSpriteList.Add(Mothman);
+        characterSpriteList.Add(Pebble);
 
         IDSpriteList.Add(Ticket);
         IDSpriteList.Add(BigfootCore);
@@ -71,6 +73,7 @@ public class spriteHolder : MonoBehaviour
         IDSpriteList.Add(DavidCore);
         IDSpriteList.Add(FionaCore);
         IDSpriteList.Add(LillianCore);
+        IDSpriteList.Add(PebbleCore);
 
         specialItemSpriteList.Add(FionaItem);
 

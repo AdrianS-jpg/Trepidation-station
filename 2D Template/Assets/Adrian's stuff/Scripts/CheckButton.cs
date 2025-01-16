@@ -80,13 +80,6 @@ public class CheckButton : MonoBehaviour
         if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
         {
 
-            //if (GameObject.Find("Circle").GetComponent<settingFunction>().pattern[placementnumberInList / 2] == "correct") { 
-
-            //            }
-            //if (obj.GetComponent<SpriteRenderer>().sprite == sprit)
-            //{
-
-            //}
             if (FindObjectOfType<settingFunction>().spritesgo.Count == 2)
             {
                 Debug.Log("as");
@@ -100,26 +93,13 @@ public class CheckButton : MonoBehaviour
                     Debug.Log("not");
                 }
             }
-            //else if (FindObjectOfType<settingFunction>().spritesgo.Count == 1)
-            //{
-            //    Debug.Log("asd");
-            //    if (gameObject != GameObject.Find("Circle").GetComponent<settingFunction>().spritesgo[0])
-            //    {
-            //        GetComponent<SpriteRenderer>().enabled = false;
-            //    }
 
-            //}
         }
         else
         {
             Destroy(gameObject);
             runsTimes = false;
 
-
-            //^ things DO NOT DELETE
-
-            //Debug.Log(camera.WorldToScreenPoint(transform.position));
-            //tf is THIS ^
         }
 
     }
@@ -147,16 +127,11 @@ public class CheckButton : MonoBehaviour
     {
         if (runsTimes == false)
         {
-            //new idea: computer knows where to put boxes because of original vector in which it is spawned into, the (x, y, z) coordinate bc it changes immiedently. 
-            //or just use the vector itself as the coordinates
-            //i might be both stupid and smart at the same time chat
-            //GetComponent<Renderer>().enabled = true;
 
-            //not sure why this exists imma be fully honest but hey
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
                 nameOfPlace = "Rulebook";
-                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(5,1))) + 3))
+                if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(5, 1))) + 3))
                 {
                     if (Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(3, 2)) >= 15 && Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(3, 2)) <= 17)
                     {
@@ -169,53 +144,34 @@ public class CheckButton : MonoBehaviour
                         corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(9, 1)) + 7] = "cityorr";
 
                     }
-                    //else
-                    //{
-                        //corrects[Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum])] = "rulebook";
 
-                    //}
-                    
                 }
-                //if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount == 3))
-                //{
-                //    if ((transform.position.z + 0.1f) >= 7 && transform.position.z <= 8)
-                //    {
-                //        corrects[7] = "rulebookbannerfell";
+                else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
+                {
+                    nameOfPlace = "Passport";
+                }
+                else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
+                {
+                    nameOfPlace = "ID";
+                }
+                else if (((transform.position.z + 0.1f) >= 22 && transform.position.z <= 24))
+                {
+                    nameOfPlace = "xtra documents";
+                }
+                else if (((transform.position.z + 0.1f) >= 25 && transform.position.z <= 31))
+                {
+                    nameOfPlace = "Entry Card";
+                }
+                whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
+                GetComponent<BoxCollider2D>().enabled = true;
+                GetComponent<Transform>().localScale = new Vector2((Size[(int)(transform.position.z + 0.1f) * 2] * 3299.754f), (Size[(int)((transform.position.z + 0.1f) * 2) + 1] * 3327.64f));
+                transform.position = new Vector3(GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.y + transform.position.y, -3);
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 3);
+                runsTimes = true;
 
-                //    }
-                // yo future adrian get this done ^
-                // it's just the names of the towns
-
-                //ok
-                //it done
-                //Debug.Log(corrects[8]);
-
-                //yo past adrians yall are fkin stupid cmon man
-                //there was a way easier way to do it, even if it took me a concerningly longer time to do it, it's much more efficient i promise
             }
-            else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
-            {
-                nameOfPlace = "Passport";
-            }
-            else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
-            {
-                nameOfPlace = "ID";
-            } else if (((transform.position.z + 0.1f) >= 22 && transform.position.z <= 24))
-            {
-                nameOfPlace = "xtra documents";
-            } else if (((transform.position.z + 0.1f) >= 25 && transform.position.z <= 31))
-            {
-                nameOfPlace = "Entry Card";
-            }
-            whatThisIs = corrects[(int)(transform.position.z + 0.1f)];
-            GetComponent<BoxCollider2D>().enabled = true;
-            GetComponent<Transform>().localScale = new Vector2((Size[(int)(transform.position.z + 0.1f) * 2] * 3299.754f), (Size[(int)((transform.position.z + 0.1f) * 2) + 1] * 3327.64f));
-            transform.position = new Vector3(GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.x + transform.position.x, GameObject.Find(nameOfPlace).GetComponent<Transform>().transform.position.y + transform.position.y, -3);
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, GameObject.Find("Circle").GetComponent<settingFunction>().zvalue - 3);
-            runsTimes = true;
 
         }
-
     }
     public void sleep(){
         Debug.Log("sleep");

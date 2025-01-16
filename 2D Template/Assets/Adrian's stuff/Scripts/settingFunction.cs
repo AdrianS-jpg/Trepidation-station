@@ -7,30 +7,32 @@ using UnityEngine;
 
 public class settingFunction : MonoBehaviour
 {
-    
+    public int points = 0;
     public List<string> sprites = new List<string>();
     public List<GameObject> spritesgo = new List<GameObject>();
     [System.NonSerialized]
     public List<string> pattern = new List<string>() {
-        "err140001001900", //bigfoot
-        "orr004010200100", //frank    Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
-        "orr000022201800", //blink    Once you understand it though, you can never forget it!
-        "err153030200700", //phillip  Lets use this --> "err1520401" as an example!
-        "orr003040001500", //yanagi   (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
-        "err120053102300", //david    (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
-        "orr000064012200", //fiona    (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
-        "orr002070201600", //ichigo   (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
-        "orr001080002000", //mavis    (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
-        "orr001090201400", //whiskers (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
-        "orr004100204000", //kumiko   Thanks, 1/9/2025 Adrian! It's great to have all of this information. However, I noticed a couple of extra numbers on the end there. Mind telling us what those are?
-        "orr003110000900", //shigure  *pushes 1/9/25 Adrian aside* Here, I got this one. Hi, I'm 1/13/2025 Adrian here to explain the extra numbers I added later on! Let's use --> "err1520401032" as an example!
-        "orr004120000000", //spindler (0) this is the variable that corresponds to whether if I need another extra document or not. 
-        "orr002130003200", //rufus    (32) this is the number that links to Ayden's list of sprites. I didn't want to add another 50 sprites to the spriteholder, so I just used his. He won't mind. This is the sprite that walks up to the screen and leaves when you start the game.
-        "orr003140001200", //steve    Why thank you, 1/13/2025 Adrian
-
-        "orr000155000310", //lillian  And why is there a space here? ^
-        "orr002160101300", //veronie  
-        "orr001170100500", //mothman    
+        "orr003140001200", //steve1
+        "arr004010200100", //frank2     Hi, It's 1/9/2025 Adrian here with a quick explanation of how to Navigate this weird and wonderful set of, I'm sure, confusing mash of letters and numbers!
+        "orr000022201800", //blink3     Once you understand it though, you can never forget it!
+        "err153030200700", //phillip4   Lets use this --> "err1520401" as an example!
+        "orr003040001500", //yanagi5    (err) this is to check if the passport is correct or not. orr is correct, err is incorrect (error).
+        "err120053102300", //david6     (15) this is the hitbox/invisible text that will be changed to make sure the checking works. if you are not adrian/someone who understands this code, dont worry about this.
+        "orr000064012200", //fiona7     (2) this is the number that connects to a list of passport covers. I need to know which cover to use for each character, so that's what this is for.       
+        "orr002070201600", //ichigo8    (04) this is the placement of the passport in the spriteholder (see spriteholder passportSpriteList). This is mainly for just in case something breaks and i have to do some debugging .       
+        "orr001080002000", //mavis9     (0) this is the variable that determines whether i need another paper or not. If it's 0, it'll have a basic ticket. otherwise, there's another list where it corresponds to. Most likely this is going to change in the future if we add more documents.
+        "orr001090201400", //whiskers10 (1) this is the location of the correct/incorrect location on the handbook. if it's 0, then it's the first location. if it's 1, it's the 2nd, and 2 means it's the 3rd.
+        
+        "orr004100204000", //kumiko11   Thanks, 1/9/2025 Adrian! It's great to have all of this information. However, I noticed a couple of extra numbers on the end there. Mind telling us what those are?
+        "orr003110000900", //shigure12  *pushes 1/9/25 Adrian aside* Here, I got this one. Hi, I'm 1/13/2025 Adrian here to explain the extra numbers I added later on! Let's use --> "err1520401032" as an example!
+        "orr004120000000", //spindler13 (0) this is the variable that corresponds to whether if I need another extra document or not. 
+        "orr002130003200", //rufus14    (32) this is the number that links to Ayden's list of sprites. I didn't want to add another 50 sprites to the spriteholder, so I just used his. He won't mind. This is the sprite that walks up to the screen and leaves when you start the game.
+        "orr002010003400", //flick15    Why thank you, 1/13/2025 Adrian
+        "orr000155000310", //lillian16  And why is there a space here? ^
+        "arr002160101300", //veronie17  
+        "orr001170100500", //mothman18   
+        "orr000186104100", //pebbles19
+        "orr001190204200", //jamie20
 
 
         //dont give entry ticket for incorrect ones pls
@@ -51,7 +53,7 @@ public class settingFunction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        patternNum = 14;
+        patternNum = 0;
         spriteHolder = GameObject.Find("SpriteHolder");
         GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
         GetComponent<SpriteRenderer>().color = Color.white;
@@ -149,7 +151,14 @@ public class settingFunction : MonoBehaviour
             if (pattern[patternNum].Substring(0, 3) == "err")
             {
                 CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))] = CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Remove(CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))].Length - 3, 3) + "err";
-            } 
+            }
+            if (pattern[patternNum].Substring(0, 3) == "arr")
+            {
+                GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = false;
+            } else
+            {
+                GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = true;
+            }
             if (Convert.ToInt32(pattern[patternNum].Substring(3, 2)) >= 15 && Convert.ToInt32(pattern[patternNum].Substring(3, 2)) <= 17)
                 {
                     CheckButton.corrects[Convert.ToInt32(pattern[patternNum].Substring(3, 2))] = "city";
@@ -199,7 +208,7 @@ public class settingFunction : MonoBehaviour
             GameObject.Find("Passport").GetComponent<WhenClicked>().sprite2 = spriteHolder.GetComponent<spriteHolder>().characterSpriteList[Convert.ToInt32(pattern[patternNum].Substring(6, 2))];
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("Passport").GetComponent<SpriteRenderer>().sprite = GameObject.Find("Passport").GetComponent<WhenClicked>().sprite;
-            GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = true;
+            //GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("Passport").GetComponent<Transform>().position = new Vector2(0, -3.5f);
             GameObject.Find("ID").GetComponent<Transform>().position = new Vector2(0, -3.5f);
             GameObject.Find("xtra documents").GetComponent<Transform>().position = new Vector2(0, -3.5f);
@@ -333,13 +342,38 @@ public class settingFunction : MonoBehaviour
     }
     public void adding()
     {
+        if (pattern[patternNum].Substring(0,3) == "err" || pattern[patternNum].Substring(0, 3) == "arr")
+        {
+            if (FindObjectOfType<NPCmovement>().location == NPCmovement.Location.Accepted) 
+            {
+                points--;
+            }
+            else
+            {
+                points++;
+            }
+        } else if (pattern[patternNum].Substring(0,3) == "orr")
+        {
+            if (FindObjectOfType<NPCmovement>().location == NPCmovement.Location.Accepted)
+            {
+                points++;
+            }
+            else
+            {
+                points--;
+            }
+        }
         if (pattern.Count - 1 == patternNum)
         {
             end = true;
-        } else
+        }
+        else
         {
             patternNum++;
         }
+        Debug.Log(pattern[patternNum - 1].Substring(11, 2));
+        Debug.Log(patternNum - 1);
+        Debug.Log(patternNum);
     }
     public void reset()
     {
