@@ -494,7 +494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 90.56, y: 59.210022}
+  m_AnchoredPosition: {x: 90.56, y: 59.20996}
   m_SizeDelta: {x: 70.53, y: 16.410004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195598261
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 973690410}
   - component: {fileID: 973690413}
   - component: {fileID: 973690412}
-  - component: {fileID: 973690411}
+  - component: {fileID: 982162788}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2646,6 +2646,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &973690412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973690403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb553746c5a5704b870cd1f594582b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 823270885}
+  textLabel: {fileID: 1137062880}
+  testDialogue: {fileID: 0}
+--- !u!114 &973690413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973690403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fc1363d8c76334fadab97e6e2542b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talkingSpeed: 15
 --- !u!1001 &982162785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2772,11 +2800,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 843816240234703005, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
   m_PrefabInstance: {fileID: 982162785}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &982162787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 843816240234702994, guid: 5bd0f30e1b3e8ea4ebc2ba5c9d495f90, type: 3}
-  m_PrefabInstance: {fileID: 982162785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &982162788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,34 +2815,6 @@ MonoBehaviour:
   responseBox: {fileID: 1878466974}
   responseButtonTemplate: {fileID: 760438062}
   responseContainer: {fileID: 79513818}
---- !u!114 &973690412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973690403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb553746c5a5704b870cd1f594582b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 823270885}
-  textLabel: {fileID: 1137062880}
-  testDialogue: {fileID: 11400000, guid: 20fae025faf5b0a4693907d44e924919, type: 2}
---- !u!114 &973690413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973690403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fc1363d8c76334fadab97e6e2542b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talkingSpeed: 15
 --- !u!1 &995571207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3303,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 89b02a4b4d960294ea2a34c47ca19cff, type: 3}
   - {fileID: 21300000, guid: 63791a0d7c3ffe34cac7c1c66b33cd6f, type: 3}
   item: {fileID: 5318074366427783402, guid: 9d32eb2ec8122ed4f91745f79bc411ed, type: 3}
+  onMiddle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: ShowDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e2b4964a0ad621840b76a28f2e23dc2e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1043655073
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,6 +5709,7 @@ MonoBehaviour:
   Rufus: {fileID: 1220958391, guid: f4f13c08d708713429fcafa8f6b87992, type: 3}
   Steve: {fileID: -1304312703, guid: e642cac57125a4d4ca5f914bf2d466aa, type: 3}
   Lillian: {fileID: 1428367348, guid: 019e7b6a72a29af45913830330c7b63f, type: 3}
+  Veronie: {fileID: 0}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}

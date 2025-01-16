@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NPCmovement : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class NPCmovement : MonoBehaviour
     public List<Sprite> allMonsters;
 
     public GameObject item;
+    public UnityEvent onMiddle;
     //public bool inMiddle;
     //public bool accept;
     //public bool deny;
@@ -51,8 +53,8 @@ public class NPCmovement : MonoBehaviour
             if (transform.position == centerscreen.position)
             {
                 location = Location.Middle;           // Code that makes it drop the Book and passport etc.
-                
 
+                onMiddle.Invoke();
                 DropItem();
 
             }
@@ -84,6 +86,7 @@ public class NPCmovement : MonoBehaviour
     {
         if (location == Location.Middle)
         {
+            
             location = Location.Accepted;
             GameObject.Find("Circle").GetComponent<settingFunction>().reset();
         } 

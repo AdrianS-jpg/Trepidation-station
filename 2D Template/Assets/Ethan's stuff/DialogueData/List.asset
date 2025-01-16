@@ -1,0 +1,408 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e285fa0b76e1b1d43b83a4c8fd35373d, type: 3}
+  m_Name: List
+  m_EditorClassIdentifier: 
+  dialogueobjects:
+  - Monster: {fileID: 21300000, guid: 9a5b4fdba9deb3f4f8b8c609b5da1438, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 07c41675c7524434baccdcad3b7dc3a1, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: ad7e2a04fe6457b4e8c1a66648c6d32c, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 81c34897fea9ebc42836aac2086f6c1a, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: b36ebed591aa2e6428cd78ddacd391a6, type: 2}
+  - Monster: {fileID: 21300000, guid: 01045ef191b8b5f439d4802887b877ca, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 6e54e7a524902ab4d9b9db3b74327098, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 2ed39717dbaa1d94cbf785328772300a, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 9126ef92d68ecb641bd54ad3b58256a0, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 8587ec5f26e120747aca3a2e7f12efbf, type: 2}
+  - Monster: {fileID: 21300000, guid: f5d96b3d56fb28c41bcf11479a101bbe, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: f0e9303b1d0f5914d8d0f4680fd2ef0d, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: c9f991fafb177ff4f842b2b3d23ace48, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: bdc07f6e8b8bd5a4db968bb89338b36a, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 06321ac4d7c91604a9b2f9852f2d031c, type: 2}
+  - Monster: {fileID: 21300000, guid: cc014b813b4352e4c89e213e91b22618, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 6a2dbc0ff6f0acc4caabdeddd2c397fe, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 9c0d80077c686ff4ca05e60a6aa1c2a2, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 4c72077040896e744a843db4860efa59, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 3874b4339df3b1547828d899772e38ab, type: 2}
+  - Monster: {fileID: 21300000, guid: 038c50db84b5c4b47949e9878104caac, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: fb0374011d53b7d479391f5f521922bc, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: f734187bd6c5d5449be4da269fdc5f0d, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: e7ff97b47eb7cb34db13e4814929fca1, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: c11788347d940d84690e7e8943fbccf4, type: 2}
+  - Monster: {fileID: 21300000, guid: 452ac820029417c4f8b41201a129cb9a, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 02f60d55be471b746bbdd58cfbfe8776, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 27141b001731103429b872dbef7cdad7, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: e2af565afbdfae14eb55fc136fea1b93, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: d11484dd7b6ca534cbf5af8963b01cf7, type: 2}
+  - Monster: {fileID: 21300000, guid: 92a8c2b4733a26b4784288c83b8ab028, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: d9ae67de5104faf4f9178a97d9b35174, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 93857d08daa6f2645a37cb2030f26fa5, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 86e7db2077f32974395f3f76b7d05264, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 5976e4c82542d2945b1f094ac2bfed48, type: 2}
+  - Monster: {fileID: 21300000, guid: 639f47b630d0bb9459a29770f93d7037, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: c5269ce51d3032d4ab9a7a59fc239079, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: e00c9b2f239e7b240bf472facc1ba3a5, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 6146ee6d3448fc34b8419616792d9bbd, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 3459bed910ecd3b43a7e855c266082d9, type: 2}
+  - Monster: {fileID: 21300000, guid: 6afe5c29d49cb25438edafdc8495429e, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: cb7bc1f9c57777346ab136b88c4956a8, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 9e66fdbf024cb6e438a145a19d2c7185, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 9c05a7c2bbf82304185c7d769bde8646, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 45891507b4e77b5428c2707559978f8c, type: 2}
+  - Monster: {fileID: 21300000, guid: 66f696e687027b54ea0d45c2b10f20eb, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: d86f840bbb71329469449ccd7c6c0b21, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: e3639fa47dace4049a5ba53ae9244d1f, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: fd6f39a91db3e3c4fb0af5ab501f543c, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 0ce2693ee7e9a63468a7c5176217c375, type: 2}
+  - Monster: {fileID: 21300000, guid: 9c654eeb82927d243b27a3fad7e0fa69, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: ad656c3da4eac214d849cd50bd88c9f0, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 694d93ee478245447915c4e7f0b499d1, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: a84787b8bd8aa2343b2e066140519ea2, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 97ed33c03e9d47a48b4178347ed2637a, type: 2}
+  - Monster: {fileID: 21300000, guid: 7003e13d74b198a429a21256b659eb75, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 91e728541af5da347a81b71afafd1d4e, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 2add8f86b9317f54d98b048791e42a6e, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: f2a7f43b52e2de748a9bc844958705af, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: e8827e6fd0002374d9bda643a250a6e4, type: 2}
+  - Monster: {fileID: 21300000, guid: bf12105f9a3acbb40b8366643a15ce12, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 3a8d7fc03679ad54aa7001d90f749918, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 0e33547840d80e644bb8b26e689a23f9, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 951c3371a15f6d9489e71164329e4095, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 8d37ede9c58abfd448afd9c7229bf1ba, type: 2}
+  - Monster: {fileID: 21300000, guid: 18b8d165ab9e22747a2cee796dd5a994, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: e2ad4a28a26cbb848ad1cc52aa5f8164, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 55a6005241c9273458496c3ab0cf03e3, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 6ae43986743aa4240bc319d18a8d34c4, type: 2}
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: c1fb8a0c7d9414f4b81d7ec874f14558, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 3e11fdefabd177249b3a62c1c3bcd1b4, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 2c06d054cbc684a42957df442cb8afbb, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 5b0cc2063e21a6b4db240d71c0699909, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 358f0c1325fa93742bcc789e3e80c794, type: 2}
+  - Monster: {fileID: 21300000, guid: 3e56f7982fc0ce24aab67809a0736dd8, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 9197955c9275e104397ff11ea9f2a452, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: af5ef50a02e5be440a10d5cab437085e, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 3503e0bf0d2a143478734c3f893b555c, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: fbed42599db5b0d419223d18056f1cd9, type: 2}
+  - Monster: {fileID: 21300000, guid: d453aa57aa71b314dbffa1a04cb7729b, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 112908f7af6f26c4fa2683bbf185f01c, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 3374737eb6cc3ef4fab39836d1f41069, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 67a49e4e583111e45998c4b642675ed3, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 6fd775de09fefcc439413aa56f3fcd63, type: 2}
+  - Monster: {fileID: 21300000, guid: 2a140001213cb5143accf68258c4bc97, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 27d4627c820066644a9a4008cc90c245, type: 2}
+    Accept: []
+    Denial: []
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: eb3f20527d3e1a14a9df964ec7d8dbf4, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: e2b4964a0ad621840b76a28f2e23dc2e, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: ab62c36f464042a46a5231ea81065331, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 42131d7ff4cd16f4e887fc9d63bed806, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 2edf6a1c43cad11439ad0ae631b819ee, type: 2}
+  - Monster: {fileID: 21300000, guid: 424757d779b99a24eaab5b3ca240aa84, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: de9c9a2adf64794438f184ca9159bb5d, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: a6b64065dbfda5749a61f5c59e694fae, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 00d9ed149ff446c459f8a0ad9018f09f, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 4f10a101131191c4789a0ac5bf118fa9, type: 2}
+  - Monster: {fileID: 21300000, guid: e429db18c452edf4da30163bc827277e, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: cf966dc1f46fd2a4e9e8a29edaf41258, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 4165b9124e6a35a4887215e1623832e2, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 087ca825d346b1d44869da40a8e7d652, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 905eba692151ec8489cebb908200dbc7, type: 2}
+  - Monster: {fileID: 21300000, guid: 56d744790725f2f43abf2999c2a170c4, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: b892633347779b649a79aafb5ae42a33, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 9e7567f21f9acf54d851c1c4624e55cd, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 024dc909207502448a4d811682542e62, type: 2}
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: 25f2156485fc06e469c6266be0b8e5e5, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 427d67bca4b10bd49b027c3a310f5059, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 32ecbc2652a02e745bb9e947b9f7ddc6, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 3bdf5cbdf71a0e54182f3afec3b07706, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 1cf95608f9f557a41908a9f519de96dd, type: 2}
+  - Monster: {fileID: 21300000, guid: df96a186447d9f944a5956dbf947c2d4, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: e14c702849698ec44ac4766022c228a2, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 43b12e3d1b9c0034db411ec7b7999ad7, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 97e59e3dd38b2314a86f884e051e3640, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: e59791ef3642bdd409f261e1911fa795, type: 2}
+  - Monster: {fileID: 21300000, guid: 3b557abf2b579474e9879f9b3e63aecd, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: ae563875ed30f9546a58757dff31432f, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: a83b75a7fe3257546afcda65bcfe7479, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 315e6d393c9d4da4b9a18605e5eb4298, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: f28298bf90860ba49847e20750e1b1a5, type: 2}
+  - Monster: {fileID: 21300000, guid: f3e98a31374e8514e9b67f1c5640be4c, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: a0b393e4143f47545ba4bc04b0336e5e, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 932df85935af28946b77414004998446, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: ef26ffe428f9f7840a58d119f8eced69, type: 2}
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: 36ee8b23671fccf4192d4ffa27597579, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: fb0792ec5b74ae043972fa7ed6baf99f, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 0a5f04b8e0824684eb090caa71fcd9dc, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: a73e4e1ba00e3e248b74c1bf94d3f85b, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 02a38cf01e1c4c64292118d8d6abc84b, type: 2}
+  - Monster: {fileID: 21300000, guid: 9f84922aa380aa14498ad122b4621ab1, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: bf508e233520b464fac05b49d67b2c6d, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: afec1741e0f820c4d86764cac34f7c7c, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 16d28dc53789e074b8bc18ec6ec17941, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 1bbfd3f9f8fdcb5469bf5c8ac84e297b, type: 2}
+  - Monster: {fileID: 21300000, guid: 641f2c304c773dd41946672eb8176daa, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 17f5badef13ad2d48975e663186dc8cf, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 0b465f5cb7d7452428e19b70ca3917c9, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: dcf6d52d50b880f4b94957ff6754b807, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 479160bc08776e24c8ec8bc22cfec16e, type: 2}
+  - Monster: {fileID: 21300000, guid: 89b02a4b4d960294ea2a34c47ca19cff, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 99b558d8aba62684d8e83e1c0c534d7d, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: fcadaafb6cf935b469214e0530948683, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 5a5d9e3bc670ae54b83aa7ab29b389e4, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 24bdf18f118f874439f8ec642a77f9b3, type: 2}
+  - Monster: {fileID: 21300000, guid: 1b34ad8dad189a44c80cc6454aa64137, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: ec3dacf97b0acb04aa26bddf1cf354bb, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 7d52716a1fee40948a925ebe4781fa48, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 1aaffc684fe0b8b41be55d48c330c0bc, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 71ea696ad2176364abfe9150c24a3ace, type: 2}
+  - Monster: {fileID: 21300000, guid: ff2476998c335a24fa69df09757732d7, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 24a203fca428bb84db21994f41e8fc84, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 986f2b2432d77c949a5a7a1d7b772283, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 74371813db1f98d4294266f88234b2bb, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 0df7802b84979f549a6e1c6e26eefa1c, type: 2}
+  - Monster: {fileID: 21300000, guid: 6bc1418ef19082e4ba6acd80ecb237cf, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 82a97c0172c17c74bbb4b91533224a36, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 10bfcfbfd9209564d8c77f2794ffed45, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 76f22ccc6923df84da99f4b6b5514ef3, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 18ffc7e8e44cbec40bf17eb98702c0b4, type: 2}
+  - Monster: {fileID: 21300000, guid: 712b50054c5bf1247a7444b8b60c0e9e, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: c62312d0af72fc0429cd458cb7a84a88, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: ff43fdb77826bf04f958a17f84a638cd, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: afb0d42209155fe44b37241e9d0273bd, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 9b288c4865679a74c806484a1344130b, type: 2}
+  - Monster: {fileID: 21300000, guid: 5695496d41b3ec944ba35594b9fa9d27, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 5e4a27e07444a8f43b38fb388e0295d1, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 7010530d68d240b4e90c13e8224f2dc3, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: b45a1f896fdd2324f84dbc594858c69c, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 5bc9560d062c9314583f44e659476b89, type: 2}
+  - Monster: {fileID: 21300000, guid: 3ad389ecce91de8479eb8480618e1986, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 7f1844ca60e94ce439fce0b8202a3af3, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 605d49d961dd4a5419921a5903605049, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 7622a8e2a80047d45a7c6075864a7e1a, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 485b5f3b511663247a206c64bb05e770, type: 2}
+  - Monster: {fileID: 21300000, guid: 4fae6c6a1846cf447bd2a91f41f72e0f, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 2d894e144c54f0148b570b2324852ca4, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 12d9eb16c2a2c6f4ab215f57fd1a67ee, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: d3e95cafd0547d34c89fd68babe2d308, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 7a0858794371b4b4cb0d033531ae7659, type: 2}
+  - Monster: {fileID: 21300000, guid: 94976f6bfc2d1fd45a5f3a93016090e2, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: daf8fed05180dd749ab286fb6aaed580, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: e54f816c73c958848980bc47a0528925, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: ff7ab61ca5bb08a46a2c4d9e3d29ac1b, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 64a208faec19d18479631081a3cf12e7, type: 2}
+  - Monster: {fileID: 21300000, guid: e7d07875cd978ff4d93efbd7184dd814, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: e19e8873c20ba0143a8e8c7bc3c148c7, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 748adc11fb4853c47825e338ee28f67d, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: d431a059d252e8944a7180bdc983922f, type: 2}
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: 154bb63dcab238d49be9020085570cc2, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 4dfb6b623a329704aa50979f0a3f63ee, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: c3ac1c9a93004d7469bc1c7689d83c0c, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 9dc9225cf3fd3ab459ac6c86643b282f, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 6b4111a2b538ca944a80f25aaa82d74f, type: 2}
+  - Monster: {fileID: 21300000, guid: 63791a0d7c3ffe34cac7c1c66b33cd6f, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: f4b33205b88e5114e9c8fc31cc4d0757, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 8f3f78c8739d4524193358a075e7657d, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 72bb3520980411f49ab5c628023aa625, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 02e7d07dc0b4f274f8908773e7a79d66, type: 2}
+  - Monster: {fileID: 21300000, guid: 43c135943a58d7a41bd7b1abfad261b2, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: ecc2b1f8c715ec749a36730320716707, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: debe03bf1d5071d499ed98c0c761f4a9, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 4cba134f1205c8c41ac8ee82602d3dd8, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: 369f8f85507488c469ae763ade049835, type: 2}
+  - Monster: {fileID: 21300000, guid: 99fd76baa15538047bfa397903b80ed1, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 8246010334248b149b6693da694556e7, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: d206d4eb224b84f45867898686e023d6, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 24c5d9038d5b03e4da85fa35f585d6d2, type: 2}
+    PreAttackThreat: []
+  - Monster: {fileID: 21300000, guid: 1bea3649eb21e32418b3c934b8d3fc11, type: 3}
+    Intro:
+    - {fileID: 11400000, guid: 6eb7e6ce2cfc74044bd1ab91ca3045ee, type: 2}
+    Accept:
+    - {fileID: 11400000, guid: 461dd437d4e341a49b61c1baa7723530, type: 2}
+    Denial:
+    - {fileID: 11400000, guid: 676f7f3306675974f86ff2cab1810134, type: 2}
+    PreAttackThreat:
+    - {fileID: 11400000, guid: e961b92e31e5fc64d818b351f42163a0, type: 2}
+  - Monster: {fileID: 0}
+    Intro: []
+    Accept: []
+    Denial: []
+    PreAttackThreat: []
