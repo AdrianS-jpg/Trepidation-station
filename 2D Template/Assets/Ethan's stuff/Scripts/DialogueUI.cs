@@ -19,7 +19,6 @@ public class DialogueUI : MonoBehaviour
         slowTalk = GetComponent<SlowTalk>();
         responseHandler = GetComponent<ResponseHandler> ();
         CloseDialogueBox();
-        ShowDialogue(testDialogue);
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
@@ -27,6 +26,12 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(true);
         StartCoroutine(routine: StepThroughDialogue(dialogueObject));
 
+    }
+
+    public void ShowDialogue(DialogueListObject dialoguelistobject)
+    {
+        dialogueBox.SetActive(true);
+        //StartCoroutine(routine: StepThroughDialogue(dialoguelistobject.dialogueobjects[0].Dialogue));
     }
 
     private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
