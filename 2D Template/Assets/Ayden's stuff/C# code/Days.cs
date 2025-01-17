@@ -10,12 +10,17 @@ public class Days : MonoBehaviour
     public float choices = 0;
     public string LevelName;
 
-    public void days()
+    public void Update()
     {
         if (choices == 10)
         {
-            SceneManager.LoadSceneAsync(LevelName);
+            SceneManager.LoadScene(LevelName);
         }
+
+    }
+    public void next()
+    {
+        SceneManager.UnloadSceneAsync(LevelName);
     }
 
 

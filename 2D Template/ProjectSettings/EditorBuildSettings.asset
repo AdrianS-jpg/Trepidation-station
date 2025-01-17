@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ayden's stuff/Game Over.unity
     guid: 909dc594195270b458e8734b71a967f7
+  - enabled: 1
+    path: Assets/Ayden's stuff/Day changer.unity
+    guid: 02ceace80caa814479f9aa439e7d3737
   m_configObjects: {}
