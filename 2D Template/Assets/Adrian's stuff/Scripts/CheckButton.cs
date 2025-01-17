@@ -126,10 +126,11 @@ public class CheckButton : MonoBehaviour
     public void placeEverything()
     {
         if (runsTimes == false)
-        {
+        { 
 
             if ((transform.position.z + 0.1f) >= 0 && transform.position.z <= 11)
             {
+                Debug.Log("sl");
                 nameOfPlace = "Rulebook";
                 if ((GameObject.Find("Rulebook").GetComponent<rulebookMovement>().spriteCount) == ((Convert.ToInt32(GameObject.Find("Circle").GetComponent<settingFunction>().pattern[GameObject.Find("Circle").GetComponent<settingFunction>().patternNum].Substring(5, 1))) + 3))
                 {
@@ -146,13 +147,16 @@ public class CheckButton : MonoBehaviour
                     }
 
                 }
+            }
                 else if ((transform.position.z + 0.1f) >= 12 && transform.position.z <= 16)
                 {
                     nameOfPlace = "Passport";
+                    Debug.Log("sl");
                 }
                 else if ((transform.position.z + 0.1f) >= 17 && transform.position.z <= 21)
                 {
                     nameOfPlace = "ID";
+                    Debug.Log("sm");
                 }
                 else if (((transform.position.z + 0.1f) >= 22 && transform.position.z <= 24))
                 {
@@ -172,7 +176,7 @@ public class CheckButton : MonoBehaviour
             }
 
         }
-    }
+    
     public void sleep(){
         Debug.Log("sleep");
         if (FindObjectOfType<settingFunction>().spritesgo.Count == 2) { 
