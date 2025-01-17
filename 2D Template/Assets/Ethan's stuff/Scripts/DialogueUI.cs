@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using System.Collections;
+using System.Linq;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -24,14 +25,49 @@ public class DialogueUI : MonoBehaviour
     public void ShowDialogue(DialogueObject dialogueObject)
     {
         dialogueBox.SetActive(true);
+
+        textLabel.text = string.Empty;
+        StopAllCoroutines();
+
+
         StartCoroutine(routine: StepThroughDialogue(dialogueObject));
 
     }
 
-    public void ShowDialogue(DialogueListObject dialoguelistobject)
+    public void ShowIntroDialogue(DialogueListObject dialoguelistobject)
     {
-        dialogueBox.SetActive(true);
-        //StartCoroutine(routine: StepThroughDialogue(dialoguelistobject.dialogueobjects[0].Dialogue));
+        Sprite sprite = GameObject.FindGameObjectWithTag("Monster").GetComponent<SpriteRenderer>().sprite;
+        Dictionary dictionary = dialoguelistobject.dialogueobjects.First(Monster => Monster.Monster == sprite);
+        DialogueObject dialogue = dictionary.Intro[0];
+
+        ShowDialogue(dialogue);
+    }
+
+    public void ShowAcceptDialogue(DialogueListObject dialoguelistobject)
+    {
+        Sprite sprite = GameObject.FindGameObjectWithTag("Monster").GetComponent<SpriteRenderer>().sprite;
+        Dictionary dictionary = dialoguelistobject.dialogueobjects.First(Monster => Monster.Monster == sprite);
+        DialogueObject dialogue = dictionary.Accept[0];
+
+        ShowDialogue(dialogue);
+    }
+
+    public void ShowDenialDialogue(DialogueListObject dialoguelistobject)
+    {
+        Sprite sprite = GameObject.FindGameObjectWithTag("Monster").GetComponent<SpriteRenderer>().sprite;
+        Dictionary dictionary = dialoguelistobject.dialogueobjects.First(Monster => Monster.Monster == sprite);
+        DialogueObject dialogue = dictionary.Denial[0];
+
+        ShowDialogue(dialogue);
+    }
+
+    public void ShowPreAttackThreatDialogue(DialogueListObject dialoguelistobject)
+    {
+        Sprite sprite = GameObject.FindGameObjectWithTag("Monster").GetComponent<SpriteRenderer>().sprite;
+        Dictionary dictionary = dialoguelistobject.dialogueobjects.First(Monster => Monster.Monster == sprite);
+        DialogueObject dialogue = dictionary.PreAttackThreat[0];
+
+        ShowDialogue(dialogue);
     }
 
     private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)

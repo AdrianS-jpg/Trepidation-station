@@ -28,6 +28,9 @@ public class NPCmovement : MonoBehaviour
 
     public GameObject item;
     public UnityEvent onMiddle;
+    public UnityEvent onAccept;
+    public UnityEvent onDenial;
+    public UnityEvent onPreAttackThreat;
     //public bool inMiddle;
     //public bool accept;
     //public bool deny;
@@ -61,10 +64,12 @@ public class NPCmovement : MonoBehaviour
         if (location == Location.Accepted && item.gameObject.GetComponent<SpriteRenderer>().enabled) // Monster only moves to the right when accpeted, and the passport is collected 
         {
             transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.deltaTime);
+            onAccept.Invoke();
         }
         if (location == Location.Denied)           // Monster moves left
         {
             transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.deltaTime);
+            onDenial.Invoke();
         }
         if (location == Location.GUN)
         {

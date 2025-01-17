@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3200,7 +3200,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3326,15 +3326,60 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 973690412}
         m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
-        m_MethodName: ShowDialogue
+        m_MethodName: ShowIntroDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: e2b4964a0ad621840b76a28f2e23dc2e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: 35d69b0fb90d9194ab1e87d8d9e56e52, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueListObject, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+  onAccept:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: ShowAcceptDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 35d69b0fb90d9194ab1e87d8d9e56e52, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueListObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDenial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: ShowDenialDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 35d69b0fb90d9194ab1e87d8d9e56e52, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueListObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPreAttackThreat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: ShowPreAttackThreatDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 35d69b0fb90d9194ab1e87d8d9e56e52, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueListObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1043655073
 GameObject:
