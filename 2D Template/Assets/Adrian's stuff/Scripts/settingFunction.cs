@@ -28,7 +28,7 @@ public class settingFunction : MonoBehaviour
         "orr004120000000", //spindler13 (0) this is the variable that corresponds to whether if I need another extra document or not. 
         "orr002130003200", //rufus14    (32) this is the number that links to Ayden's list of sprites. I didn't want to add another 50 sprites to the spriteholder, so I just used his. He won't mind. This is the sprite that walks up to the screen and leaves when you start the game.
         "orr002010003400", //flick15    Why thank you, 1/13/2025 Adrian
-        "orr000155000310", //lillian16  And why is there a space here? ^
+        "orr000155000310", //lillian16  
         "arr002160101300", //veronie17  
         "orr001170100500", //mothman18   
         "orr000186104100", //pebbles19
@@ -280,7 +280,7 @@ public class settingFunction : MonoBehaviour
             }
             if (GameObject.Find("ID").GetComponent<SpriteRenderer>().enabled == true)
             {
-                if (pattern[patternNum].Substring(8, 1) == "0") {
+                if (pattern[patternNum].Substring(8, 1) != "0") {
                     spawnClone(-0.77f, 0.29f, 17);
                     spawnClone(0.4f, 0.55f, 18);
                     spawnClone(0.4f, 0.27f, 19);
