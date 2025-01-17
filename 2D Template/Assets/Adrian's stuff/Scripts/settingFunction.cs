@@ -33,8 +33,9 @@ public class settingFunction : MonoBehaviour
         "arr002160101300", //veronie17  
         "orr001170100500", //mothman18   
         "orr000186104100", //pebbles19
-        "orr001190204200", //jamie20
+        "orr001190204200" //jamie20
 
+        //"orr000207120620", noon21
 
         //dont give entry ticket for incorrect ones pls
         };
@@ -394,7 +395,9 @@ public class settingFunction : MonoBehaviour
         GameObject.Find("xtra documents").GetComponent<SpriteRenderer>().enabled = false;
 
     }
-    public void test(){
-        
+    public void scene(){
+        FindObjectOfType<finaltext>().points = points;
+        SceneManager.LoadScene("Ending");
+
     }
 }
