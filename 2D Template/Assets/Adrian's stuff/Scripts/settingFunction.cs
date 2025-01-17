@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class settingFunction : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class settingFunction : MonoBehaviour
     public GameObject prefabtext;
     public Canvas Canvas;
     public int passportnumber;
+    [System.NonSerialized]
     public int patternNum;
     public bool end = false;
     public GameObject spriteHolder;
@@ -53,7 +55,17 @@ public class settingFunction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        patternNum = 0;
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+        if (sceneName == "movement test 1-13")
+        {
+            patternNum = 0;
+        } else
+        {
+            patternNum = 10;
+        }
         spriteHolder = GameObject.Find("SpriteHolder");
         GetComponent<Transform>().position = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z);
         GetComponent<SpriteRenderer>().color = Color.white;
