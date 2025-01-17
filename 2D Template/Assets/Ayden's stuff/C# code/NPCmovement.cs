@@ -140,6 +140,7 @@ public class NPCmovement : MonoBehaviour
             Enemy.monster = monster.GetComponent<SpriteRenderer>().sprite;
             transform.position = new Vector2(-11.2f, 0);
             location = Location.Traveling;
+
         }
         else if (location == Location.GUN)
         {
