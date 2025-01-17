@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e9efc7e843b92429e9ad856edc95e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choices: 9
+  choices: 0
   LevelName: Day changer
 --- !u!1 &614260569
 GameObject:
