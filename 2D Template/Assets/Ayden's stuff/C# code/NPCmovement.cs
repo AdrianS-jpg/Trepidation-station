@@ -88,6 +88,7 @@ public class NPCmovement : MonoBehaviour
             
             location = Location.Accepted;
             GameObject.Find("Circle").GetComponent<settingFunction>().reset();
+            FindObjectOfType<Days>().choices += 1;
         } 
     }
     public void denyer()
@@ -96,6 +97,7 @@ public class NPCmovement : MonoBehaviour
         {
             location = Location.Denied;
             GameObject.Find("Circle").GetComponent<settingFunction>().reset();
+            FindObjectOfType<Days>().choices += 1;
         }
     }
     public void Gunner()
