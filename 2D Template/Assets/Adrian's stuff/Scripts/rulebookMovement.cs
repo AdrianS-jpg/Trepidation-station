@@ -21,11 +21,28 @@ public class rulebookMovement : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 mousePosition = Input.mousePosition;
         spriteholder = GameObject.Find("SpriteHolder").GetComponent<spriteHolder>();
+        GetComponent<BoxCollider2D>().size = new Vector2(0.9f, 1.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.localPosition.x <= -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2))
+        {
+            transform.localPosition = new Vector2(-1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2), transform.localPosition.y);
+        }
+        if (transform.localPosition.x >= (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2))
+        {
+            transform.localPosition = new Vector2(GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2, transform.localPosition.y);
+        }
+        if (transform.localPosition.y <= -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2))
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x , -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2));
+        }
+        if (transform.localPosition.y >= GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2)
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x, GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2);
+        }
         if (redMode == false)
         {
             GetComponent<BoxCollider2D>().enabled = true;
@@ -34,7 +51,14 @@ public class rulebookMovement : MonoBehaviour
                 clickTime += Time.deltaTime;
                 clickCheck = false;
                 //spriteCount = 0;
-                GetComponent<BoxCollider2D>().size = new Vector2(3.235898f, 2f);
+                if (ifClickedOn == true)
+                {
+                    GetComponent<BoxCollider2D>().size = new Vector2(0.9f, 1.5f);
+                }
+                else
+                {
+                    GetComponent<BoxCollider2D>().size = new Vector2(3.235898f, 2f);
+                }
             }
             else if (click == false)
             {

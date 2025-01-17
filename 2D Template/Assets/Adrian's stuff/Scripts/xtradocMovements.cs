@@ -23,6 +23,22 @@ public class xtradocMovements : MonoBehaviour
     // i swear this wasn't used when i got it
     void Update()
     {
+        if (transform.localPosition.x <= -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2))
+        {
+            transform.localPosition = new Vector2(-1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2), transform.localPosition.y);
+        }
+        if (transform.localPosition.x >= (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2))
+        {
+            transform.localPosition = new Vector2(GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.x / 2, transform.localPosition.y);
+        }
+        if (transform.localPosition.y <= -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2))
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x, -1 * (GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2));
+        }
+        if (transform.localPosition.y >= GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2)
+        {
+            transform.localPosition = new Vector2(transform.localPosition.x, GameObject.Find("Canvas").GetComponent<RectTransform>().sizeDelta.y / 2);
+        }
         if (GameObject.Find("Rulebook").GetComponent<rulebookMovement>().redMode == true)
         {
             redMode = true;
