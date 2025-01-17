@@ -1300,6 +1300,7 @@ GameObject:
   - component: {fileID: 688672956}
   - component: {fileID: 688672955}
   - component: {fileID: 688672954}
+  - component: {fileID: 688672957}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -1400,6 +1401,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &688672957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688672953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a92adfac668ef44b50b5074ac12f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: CloseDialogueBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &721361030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,6 +4374,7 @@ GameObject:
   - component: {fileID: 1369849278}
   - component: {fileID: 1369849277}
   - component: {fileID: 1369849276}
+  - component: {fileID: 1369849279}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -4446,6 +4475,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369849279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369849275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a92adfac668ef44b50b5074ac12f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973690412}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: CloseDialogueBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1420602009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5881,6 +5937,7 @@ MonoBehaviour:
   Mothman: {fileID: 1589824100, guid: db37f424e29153e41b2bb31cf6f47bdf, type: 3}
   Pebble: {fileID: -893349823, guid: 0a85018b3af2ee246bbff428fb42cf56, type: 3}
   Jamie: {fileID: 0}
+  Noon: {fileID: 0}
   Ticket: {fileID: 144390291, guid: 5912b1abfa4b99746aa39aa86ca01bfb, type: 3}
   BigfootCore: {fileID: -1342535832, guid: 88bf152c69b35fe4a8fb93d7f8a8950f, type: 3}
   BlinkCore: {fileID: -1673288026, guid: f3cb8d7afd268c84fa6989f5c8b9999d, type: 3}
@@ -5888,8 +5945,11 @@ MonoBehaviour:
   FionaCore: {fileID: -354665122, guid: ee05cf215a25135468887ae64df3c1c8, type: 3}
   LillianCore: {fileID: 1279243704, guid: d55b5791f52008f429ef56f3c23e3486, type: 3}
   PebbleCore: {fileID: 1083688244, guid: 62e57602a16bf7d4e98f2d70d5596ad6, type: 3}
+  NoonCore: {fileID: 0}
   FionaItem: {fileID: 1593598903, guid: 9ba2151c215f8e24fa3e7c7051fddbf2, type: 3}
+  NoonItem: {fileID: 0}
   LillianEntry: {fileID: -598298892, guid: 28cfaf427c9217f4f90d15dbdc6153d6, type: 3}
+  NoonEntry: {fileID: 0}
   rulebookSpriteList: []
   passportSpriteList: []
   characterSpriteList: []

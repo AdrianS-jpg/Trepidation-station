@@ -64,12 +64,10 @@ public class NPCmovement : MonoBehaviour
         if (location == Location.Accepted && item.gameObject.GetComponent<SpriteRenderer>().enabled) // Monster only moves to the right when accpeted, and the passport is collected 
         {
             transform.position = Vector2.MoveTowards(transform.position, Accepted.position, speed * Time.deltaTime);
-            onAccept.Invoke();
         }
         if (location == Location.Denied)           // Monster moves left
         {
             transform.position = Vector2.MoveTowards(transform.position, Denied.position, speed * Time.deltaTime);
-            onDenial.Invoke();
         }
         if (location == Location.GUN)
         {
@@ -90,10 +88,10 @@ public class NPCmovement : MonoBehaviour
     {
         if (location == Location.Middle)
         {
-            
             location = Location.Accepted;
             GameObject.Find("Circle").GetComponent<settingFunction>().reset();
             FindObjectOfType<Days>().choices += 1;
+            onAccept.Invoke();
         } 
     }
     public void denyer()
@@ -103,6 +101,7 @@ public class NPCmovement : MonoBehaviour
             location = Location.Denied;
             GameObject.Find("Circle").GetComponent<settingFunction>().reset();
             FindObjectOfType<Days>().choices += 1;
+            onDenial.Invoke();
         }
     }
     public void Gunner()
@@ -166,7 +165,7 @@ public class NPCmovement : MonoBehaviour
         if (collision.CompareTag("Item") && location == Location.Accepted ||  location == Location.Denied) //If the monster collides with the item only if they are accepted or denied 
         {
             Debug.Log("monster has passport");
-            item.GetComponent<SpriteRenderer>().enabled = false;  
+            //item.GetComponent<SpriteRenderer>().enabled = false;  
         }
     }
 }

@@ -98,7 +98,7 @@ public class DialogueUI : MonoBehaviour
         
     }
 
-    private void CloseDialogueBox()
+    public void CloseDialogueBox()
     {
         dialogueBox.SetActive(false);
         
