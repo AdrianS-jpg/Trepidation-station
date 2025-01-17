@@ -20,7 +20,8 @@ public class Days : MonoBehaviour
     }
     public void next()
     {
-        SceneManager.UnloadSceneAsync(LevelName);
+        SceneManager.LoadScene(LevelName);
+        choices += 1;
     }
 
 
