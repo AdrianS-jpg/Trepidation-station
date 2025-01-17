@@ -32,4 +32,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ayden's stuff/Day changer.unity
     guid: 02ceace80caa814479f9aa439e7d3737
+  - enabled: 1
+    path: Assets/Ayden's stuff/Credits.unity
+    guid: 1cfac2477643d2b43a89222563b13d68
+  - enabled: 1
+    path: Assets/Ayden's stuff/Adrian.unity
+    guid: 21d8027e60ae77c4490b7cb20fef65d2
+  - enabled: 1
+    path: Assets/Ayden's stuff/Ayden.unity
+    guid: a89845c2f88f341419fc172677508fa2
+  - enabled: 1
+    path: Assets/Ayden's stuff/Carina.unity
+    guid: 226267995ea362c4795660ba98cec26c
+  - enabled: 1
+    path: Assets/Ayden's stuff/Ethan.unity
+    guid: 6ba992bbafcc327419851d28ebc76548
+  - enabled: 1
+    path: Assets/Ayden's stuff/Jake.unity
+    guid: d5b5db0f3a957164f949a0dc390d51b7
+  - enabled: 1
+    path: Assets/Ayden's stuff/Natalie.unity
+    guid: e8bd7068cbce1e44297f60f518b37d4e
   m_configObjects: {}
